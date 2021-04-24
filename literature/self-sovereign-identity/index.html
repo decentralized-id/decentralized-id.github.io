@@ -1,0 +1,1801 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Self Sovereign Identity (SSI) |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Literature associated with the Fundamentals of Self-Sovereign Identity.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Self Sovereign Identity (SSI)">
+<meta property="og:url" content="https://decentralized-id.com/literature/self-sovereign-identity/">
+
+
+  <meta property="og:description" content="Literature associated with the Fundamentals of Self-Sovereign Identity.">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Self Sovereign Identity (SSI)">
+  <meta name="twitter:description" content="Literature associated with the Fundamentals of Self-Sovereign Identity.">
+  <meta name="twitter:url" content="https://decentralized-id.com/literature/self-sovereign-identity/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2018-12-21T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2020-11-02T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/literature/self-sovereign-identity/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/images/the-world-map-from-a-binary-code.webp" alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources &amp; Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="active">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Self Sovereign Identity (SSI)">
+    <meta itemprop="description" content="It would seem that Christopher Allen’s The Path to Self-Sovereign Identity is still the most comprehensive introduction to the subject of Self Sovereign Identity. It outlines some of the underlying history, and introduces 10 Principles of Self-Sovereign Identity, born from the collective thoughts on identity leading to it.Considerable additional material has been created on the subject since then, including some helpful criticism on the principles. Some of initial thoughts have been organized in evolution-of-ssi.">
+    <meta itemprop="datePublished" content="December 21, 2018">
+    <meta itemprop="dateModified" content="November 02, 2020">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Self Sovereign Identity (SSI)
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-link"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li>
+<a href="#ssi-documentation-components">SSI Documentation Components</a>
+    <ul>
+      <li>
+<a href="#about-ssi">About SSI</a>
+        <ul>
+          <li><a href="#video">Video</a></li>
+        </ul>
+      </li>
+      <li><a href="#history">History</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <center><img src="/images/sovereign-id-wide.webp"></center>
+
+<p>This directory was born from <a href="https://github.com/WebOfTrustInfo/self-sovereign-identity">WebOfTrustInfo/self-sovereign-identity</a>, <em>the original</em> SSI repository.</p>
+
+<p>It would seem that Christopher Allen’s <a href="https://github.com/WebOfTrustInfo/self-sovereign-identity/blob/master/ThePathToSelf-SovereignIdentity.md">The Path to Self-Sovereign Identity</a> is still the most comprehensive introduction to the subject of Self Sovereign Identity. It outlines some of the underlying history, and introduces <a href="https://github.com/WebOfTrustInfo/self-sovereign-identity/blob/master/self-sovereign-identity-principles.md">10 Principles of Self-Sovereign Identity</a>, born from the collective thoughts on identity leading to it.</p>
+
+<p>Considerable additional material has been created on the subject since then, including some helpful criticism on the principles. Some of initial thoughts have been organized in <a href="/literature/self-sovereign-identity/evolution-of-ssi/">evolution-of-ssi</a>.</p>
+
+<p><a href="https://medium.com/@trbouma/self-sovereign-identity-an-unofficial-generic-icon-a5a6ab332cd7"><img src="https://i.imgur.com/S9uBk4k.png" alt=""></a></p>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/U8bZ4GYFwKY" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+<h2 id="ssi-documentation-components">SSI Documentation Components</h2>
+
+<p>While none of this is authoritative, it’s useful to keep in mind the philosophy an principles that have focused efforts around creating next generation digital identification schemes.</p>
+
+<ul>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/self-sovereign-identity/blob/master/ThePathToSelf-SovereignIdentity.md">The Path to Self-Sovereign Identity</a> - The original article on Self-Sovereign Identity and the 10 Principles of Self-Sovereign Identity as published on 2016-04-25 in github and at <a href="http://www.lifewithalacrity.com/2016/04/the-path-to-self-soverereign-identity.html">Life With Alacrity</a> by <a href="http://www.github.com/christophera">Christopher Allen</a> [<a href="https://www.coindesk.com/path-self-sovereign-identity/amp/"><strong>ϟ</strong></a>]
+    <ul>
+      <li>
+<a href="https://github.com/WebOfTrustInfo/self-sovereign-identity/blob/master/self-sovereign-identity-principles.md">10 Principles of Self-Sovereign Identity</a> - The Self-Sovereign Identity Principles, in progress of being revised.</li>
+      <li>
+<a href="https://github.com/WebOfTrustInfo/self-sovereign-identity/blob/master/characteristics-of-sovereign-identity.md">Core Characteristics of Self Sovereign Identity</a> - from <em><a href="https://github.com/jandrieu/rebooting-the-web-of-trust-fall2016/raw/master/topics-and-advance-readings/a-technology-free-definition-of-self-sovereign-identity.pdf">A Technlogy-Free Definition of Self-Sovereign Identity</a></em> - Topic paper for Rebooting Web of Trust III by <a href="http://www.github.com/jandrieu">Joe Andrieu</a> (for review and comparison against <em>10 Principles of SSI</em>)
+        <ul>
+          <li><a href="/literature/self-sovereign-identity/ssi-principles-vs-characteristics/">SSI Principles vs. Characteristics</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://github.com/WebOfTrustInfo/self-sovereign-identity/blob/master/self-sovereign-identity-bill-of-rights.md">Self-Sovereign Bill of Rights</a> - lifeID (founded by <a href="https://github.com/cboscolo">Chris Boscolo</a>) adapted the 10 Principles of Self-Sovereign Identity into a <a href="https://medium.com/@lifeID_io/lifeid-self-sovereign-identity-bill-of-rights-d2acafa1de8b">Bill of Rights</a> that all self-sovereign identity solution should uphold.</li>
+      <li>
+<a href="https://github.com/WebOfTrustInfo/self-sovereign-identity/blob/master/Schutte-on-SSI.md">Schutte’s Take</a> offers criticism on the 10 principles.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/self-sovereign-identity/blob/master/7-myths-of-self-sovereign-identity.md">7 Myths of Self Sovereign Identity</a> - from Timothy Ruff’s <a href="https://medium.com/evernym/7-myths-of-self-sovereign-identity-67aea7416b1">blog post</a>.</li>
+  <li>
+<a href="https://bitsonblocks.net/2017/05/17/gentle-introduction-self-sovereign-identity/">A Gentle Guide to Self Sovereign Identity</a> has a section called “How would self-sovereign identity work for the user?” that could be <a href="user-experience/">modularized</a>.</li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rwot7/blob/master/final-documents/convincing-dad.md">How to Convince Dad* of the Importance of Self-Sovereign Identity</a> (*and your sister and your daughter and your best friend and your nephew) (SSI Use-Cases)</li>
+  <li><a href="http://www.windley.com/archives/2016/09/self-sovereign_identity_and_the_legitimacy_of_permissioned_ledgers.shtml">Self-Sovereign Identity and the Legitimacy of Permissioned Ledgers</a></li>
+  <li><a href="https://github.com/hyperledger/indy-hipe/tree/master/text/0014-ssi-notation">HIPE 0014-ssi-notation</a></li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/a-roadmap-for-ssi.md">SSI: A Roadmap for Adoption</a> from Rebooting the web of trust, Spring 2018.
+    <blockquote>
+      <p>This document proposes the formation of a short-term team to develop consistent messaging for the Self-Sovereign Identity (SSI) market.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><img src="https://imgur.com/3zz62kpl.png" alt=""></p>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/rygsE1JC-8Q" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+<p><a href="https://www.youtube.com/watch?v=rygsE1JC-8Q">What is self-sovereign identity? [Webinar]</a></p>
+<blockquote>
+  <ul>
+    <li>A brief history and overview of self-sovereign identity / decentralized identity</li>
+    <li>The top consumer-focused and business-focused benefits of SSI</li>
+    <li>Real-world examples of SSI in action</li>
+    <li>How organizations can the journey to a decentralized future</li>
+  </ul>
+</blockquote>
+
+<h3 id="about-ssi">About SSI</h3>
+
+<ul>
+  <li>
+<a href="https://thelivinglib.org/self-sovereign-identity/">Self-Sovereign Identity</a>
+    <blockquote>
+      <p>Identification document (ID) is a crucial part of every individual’s life, in that it is often a prerequisite for accessing a variety of services — ranging from creating a bank account to enrolling children in school to buying alcoholic beverages to signing up for an email account to voting in an election — and also a proof of simply being.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.coindesk.com/theres-alternative-facebook-called-self-sovereign-identity">There’s A Facebook Alternative, It’s Called Self-Sovereign Identity</a> —coindesk</li>
+  <li><a href="https://identitywoman.net/self-sovereign-identity/">Self Sovereign Identity -identitywoman.net</a></li>
+  <li><a href="https://www.brighttalk.com/webcast/16693/342423/self-sovereign-identity-going-where-no-identity-has-gone-before">Self Sovereign Identity going where no identity has gone before</a></li>
+  <li><a href="https://medium.com/@trbouma/less-identity-65f65d87f56b">LESS identity</a></li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/topics-and-advance-readings/functional-identity-primer.md">A Primer on Functional Identity</a>; Joe Andrieu describes identity terms in plain language, with regards to what function they serve.</li>
+  <li><a href="https://github.com/karimStekelenburg/awesome-self-sovereign-identity">karimStekelenburg/awesome-self-sovereign-identity</a></li>
+  <li>
+<a href="https://medium.com/learning-machine-blog/identity-and-digital-self-sovereignty-1f3faab7d9e3">Identity and Digital Self-Sovereignty</a> - Blog post by <a href="https://medium.com/@nsmolenski">Natalie Smolenski</a>
+</li>
+  <li><a href="https://sovrin.org/wp-content/uploads/2018/03/The-Inevitable-Rise-of-Self-Sovereign-Identity.pdf">Inevitable Rise of Self-Sovereign Identity</a></li>
+  <li><a href="https://medium.com/evernym/the-three-models-of-digital-identity-relationships-ca0727cb5186">The Three Models of Digital Identity Relationships — How self-sovereign identity (SSI) is different, and why it’s better</a></li>
+  <li><a href="https://wso2.com/blog/research/the-rise-of-self-sovereign-identity-hyperledger-indy">The Rise of Self-Sovereign Identity - Hyperledger Indy</a></li>
+  <li><a href="https://www.ibm.com/blogs/think/2017/10/self-sovereign-id-blockchain/">Paving the Road to Self-Sovereign Identity with Blockchain, Open Standards</a></li>
+  <li><a href="https://www.newamerica.org/future-property-rights/reports/nail-finds-hammer/">The Nail Finds a Hammer: Self-Sovereign Identity, Design Principles, and Property Rights in the Developing World</a></li>
+  <li><a href="https://github.com/sovrin-foundation/protocol/blob/master/self_sovereign_privacy_by_design_v1.md">Self-Sovereign Privacy By Design</a></li>
+  <li><a href="https://arxiv.org/pdf/1712.01767.pdf">Self-sovereign Identity –	Opportunities and Challenges for the Digital Revolution</a></li>
+  <li>
+<a href="http://maciek.blog/DecentralizedIDentity-trilemma/">Decentralized Identity Trilemma</a>
+    <blockquote>
+      <p>There seems to exist a trilemma in decentralized identity analogous to <a href="https://twitter.com/Zooko" class="user-mention">@Zooko</a>’s triangle. None of the existing solutions are at the same time: 1) privacy-preserving, 2) Sybil-resistant 3) self-sovereign -[<a href="https://twitter.com/MaciekLaskus/status/1031859093072424960"><strong>T</strong></a>]</p>
+    </blockquote>
+  </li>
+  <li><a href="https://medium.com/@apoikola/self-sovereign-identity-and-mydata-e1f996a9451">Self Sovereign Identity and MyData</a></li>
+  <li><a href="https://internetidentityworkshop.com/past-workshops/">IIW - Past Workshops</a></li>
+  <li><a href="https://www.slideshare.net/TommyKoens/matching-identity-management-solutions-to-selfsovereign-identity-principles">Matching Identity Management Solutions to Self Sovereign Identity Solutions</a></li>
+  <li><a href="https://www.itu.int/en/ITU-T/Workshops-and-Seminars/20180718/Documents/D_Reed.pdf">A Brief Introduction to How SSI Infrastructure Can Integrate Digital Fiat Currency (DFC)</a></li>
+  <li><a href="https://twitter.com/VitalikButerin/status/1072160446180810752"><img src="https://i.imgur.com/tNvN7vV.png" alt=""></a></li>
+</ul>
+
+<p><a href="https://twitter.com/ChristopherA/status/989120215702261761?ref_src=twsrc%5Etfw"><img src="https://i.imgur.com/f3FlznM.png" alt=""></a></p>
+
+<p><a href="https://www.evernym.com/blog/the-three-pillars-of-self-sovereign-identity/">The Three Pillars of Self-Sovereign Identity</a>
+<a href="https://www.csoonline.com/article/3366261/self-sovereign-identity-3-key-questions.html">Self-sovereign identity: 3 key questions</a></p>
+<blockquote>
+  <p>SSI is on the extreme end of the digital identity spectrum. Its focus is putting control back in the hands of you, the user. But SSI is not the only way to skin a cat.
+<a href="https://www.windley.com/archives/2019/07/answering_questions_about_self-sovereign_identity.shtml">Answering Questions about Self-Sovereign Identity</a>
+Identity professionals continue to have questions about self-sovereign identity (SSI). In this post, I answer a few questions that Susan Morrow raised about the commercial viability, security, privacy, and desired user experience of SSI.</p>
+</blockquote>
+
+<p><img src="https://i.imgur.com/MMa72Dx.png" alt=""></p>
+
+<p><a href="https://medium.com/@trbouma/self-sovereign-identity-shifting-the-locus-of-control-10da1c8757ad">Self-Sovereign Identity: Shifting the Locus of Control</a></p>
+<blockquote>
+  <p>Simply put, the old (centralized and federated models) the locus of control was between the other parties that could make decisions about me, whether I was in the picture or not. In the new model (self-sovereign identity), the user is put into the centre of his/her own locus of control. See above.</p>
+</blockquote>
+
+<h4 id="video">Video</h4>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=iqmY_h49vPs">Identity and the quest for Self Sovereign Identity - Daniel Hardman</a></li>
+  <li><a href="https://www.youtube.com/watch?v=amq88XmWaNs">Self Sovereign Identity and the MyData model from Finland - Antti ‘Jogi’ Poikola</a></li>
+  <li><a href="http://ssimeetup.org/self-sovereign-identity-ssi-open-source-richard-esplin-webinar-16/">Self-Sovereign Identity (SSI) and Open Source – Richard Esplin from SSIMeetup</a></li>
+  <li><a href="https://www.youtube.com/watch?v=KsIM0zq37fU">Decentralized Identifiers enable self-sovereign identity - MyData 2018</a></li>
+  <li><a href="https://www.youtube.com/watch?v=AHa175AEVVs">eIDAS and Self-Sovereign Identity - MyData 2018</a></li>
+  <li><a href="https://www.youtube.com/watch?v=hBIragrwqYc">uPort: Self-Sovereign Identity Meets Portable Data</a></li>
+  <li><a href="https://www.youtube.com/watch?v=wSdm2-18Z2g">Behind the Cloud—Blockchain and Self-Sovereign Identity in the Enterprise</a></li>
+  <li><a href="https://www.youtube.com/watch?v=RllH91rcFdE&amp;feature=youtu.be&amp;t=4m30s">The Story of Open SSI Standards - Drummond Reed</a></li>
+</ul>
+
+<h3 id="history">History</h3>
+
+<ul>
+  <li>
+<a href="https://channel9.msdn.com/Blogs/scobleizer/Kim-Cameron-Identity-Laws">Kim Cameron Identity Laws</a>
+    <ul>
+      <li><a href="https://web.archive.org/web/20080814163727/http://www.identityblog.com/stories/2004/12/09/thelaws.html">Laws of Identity - Whitepaper</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.moxytongue.com/2012/02/what-is-sovereign-source-authority.html"><em>What is Sovereign Source Authority?</em></a> shows an early use of ‘sovereign’ in relation to our internet identities. The term “Self Sovereign Identity” started becoming widely used in 2014.[<a href="https://www.tokencommons.org/Windhover-Principles-for-Digital-Identity-Trust-Data.html"><strong>ϟ</strong></a>][<a href="https://hubculture.com/hubs/47/news/689/"><strong>ϟ</strong></a>]</li>
+  <li><a href="https://www.prnewswire.com/news-releases/sovrin-foundation-launches-first-dedicated-self-sovereign-identity-network-300336702.html">Sovrin Foundation Launches first dedicated Self Sovereign Identity Network</a></li>
+</ul>
+
+<h3 id="resources">Resources</h3>
+
+<ul>
+  <li>
+<a href="http://ssimeetup.org/">SSIMeetup</a> [<a href="https://www.slideshare.net/SSIMeetup/presentations">Slideshare</a>] [<a href="https://www.youtube.com/channel/UCSqSTlKdbbCM1muGOhDa3Og">Youtube</a>] [<a href="https://t.me/SSIMeetup">Telegram</a>] - SSI Meetup is an open, collaborative community to help SSI evangelists around the world, independent of company interests or standards.</li>
+  <li><a href="https://github.com/WebOfTrustInfo/self-sovereign-identity">WebOfTrustInfo/self-sovereign-id</a></li>
+  <li><a href="https://wiki.p2pfoundation.net/Self-Sovereign_Identity">Self-Sovereign Identity — wiki.p2pfoundation</a></li>
+</ul>
+
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#eidas" class="page__taxonomy-item" rel="tag">eIDAS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#laws-of-identity" class="page__taxonomy-item" rel="tag">Laws of Identity</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rebooting-wot" class="page__taxonomy-item" rel="tag">Rebooting WoT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#self-sovereign-identity" class="page__taxonomy-item" rel="tag">Self Sovereign Identity</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#uport" class="page__taxonomy-item" rel="tag">uPort</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#literature" class="page__taxonomy-item" rel="tag">Literature</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-02">November 02, 2020</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/literature/2018-12-21-self-sovereign-identity.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&amp;text=Self+Sovereign+Identity+%28SSI%29%20https%3A%2F%2Fdecentralized-id.com%2Fliterature%2Fself-sovereign-identity%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fliterature%2Fself-sovereign-identity%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdecentralized-id.com%2Fliterature%2Fself-sovereign-identity%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fliterature%2Fself-sovereign-identity%2F&amp;title=Self+Sovereign+Identity+%28SSI%29" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a>
+</h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2">
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="self-sovereign-identity">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/dataweb/dataweb-whitepaper-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/augmented-social-network-teaser.png" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/augmented-social-network/" rel="permalink">Augmented Social Network
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The Augmented Social Network is a proposal for a “next generation” online community that would strengthen the collaborative nature of the Internet, enhancing its ability to act as a public commons that engages citizens in civil society. The ASN creates an infrastructure for trusted relationships ...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-26 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  172 minute read
+</p>
+    <div class="tags">Augmented Social Network</div> <div class="tags">Microsoft</div> <div class="tags">OASIS</div> <div class="tags">Planetwork</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/blockchain-Tumisu_3019121.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blockchain/" rel="permalink">Blockchain Identity
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Traditional identity systems typically suffer from single points of failure, lack of interoperability, and privacy issues such as encouraging mass data collection and user tracking. Blockchain technology has the potential to support novel data ownership and governance models with built-in control...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-10 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+</p>
+    <div class="tags">Authenteq</div> <div class="tags">Blockstack</div> <div class="tags">Civic</div> <div class="tags">Datum</div> <div class="tags">GDPR</div> <div class="tags">Microsoft</div> <div class="tags">ProCivis</div> <div class="tags">uPort</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/did-square.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/" rel="permalink">Identity Articles, Research and Literature
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">A selection of DID related literature and top level resources for discovery of more.
+</p>
+    <p class="page__meta"><strong>Updated:</strong> 2019-07-11 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    <div class="tags">Accenture</div> <div class="tags">DKMS</div> <div class="tags">DPKI</div> <div class="tags">Danube Tech</div> <div class="tags">ID2020</div> <div class="tags">Rebooting WoT</div> <div class="tags">Self Sovereign Identity</div> <div class="tags">Verifiable Credentials</div> <div class="tags">WEF</div> <div class="tags">XDI</div> <div class="tags">Zug</div> <div class="tags">uPort</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

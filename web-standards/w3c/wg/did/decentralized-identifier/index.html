@@ -1,0 +1,3235 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>(DID) the Decentralized Identifier |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="(DID) the Decentralized Identifier">
+<meta property="og:url" content="https://decentralized-id.com/web-standards/w3c/wg/did/decentralized-identifier/">
+
+
+  <meta property="og:description" content="Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity.">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="(DID) the Decentralized Identifier">
+  <meta name="twitter:description" content="Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity.">
+  <meta name="twitter:url" content="https://decentralized-id.com/web-standards/w3c/wg/did/decentralized-identifier/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-01-10T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2020-12-02T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/web-standards/w3c/wg/did/decentralized-identifier/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/images/the-world-map-from-a-binary-code.webp" alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources &amp; Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="(DID) the Decentralized Identifier">
+    <meta itemprop="description" content="Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides that it identifies. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities. Specifically, while other parties might be used to help enable the discovery of information related to a DID, the design enables the controller of a DID to prove control over it without requiring permission from any other party. DIDs are URIs that associate a DID subject with a DID document allowing trustable interactions associated with that subject.">
+    <meta itemprop="datePublished" content="January 10, 2020">
+    <meta itemprop="dateModified" content="December 02, 2020">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">(DID) the Decentralized Identifier
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  52 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#decentralized-identifier" id="markdown-toc-decentralized-identifier">Decentralized Identifier</a></li>
+  <li>
+<a href="#did-method-registry" id="markdown-toc-did-method-registry">DID Method Registry</a>    <ul>
+      <li>
+<a href="#didabt" id="markdown-toc-didabt"><strong><code class="language-plaintext highlighter-rouge">did:abt:</code></strong></a>        <ul>
+          <li><a href="#for-abt-network-by-arcblock" id="markdown-toc-for-abt-network-by-arcblock">For ABT Network, by ArcBlock</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didbtcr" id="markdown-toc-didbtcr"><strong><code class="language-plaintext highlighter-rouge">did:btcr:</code></strong></a>        <ul>
+          <li><a href="#for-bitcoin-by-christopher-allen-ryan-grant-kim-hamilton-duffy" id="markdown-toc-for-bitcoin-by-christopher-allen-ryan-grant-kim-hamilton-duffy">For Bitcoin, by Christopher Allen, Ryan Grant, Kim Hamilton Duffy</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didstack" id="markdown-toc-didstack"><strong><code class="language-plaintext highlighter-rouge">did:stack:</code></strong></a>        <ul>
+          <li><a href="#for-bitcoin-by-jude-nelson" id="markdown-toc-for-bitcoin-by-jude-nelson">For Bitcoin, by Jude Nelson</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#diderc725" id="markdown-toc-diderc725"><strong><code class="language-plaintext highlighter-rouge">did:erc725:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-by-markus-sabadello-fabian-vogelsteller-peter-kolarov" id="markdown-toc-for-ethereum-by-markus-sabadello-fabian-vogelsteller-peter-kolarov">For Ethereum, by Markus Sabadello, Fabian Vogelsteller, Peter Kolarov</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didexample" id="markdown-toc-didexample"><strong><code class="language-plaintext highlighter-rouge">did:example:</code></strong></a>        <ul>
+          <li><a href="#did-specification-by-w3c-credentials-community-group" id="markdown-toc-did-specification-by-w3c-credentials-community-group">DID Specification, by W3C Credentials Community Group</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didipid" id="markdown-toc-didipid"><strong><code class="language-plaintext highlighter-rouge">did:ipid:</code></strong></a>        <ul>
+          <li><a href="#for-ipfs-by-transendx" id="markdown-toc-for-ipfs-by-transendx">For IPFS, by TranSendX</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didlife" id="markdown-toc-didlife"><strong><code class="language-plaintext highlighter-rouge">did:life:</code></strong></a>        <ul>
+          <li><a href="#for-rchain-by-lifeid-foundation" id="markdown-toc-for-rchain-by-lifeid-foundation">For RChain, by lifeID Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didsov" id="markdown-toc-didsov"><strong><code class="language-plaintext highlighter-rouge">did:sov:</code></strong></a>        <ul>
+          <li><a href="#for-sovrin-by-mike-lodder" id="markdown-toc-for-sovrin-by-mike-lodder">For Sovrin, by Mike Lodder</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didethr" id="markdown-toc-didethr"><strong><code class="language-plaintext highlighter-rouge">did:ethr:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-by-uport" id="markdown-toc-for-ethereum-by-uport">For Ethereum, by uPort</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didv1" id="markdown-toc-didv1"><strong><code class="language-plaintext highlighter-rouge">did:v1:</code></strong></a>        <ul>
+          <li><a href="#for-veres-one-by-digital-bazaar" id="markdown-toc-for-veres-one-by-digital-bazaar">For Veres One, by Digital Bazaar</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didcom" id="markdown-toc-didcom"><strong><code class="language-plaintext highlighter-rouge">did:com:</code></strong></a>        <ul>
+          <li><a href="#for-commercionetwork-by-commercio-consortium" id="markdown-toc-for-commercionetwork-by-commercio-consortium">For commercio.network, by Commercio Consortium</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didont" id="markdown-toc-didont"><strong><code class="language-plaintext highlighter-rouge">did:ont:</code></strong></a>        <ul>
+          <li><a href="#for-ontology-by-ontology-foundation" id="markdown-toc-for-ontology-by-ontology-foundation">For Ontology, by Ontology Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didvvo" id="markdown-toc-didvvo"><strong><code class="language-plaintext highlighter-rouge">did:vvo:</code></strong></a>        <ul>
+          <li><a href="#for-vivvo-by-vivvo-application-studios" id="markdown-toc-for-vivvo-by-vivvo-application-studios">For Vivvo, by Vivvo Application Studios</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didaergo" id="markdown-toc-didaergo"><strong><code class="language-plaintext highlighter-rouge">did:aergo:</code></strong></a>        <ul>
+          <li><a href="#for-httpswwwaergoio-by-httpswwwblockoio" id="markdown-toc-for-httpswwwaergoio-by-httpswwwblockoio">For https://www.aergo.io/, by https://www.blocko.io/</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didicon" id="markdown-toc-didicon"><strong><code class="language-plaintext highlighter-rouge">did:icon:</code></strong></a>        <ul>
+          <li><a href="#for-icon-by-iconloop" id="markdown-toc-for-icon-by-iconloop">For ICON, by ICONLOOP</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didis" id="markdown-toc-didis"><strong><code class="language-plaintext highlighter-rouge">did:is:</code></strong></a>        <ul>
+          <li><a href="#for-blockcore-by-blockcore" id="markdown-toc-for-blockcore-by-blockcore">For Blockcore, by Blockcore</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didiwt" id="markdown-toc-didiwt"><strong><code class="language-plaintext highlighter-rouge">did:iwt:</code></strong></a>        <ul>
+          <li><a href="#for-infowallet-by-raonsecure" id="markdown-toc-for-infowallet-by-raonsecure">For InfoWallet, by Raonsecure</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didockam" id="markdown-toc-didockam"><strong><code class="language-plaintext highlighter-rouge">did:ockam:</code></strong></a>        <ul>
+          <li><a href="#for-ockam-by-ockam" id="markdown-toc-for-ockam-by-ockam">For Ockam, by Ockam</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didala" id="markdown-toc-didala"><strong><code class="language-plaintext highlighter-rouge">did:ala:</code></strong></a>        <ul>
+          <li><a href="#for-alastria-by-alastria-national-blockchain-ecosystem" id="markdown-toc-for-alastria-by-alastria-national-blockchain-ecosystem">For Alastria, by Alastria National Blockchain Ecosystem</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didop" id="markdown-toc-didop"><strong><code class="language-plaintext highlighter-rouge">did:op:</code></strong></a>        <ul>
+          <li><a href="#for-ocean-protocol-by-ocean-protocol" id="markdown-toc-for-ocean-protocol-by-ocean-protocol">For Ocean Protocol, by Ocean Protocol</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didjlinc" id="markdown-toc-didjlinc"><strong><code class="language-plaintext highlighter-rouge">did:jlinc:</code></strong></a>        <ul>
+          <li><a href="#for-jlinc-protocol-by-victor-grey" id="markdown-toc-for-jlinc-protocol-by-victor-grey">For JLINC Protocol, by Victor Grey</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didion" id="markdown-toc-didion"><strong><code class="language-plaintext highlighter-rouge">did:ion:</code></strong></a>        <ul>
+          <li><a href="#for-bitcoin-by-various-dif-contributors" id="markdown-toc-for-bitcoin-by-various-dif-contributors">For Bitcoin, by Various DIF contributors</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didjolo" id="markdown-toc-didjolo"><strong><code class="language-plaintext highlighter-rouge">did:jolo:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-by-jolocom" id="markdown-toc-for-ethereum-by-jolocom">For Ethereum, by Jolocom</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didbryk" id="markdown-toc-didbryk"><strong><code class="language-plaintext highlighter-rouge">did:bryk:</code></strong></a>        <ul>
+          <li><a href="#for-bryk-by-marcos-allende-sandra-murcia-flavia-munhoso-ruben-cessa" id="markdown-toc-for-bryk-by-marcos-allende-sandra-murcia-flavia-munhoso-ruben-cessa">For bryk, by Marcos Allende, Sandra Murcia, Flavia Munhoso, Ruben Cessa</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didpeer" id="markdown-toc-didpeer"><strong><code class="language-plaintext highlighter-rouge">did:peer:</code></strong></a>        <ul>
+          <li><a href="#for-peer-2-peer-by-daniel-hardman" id="markdown-toc-for-peer-2-peer-by-daniel-hardman">For Peer 2 Peer, by Daniel Hardman</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didselfkey" id="markdown-toc-didselfkey"><strong><code class="language-plaintext highlighter-rouge">did:selfkey:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-by-selfkey" id="markdown-toc-for-ethereum-by-selfkey">For Ethereum, by SelfKey</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didmeta" id="markdown-toc-didmeta"><strong><code class="language-plaintext highlighter-rouge">did:meta:</code></strong></a>        <ul>
+          <li><a href="#for-metadium-by-metadium-foundation" id="markdown-toc-for-metadium-by-metadium-foundation">For Metadium, by Metadium Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didtys" id="markdown-toc-didtys"><strong><code class="language-plaintext highlighter-rouge">did:tys:</code></strong></a>        <ul>
+          <li><a href="#for-did-specification-by-chainyard" id="markdown-toc-for-did-specification-by-chainyard">For DID Specification, by Chainyard</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didgit" id="markdown-toc-didgit"><strong><code class="language-plaintext highlighter-rouge">did:git:</code></strong></a>        <ul>
+          <li><a href="#for-did-specification-by-internet-identity-workshop" id="markdown-toc-for-did-specification-by-internet-identity-workshop">For DID Specification, by Internet Identity Workshop</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didtangle" id="markdown-toc-didtangle"><strong><code class="language-plaintext highlighter-rouge">did:tangle:</code></strong></a>        <ul>
+          <li><a href="#for-iota-tangle-by-biilabs-co-ltd" id="markdown-toc-for-iota-tangle-by-biilabs-co-ltd">For IOTA Tangle, by BiiLabs Co., Ltd.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didemtrust" id="markdown-toc-didemtrust"><strong><code class="language-plaintext highlighter-rouge">did:emtrust:</code></strong></a>        <ul>
+          <li><a href="#for-hyperledger-fabric-by-halialabs-pte-ltd" id="markdown-toc-for-hyperledger-fabric-by-halialabs-pte-ltd">For Hyperledger Fabric, by Halialabs Pte Ltd.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didttm" id="markdown-toc-didttm"><strong><code class="language-plaintext highlighter-rouge">did:ttm:</code></strong></a>        <ul>
+          <li><a href="#for-tmchain-by-tokentm" id="markdown-toc-for-tmchain-by-tokentm">For TMChain, by Token.TM</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didwlk" id="markdown-toc-didwlk"><strong><code class="language-plaintext highlighter-rouge">did:wlk:</code></strong></a>        <ul>
+          <li><a href="#for-weelink-network-by-weelink" id="markdown-toc-for-weelink-network-by-weelink">For Weelink Network, by Weelink</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didpistis" id="markdown-toc-didpistis"><strong><code class="language-plaintext highlighter-rouge">did:pistis:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-by-andrea-taglia-matteo-sinico" id="markdown-toc-for-ethereum-by-andrea-taglia-matteo-sinico">For Ethereum, by Andrea Taglia, Matteo Sinico</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didholo" id="markdown-toc-didholo"><strong><code class="language-plaintext highlighter-rouge">did:holo:</code></strong></a>        <ul>
+          <li><a href="#for-holochain-by-holohost" id="markdown-toc-for-holochain-by-holohost">For Holochain, by Holo.Host</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didweb" id="markdown-toc-didweb"><strong><code class="language-plaintext highlighter-rouge">did:web:</code></strong></a>        <ul>
+          <li><a href="#for-web-by-oliver-terbu-mike-xu-dmitri-zagidulin-amy-guy" id="markdown-toc-for-web-by-oliver-terbu-mike-xu-dmitri-zagidulin-amy-guy">For Web, by Oliver Terbu, Mike Xu, Dmitri Zagidulin, Amy Guy</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didio" id="markdown-toc-didio"><strong><code class="language-plaintext highlighter-rouge">did:io:</code></strong></a>        <ul>
+          <li><a href="#for-iotex-by-iotex-foundation" id="markdown-toc-for-iotex-by-iotex-foundation">For IoTeX, by IoTeX Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didvaultie" id="markdown-toc-didvaultie"><strong><code class="language-plaintext highlighter-rouge">did:vaultie:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-by-vaultie-inc" id="markdown-toc-for-ethereum-by-vaultie-inc">For Ethereum, by Vaultie Inc.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didmoac" id="markdown-toc-didmoac"><strong><code class="language-plaintext highlighter-rouge">did:moac:</code></strong></a>        <ul>
+          <li><a href="#for-moac-by-moac-blockchain-tech-inc" id="markdown-toc-for-moac-by-moac-blockchain-tech-inc">For MOAC, by MOAC Blockchain Tech, Inc.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didomn" id="markdown-toc-didomn"><strong><code class="language-plaintext highlighter-rouge">did:omn:</code></strong></a>        <ul>
+          <li><a href="#for-omnione-by-omnione" id="markdown-toc-for-omnione-by-omnione">For OmniOne, by OmniOne</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didwork" id="markdown-toc-didwork"><strong><code class="language-plaintext highlighter-rouge">did:work:</code></strong></a>        <ul>
+          <li><a href="#for-hyperledger-fabric-by-workday-inc" id="markdown-toc-for-hyperledger-fabric-by-workday-inc">For Hyperledger Fabric, by Workday, Inc.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didvid" id="markdown-toc-didvid"><strong><code class="language-plaintext highlighter-rouge">did:vid:</code></strong></a>        <ul>
+          <li><a href="#for-vp-by-vp-inc" id="markdown-toc-for-vp-by-vp-inc">For VP, by VP Inc.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didccp" id="markdown-toc-didccp"><strong><code class="language-plaintext highlighter-rouge">did:ccp:</code></strong></a>        <ul>
+          <li><a href="#for-quorum-by-baidu-inc" id="markdown-toc-for-quorum-by-baidu-inc">For Quorum, by Baidu, Inc.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didjnctn" id="markdown-toc-didjnctn"><strong><code class="language-plaintext highlighter-rouge">did:jnctn:</code></strong></a>        <ul>
+          <li><a href="#for-jnctn-network-by-jnctn-limited" id="markdown-toc-for-jnctn-network-by-jnctn-limited">For Jnctn Network, by Jnctn Limited</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didevan" id="markdown-toc-didevan"><strong><code class="language-plaintext highlighter-rouge">did:evan:</code></strong></a>        <ul>
+          <li><a href="#for-evannetwork-by-evan-gmbh" id="markdown-toc-for-evannetwork-by-evan-gmbh">For evan.network, by evan GmbH</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didelastos" id="markdown-toc-didelastos"><strong><code class="language-plaintext highlighter-rouge">did:elastos:</code></strong></a>        <ul>
+          <li><a href="#for-elastos-id-sidechain-by-elastos-foundation" id="markdown-toc-for-elastos-id-sidechain-by-elastos-foundation">For Elastos ID Sidechain, by Elastos Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didkilt" id="markdown-toc-didkilt"><strong><code class="language-plaintext highlighter-rouge">did:kilt:</code></strong></a>        <ul>
+          <li><a href="#for-kilt-blockchain-by-botlabs-gmbh" id="markdown-toc-for-kilt-blockchain-by-botlabs-gmbh">For KILT Blockchain, by BOTLabs GmbH</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didelem" id="markdown-toc-didelem"><strong><code class="language-plaintext highlighter-rouge">did:elem:</code></strong></a>        <ul>
+          <li><a href="#for-element-did-by-transmute" id="markdown-toc-for-element-did-by-transmute">For Element DID, by Transmute</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didgithub" id="markdown-toc-didgithub"><strong><code class="language-plaintext highlighter-rouge">did:github:</code></strong></a>        <ul>
+          <li><a href="#for-github-by-transmute" id="markdown-toc-for-github-by-transmute">For Github, by Transmute</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didbid" id="markdown-toc-didbid"><strong><code class="language-plaintext highlighter-rouge">did:bid:</code></strong></a>        <ul>
+          <li><a href="#for-bif-by-teleinfo-caict" id="markdown-toc-for-bif-by-teleinfo-caict">For bif, by teleinfo caict</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didptn" id="markdown-toc-didptn"><strong><code class="language-plaintext highlighter-rouge">did:ptn:</code></strong></a>        <ul>
+          <li><a href="#for-palletone-by-palletone" id="markdown-toc-for-palletone-by-palletone">For PalletOne, by PalletOne</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didecho" id="markdown-toc-didecho"><strong><code class="language-plaintext highlighter-rouge">did:echo:</code></strong></a>        <ul>
+          <li><a href="#for-echo-by-echo-technological-solutions-llc" id="markdown-toc-for-echo-by-echo-technological-solutions-llc">For Echo, by Echo Technological Solutions LLC</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didtrustbloc" id="markdown-toc-didtrustbloc"><strong><code class="language-plaintext highlighter-rouge">did:trustbloc:</code></strong></a>        <ul>
+          <li><a href="#for-hyperledger-fabric-by-securekey" id="markdown-toc-for-hyperledger-fabric-by-securekey">For Hyperledger Fabric, by SecureKey</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didsan" id="markdown-toc-didsan"><strong><code class="language-plaintext highlighter-rouge">did:san:</code></strong></a>        <ul>
+          <li><a href="#for-san-cloudchain-by-ylz-inc" id="markdown-toc-for-san-cloudchain-by-ylz-inc">For SAN Cloudchain, by YLZ Inc.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didgatc" id="markdown-toc-didgatc"><strong><code class="language-plaintext highlighter-rouge">did:gatc:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-hyperledger-fabric-hyperledger-besu-alastria-by-httpsgatacaio" id="markdown-toc-for-ethereum-hyperledger-fabric-hyperledger-besu-alastria-by-httpsgatacaio">For Ethereum, Hyperledger Fabric, Hyperledger Besu, Alastria, by https://gataca.io/</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didfactom" id="markdown-toc-didfactom"><strong><code class="language-plaintext highlighter-rouge">did:factom:</code></strong></a>        <ul>
+          <li><a href="#for-factom-by-sphereon-factomatic-factom-inc" id="markdown-toc-for-factom-by-sphereon-factomatic-factom-inc">For Factom, by Sphereon, Factomatic, Factom Inc</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didsignor" id="markdown-toc-didsignor"><strong><code class="language-plaintext highlighter-rouge">did:signor:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-hedera-hashgraph-quorum-hyperledger-besu-by-httpscryptonicsconsulting" id="markdown-toc-for-ethereum-hedera-hashgraph-quorum-hyperledger-besu-by-httpscryptonicsconsulting">For Ethereum, Hedera Hashgraph, Quorum, Hyperledger Besu, by https://cryptonics.consulting/</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didhedera" id="markdown-toc-didhedera"><strong><code class="language-plaintext highlighter-rouge">did:hedera:</code></strong></a>        <ul>
+          <li><a href="#for-hedera-hashgraph-by-hedera-hashgraph-swisscom-blockchain-ag" id="markdown-toc-for-hedera-hashgraph-by-hedera-hashgraph-swisscom-blockchain-ag">For Hedera Hashgraph, by Hedera Hashgraph, Swisscom Blockchain AG</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didsirius" id="markdown-toc-didsirius"><strong><code class="language-plaintext highlighter-rouge">did:sirius:</code></strong></a>        <ul>
+          <li><a href="#for-proximax-sirius-chain-by-proximax-enterprise-proximax-inc" id="markdown-toc-for-proximax-sirius-chain-by-proximax-enterprise-proximax-inc">For ProximaX Sirius Chain, by ProximaX Enterprise, Proximax Inc.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#diddock" id="markdown-toc-diddock"><strong><code class="language-plaintext highlighter-rouge">did:dock:</code></strong></a>        <ul>
+          <li><a href="#for-dock-by-httpswwwdockio" id="markdown-toc-for-dock-by-httpswwwdockio">For Dock, by https://www.dock.io/</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didtwit" id="markdown-toc-didtwit"><strong><code class="language-plaintext highlighter-rouge">did:twit:</code></strong></a>        <ul>
+          <li><a href="#for-twit-by-httpsgithubcomdid-twitdid-twitblobmasterspecindexmd" id="markdown-toc-for-twit-by-httpsgithubcomdid-twitdid-twitblobmasterspecindexmd">For Twit, by https://github.com/did-twit/did-twit/blob/master/spec/index.md</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didnear" id="markdown-toc-didnear"><strong><code class="language-plaintext highlighter-rouge">did:near:</code></strong></a>        <ul>
+          <li><a href="#for-near-by-ontology-foundation" id="markdown-toc-for-near-by-ontology-foundation">For NEAR, by Ontology Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didvaa" id="markdown-toc-didvaa"><strong><code class="language-plaintext highlighter-rouge">did:vaa:</code></strong></a>        <ul>
+          <li><a href="#for-bif-by-china-academy-of-information-and-communications-technology-caict" id="markdown-toc-for-bif-by-china-academy-of-information-and-communications-technology-caict">For bif, by China Academy of Information and Communications Technology (CAICT)</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didbba" id="markdown-toc-didbba"><strong><code class="language-plaintext highlighter-rouge">did:bba:</code></strong></a>        <ul>
+          <li><a href="#for-ardor-by-attila-aldemir" id="markdown-toc-for-ardor-by-attila-aldemir">For Ardor, by Attila Aldemir</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didmorpheus" id="markdown-toc-didmorpheus"><strong><code class="language-plaintext highlighter-rouge">did:morpheus:</code></strong></a>        <ul>
+          <li><a href="#for-hydra-by-httpsiopglobal" id="markdown-toc-for-hydra-by-httpsiopglobal">For Hydra, by https://iop.global/</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didetho" id="markdown-toc-didetho"><strong><code class="language-plaintext highlighter-rouge">did:etho:</code></strong></a>        <ul>
+          <li><a href="#for-ethereum-by-ontology-foundation" id="markdown-toc-for-ethereum-by-ontology-foundation">For Ethereum, by Ontology Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didbnb" id="markdown-toc-didbnb"><strong><code class="language-plaintext highlighter-rouge">did:bnb:</code></strong></a>        <ul>
+          <li><a href="#for-binance-smart-chain-by-ontology-foundation" id="markdown-toc-for-binance-smart-chain-by-ontology-foundation">For Binance Smart Chain, by Ontology Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didcelo" id="markdown-toc-didcelo"><strong><code class="language-plaintext highlighter-rouge">did:celo:</code></strong></a>        <ul>
+          <li><a href="#for-celo-by-ontology-foundation" id="markdown-toc-for-celo-by-ontology-foundation">For Celo, by Ontology Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didklay" id="markdown-toc-didklay"><strong><code class="language-plaintext highlighter-rouge">did:klay:</code></strong></a>        <ul>
+          <li><a href="#for-klaytn-by-ontology-foundation" id="markdown-toc-for-klaytn-by-ontology-foundation">For Klaytn, by Ontology Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didtrx" id="markdown-toc-didtrx"><strong><code class="language-plaintext highlighter-rouge">did:trx:</code></strong></a>        <ul>
+          <li><a href="#for-tron-by-ontology-foundation" id="markdown-toc-for-tron-by-ontology-foundation">For TRON, by Ontology Foundation</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didgrg" id="markdown-toc-didgrg"><strong><code class="language-plaintext highlighter-rouge">did:grg:</code></strong></a>        <ul>
+          <li><a href="#for-grgchain-by-grgbanking-blockchain-express-co-ltd" id="markdown-toc-for-grgchain-by-grgbanking-blockchain-express-co-ltd">For GrgChain, by GRGBanking Blockchain Express Co. Ltd.</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didschema" id="markdown-toc-didschema"><strong><code class="language-plaintext highlighter-rouge">did:schema:</code></strong></a>        <ul>
+          <li><a href="#for-multiple-storage-networks-currently-public-ipfs-and-evannetwork-ipfs-by-51nodes-gmbh" id="markdown-toc-for-multiple-storage-networks-currently-public-ipfs-and-evannetwork-ipfs-by-51nodes-gmbh">For Multiple storage networks, currently public IPFS and evan.network IPFS, by 51nodes GmbH</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didkey" id="markdown-toc-didkey"><strong><code class="language-plaintext highlighter-rouge">did:key:</code></strong></a>        <ul>
+          <li><a href="#for-ledger-independent-did-method-based-on-publicprivate-key-pairs-by-rick-astley-thank-you-for-your-inspiration-manu-sporny-dmitri-zagidulin-dave-longley-orie-steele" id="markdown-toc-for-ledger-independent-did-method-based-on-publicprivate-key-pairs-by-rick-astley-thank-you-for-your-inspiration-manu-sporny-dmitri-zagidulin-dave-longley-orie-steele">For Ledger independent DID method based on public/private key pairs, by Rick Astley (thank you for your inspiration), Manu Sporny, Dmitri Zagidulin, Dave Longley, Orie Steele</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didtyron" id="markdown-toc-didtyron"><strong><code class="language-plaintext highlighter-rouge">did:tyron:</code></strong></a>        <ul>
+          <li><a href="#for-zilliqa-by-julio-cabrapan-duarte" id="markdown-toc-for-zilliqa-by-julio-cabrapan-duarte">For Zilliqa, by Julio Cabrapan Duarte</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didcorda" id="markdown-toc-didcorda"><strong><code class="language-plaintext highlighter-rouge">did:corda:</code></strong></a>        <ul>
+          <li><a href="#for-corda-by-nitesh-solankimoritz-plattpranav-kirtani" id="markdown-toc-for-corda-by-nitesh-solankimoritz-plattpranav-kirtani">For Corda, by Nitesh Solanki,Moritz Platt,Pranav Kirtani</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#diduns" id="markdown-toc-diduns"><strong><code class="language-plaintext highlighter-rouge">did:uns:</code></strong></a>        <ul>
+          <li><a href="#for-httpsdocsunsnetwork-by-httpswwwspacelephantorg" id="markdown-toc-for-httpsdocsunsnetwork-by-httpswwwspacelephantorg">For https://docs.uns.network/, by https://www.spacelephant.org/</a></li>
+        </ul>
+      </li>
+      <li>
+<a href="#didpanacea" id="markdown-toc-didpanacea"><strong><code class="language-plaintext highlighter-rouge">did:panacea:</code></strong></a>        <ul>
+          <li><a href="#for-panacea-by-medibloc" id="markdown-toc-for-panacea-by-medibloc">For Panacea, by MediBloc</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<p><a href="https://www.w3.org/2018/vocabws/presentations/Sabadello.pdf"><img src="https://i.imgur.com/7NRcJbq.png"></a></p>
+
+<h2 id="decentralized-identifier">Decentralized Identifier</h2>
+
+<ul>
+  <li>
+<a href="https://w3c.github.io/did-core/">Decentralized Identifiers (DIDs) v1.0</a>
+    <blockquote>
+      <p>Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides that it identifies. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities. Specifically, while other parties might be used to help enable the discovery of information related to a DID, the design enables the controller of a DID to prove control over it without requiring permission from any other party. DIDs are URIs that associate a DID subject with a DID document allowing trustable interactions associated with that subject.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rwot2-id2020/blob/master/topics-and-advance-readings/DID-Whitepaper.md">DID Whitepaper</a>
+    <blockquote>
+      <p>A DID architecture should focus on the set of components that Mr. Gupta refers to as “the minimum required for people to be able to do business (or other critical functions) together”.</p>
+
+      <p><strong>A Decentralized Identifier (DID) Registry and Discovery Service</strong></p>
+
+      <p>This “minimum required” is defined by a union of the proposed requirements identified by the W3C Credential Community Group, the XDI.org Registry Working Group, and the Rebooting the Web of Trust group. It consists of three functions that can be addressed by a combination of blockchain and DHT technology:</p>
+
+      <ul>
+        <li>A DID registration function</li>
+        <li>A discovery function that enables looking up a registered DID in the blockchain</li>
+        <li>A master key recovery function</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.ietf.org/rfc/rfc4122.txt">A Universally Unique IDentifier (UUID) URN Namespace</a> &lt;-DID’s modeled after
+    <ul>
+      <li><a href="https://blog.2ndquadrant.com/sequential-uuid-generators/">All you need to know about sequential UUID generators</a></li>
+    </ul>
+  </li>
+  <li><a href="https://medium.com/@adam_14796/understanding-decentralized-ids-dids-839798b91809">Understanding Decentralized IDs (DIDs)</a></li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/draft-documents/did-primer.md">DID Primer</a> [<a href="https://github.com/WebOfTrustInfo/rwot7-fall2018/blob/master/topics-and-advance-readings/did-primer-extended.md"><strong>ϟ</strong></a>]</li>
+  <li><a href="https://www.w3.org/2018/vocabws/presentations/Sabadello.pdf">Decentralized IDentifers (DIDs)</a></li>
+  <li><a href="https://github.com/WebOfTrustInfo/ID2020DesignWorkshop/blob/master/final-documents/requirements-for-dids.pdf">Requirements for DIDs</a></li>
+  <li><a href="https://github.com/WebOfTrustInfo/rwot7/blob/master/topics-and-advance-readings/dids-in-dpki.md">DIDs in DPKI</a></li>
+  <li><a href="https://docs.google.com/document/d/1Ym85y_bDVN9xkRZ-oD-zlUUIeZjVGWNihfZBk2GQidk/edit">What is a DID?</a></li>
+  <li><a href="https://hyperonomy.com/2019/01/04/the-path-from-a-id-did-to-a-real-life-something">The Path from an id (DID) to a Real-Life Something</a></li>
+</ul>
+
+<p><a href="https://hyperonomy.files.wordpress.com/2019/01/path-id-did-real-life-somethings-v0.2-1.png"><img src="https://hyperonomy.files.wordpress.com/2019/01/path-id-did-real-life-somethings-v0.2-1.png?w=500"></a></p>
+
+<p><a href="http://iiw.identitycommons.net/1A/_DID_101_%E2%80%93_Decentralized_Identifiers_%26_how_they_are_the_key_to_interoperable_self-sovereign_ID">1A/ DID 101 – Decentralized Identifiers &amp; how they are the key to interoperable self-sovereign ID</a></p>
+
+<h2 id="did-method-registry"><a href="https://w3c-ccg.github.io/did-method-registry/#the-registry">DID Method Registry</a></h2>
+
+<h3 id="didabt"><a href="https://arcblock.github.io/abt-did-spec/"><strong><code class="language-plaintext highlighter-rouge">did:abt:</code></strong></a></h3>
+<h6 id="for-abt-network-by-arcblock">For ABT Network, by ArcBlock</h6>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>    did:abt:z1muQ3xqHQK2uiACHyChikobsiY5kLqtShA
+      DID            DID string
+    schema
+</code></pre></div>  </div>
+  <p>One of our main goal is to protect users’ privacy. So people do not use the DID generated from their master key to talk to DAPPs, instead, the WALLET automatically generates an extended DID according to the user’s master DID and the DAPP’s DID and use this extended DID to communicate with the DAPP.</p>
+</blockquote>
+
+<h3 id="didbtcr"><a href="https://w3c-ccg.github.io/didm-btcr"><strong><code class="language-plaintext highlighter-rouge">did:btcr:</code></strong></a></h3>
+<h6 id="for-bitcoin-by-christopher-allen-ryan-grant-kim-hamilton-duffy">For Bitcoin, by Christopher Allen, Ryan Grant, Kim Hamilton Duffy</h6>
+
+<blockquote>
+  <p>The Bitcoin Reference DID method (did:btcr) supports DIDs on the public Bitcoin blockchain. The Bitcoin Reference method has minimal design goals: a DID trust anchor based on the Bitcoin blockchain, updates publicly visible and auditable via Bitcoin transactions, and optionally, additional DID Document information referenced in the transaction OP_RETURN data field. No other Personal Identifiable Information (PII) would be placed on the immutable blockchain.</p>
+
+  <p>A secondary intent of the BTCR method is to serve as a very conservative, very secure example and some best practices for creating a DID method. The use cases for BTCR are focused on anonymous and pseudo-anonymous identities, web-of-trust style webs of identity, and absolute mimimal personal information disclosure. Other DID methods will likely need to loosen these standards.</p>
+
+  <p>Some aspects of the BTCR method will not be practical if inappropriately scaled — for instance, there is a transaction cost to update keys and DDO object, potential UTXO inflation (i.e. one additional unspent output for every BTCR-based identity), and even if segwit isn’t used it could cause blockchain bloat. However, identities using the BTCR method can be a strong as Bitcoin itself – currently securing billions of dollars of digital value.</p>
+</blockquote>
+
+<h3 id="didstack"><a href="https://github.com/blockstack/blockstack-core/blob/stacks-1.0/docs/blockstack-did-spec.md"><strong><code class="language-plaintext highlighter-rouge">did:stack:</code></strong></a></h3>
+<h6 id="for-bitcoin-by-jude-nelson">For Bitcoin, by Jude Nelson</h6>
+
+<blockquote>
+  <p>Blockstack’s DID method is specified as part of its decentralized naming system. Each name in Blockstack has one or more corresponding DIDs, and each Blockstack DID corresponds to exactly one name – even if the name was revoked by its owner, expired, or was re-registered to a different owner.</p>
+
+  <p>Blockstack is unique among decentralized identity systems in that it is not anchored to a specific blockchain or DLT implementation. The system is designed from the ground up to be portable, and has already been live-migrated from the Namecoin blockchain to the Bitcoin blockchain. The operational ethos of Blockstack is to leverage the must secure blockchain at all times – that is, the one that is considered hardest to attack.</p>
+
+  <p>Blockstack’s naming system and its DIDs transcend the underlying blockchain, and will continue to resolve to DID document objects (DDOs) even if the system migrates to a new blockchain in the future.</p>
+</blockquote>
+
+<h3 id="diderc725"><a href="https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/topics-and-advance-readings/DID-Method-erc725.md"><strong><code class="language-plaintext highlighter-rouge">did:erc725:</code></strong></a></h3>
+<h6 id="for-ethereum-by-markus-sabadello-fabian-vogelsteller-peter-kolarov">For Ethereum, by Markus Sabadello, Fabian Vogelsteller, Peter Kolarov</h6>
+
+<blockquote>
+  <p>Decentralized Identifiers (DIDs, see [1]) are designed to be compatible with any distributed ledger or network (called the target system). In the Ethereum community, a pattern known as ERC725 (see [2]) utilizes smart contracts for standard key management functions. We propose a new DID method that allows ERC725 identities to be treated as valid DIDs. One advantage of this DID method over others appears to be the ability to use the full flexibility of Ethereum smart contracts for key management purposes.</p>
+</blockquote>
+
+<h3 id="didexample"><a href="https://w3c.github.io/did-core/#a-simple-example"><strong><code class="language-plaintext highlighter-rouge">did:example:</code></strong></a></h3>
+<h6 id="did-specification-by-w3c-credentials-community-group">DID Specification, by W3C Credentials Community Group</h6>
+
+<blockquote>
+  <p>A DID is a simple text string consisting of three parts, the:</p>
+  <ul>
+    <li>URI scheme identifier (did)</li>
+    <li>Identifier for the DID method</li>
+    <li>DID method-specific identifier.</li>
+  </ul>
+
+  <p><strong>EXAMPLE 1: A simple example of a decentralized identifier (DID)</strong></p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:example:123456789abcdefghi
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>The example DID above resolves to a DID document. A DID document contains information associated with the DID, such as ways to cryptographically authenticate the DID controller, as well as services that can be used to interact with the DID subject.</p>
+
+  <p><strong>EXAMPLE 2: Minimal self-managed DID document</strong></p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>{
+  "@context": "https://www.w3.org/ns/did/v1",
+  "id": "did:example:123456789abcdefghi",
+  "authentication": [{
+    
+    "id": "did:example:123456789abcdefghi#keys-1",
+    "type": "Ed25519VerificationKey2018",
+    "controller": "did:example:123456789abcdefghi",
+    "publicKeyBase58": "H3C2AVvLMv6gmMNam3uVAjZpfkcJCwDwnZn6z3wXmqPV"
+  }],
+  "service": [{
+    
+    "id":"did:example:123456789abcdefghi#vcs",
+    "type": "VerifiableCredentialService",
+    "serviceEndpoint": "https://example.com/vc/"
+  }]
+}
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didipid"><a href="https://did-ipid.github.io/ipid-did-method/"><strong><code class="language-plaintext highlighter-rouge">did:ipid:</code></strong></a></h3>
+<h6 id="for-ipfs-by-transendx">For IPFS, by TranSendX</h6>
+
+<blockquote>
+  <p>The Interplanetary Identifiers DID method (did:ipid:) supports DIDs on the public and private Interplanetary File System (IPFS) networks. IPFS is the distributed content addressable permanent web. More specifically, the IPID DID method utilizes the Interplanetary Linked Data (IPLD) suite of tools. The IPID DID method has minimal design goals: a DID trust anchor based on the IPFS and Libp2p protocol. In and of itself, this is not a blockchain solution. However, blockchains and other distributed ledger technologies could be utilized to anchor the artifacts of this DID methods for further enhanced security.</p>
+</blockquote>
+
+<h3 id="didlife"><a href="https://lifeid.github.io/did-method-spec/"><strong><code class="language-plaintext highlighter-rouge">did:life:</code></strong></a></h3>
+<h6 id="for-rchain-by-lifeid-foundation">For RChain, by lifeID Foundation</h6>
+
+<blockquote>
+  <p>lifeID is a decentralized, blockchain-based protocol that acts as an open identity provider. The protocol enables the creation and use of self-sovereign identities as well as the issuance of verifiable credentials to those identities. The blockchain-based components of the protocol include smart contracts for storage, revocation, and recovery of keys and credentials. These contracts may be run on any open, permissionless blockchain. The purpose of this protocol is to allow users to transact their identity in a way that minimizes data disclosure, is cryptographically secure, and enables censorship-resistant decentralized identity provisioning and recovery. The purpose of this specification is to describe how lifeID DIDs are created and the technical requirements to operate on the lifeID platform.</p>
+</blockquote>
+
+<h3 id="didsov"><a href="https://sovrin-foundation.github.io/sovrin/spec/did-method-spec-template.html"><strong><code class="language-plaintext highlighter-rouge">did:sov:</code></strong></a></h3>
+<h6 id="for-sovrin-by-mike-lodder">For Sovrin, by Mike Lodder</h6>
+
+<blockquote>
+  <p>Sovrin is a public ledger designed specifically and only for privacy-preserving self-sovereign identity. The Sovrin Ledger is governed by the international non-profit Sovrin Foundation. As the only public ledger designed exclusively for self-sovereign identity, Sovrin is optimized for DIDs and DID Documents. DIDs are created, stored, and used with verifiable claims. This specification covers how these DIDs are managed. It also describes related features of Sovrin of particular interest to DID owners, guardians, and developers.</p>
+</blockquote>
+
+<h3 id="didethr"><a href="https://github.com/decentralized-identity/ethr-did-resolver/blob/master/doc/did-method-spec.md"><strong><code class="language-plaintext highlighter-rouge">did:ethr:</code></strong></a></h3>
+<h6 id="for-ethereum-by-uport">For Ethereum, by uPort</h6>
+
+<blockquote>
+  <p>In the Ethereum community, a pattern known as ERC1056 (see [2]) utilizes a smart contract for a lightweight identity management system intended explicitly for off-chain usage.</p>
+
+  <p>The described DID method allows any Ethereum smart contract or key pair account to become a valid identity. An identity needs no registration. In the case that key management or additional attributes such as “service endpoints” are required, we deployed ERC1056 smart contracts on:</p>
+</blockquote>
+
+<p>Mainnet • Ropsten • Rinkeby • Goerli • Kovan • RSK • Alastria • Telsius • ARTIS tau1 • ARTIS sigma1</p>
+
+<blockquote>
+  <p>Since each Ethereum transaction must be funded, there is a growing trend of on-chain transactions that are authenticated via an externally created signature and not by the actual transaction originator. This allows for 3rd party funding services, or for receivers to pay without any fundamental changes to the underlying Ethereum architecture. These kinds of transactions have to be signed by an actual key pair and thus cannot be used to represent smart contract based Ethereum accounts. ERC1056 proposes a way of a smart contract or regular key pair delegating signing for various purposes to externally managed key pairs. This allows a smart contract to be represented, both on-chain as well as off-chain or in payment channels through temporary or permanent delegates.</p>
+</blockquote>
+
+<ul>
+  <li>
+<a href="https://github.com/decentralized-identity/ethr-did-resolver">decentralized-identity/ethr-did-resolver</a> - DID resolver for Ethereum Addresses with support for key management (and DID reference implementation)</li>
+</ul>
+
+<h3 id="didv1"><a href="https://w3c-ccg.github.io/did-method-v1/"><strong><code class="language-plaintext highlighter-rouge">did:v1:</code></strong></a></h3>
+<h6 id="for-veres-one-by-digital-bazaar">For Veres One, by Digital Bazaar</h6>
+
+<blockquote>
+  <p>There are two primary classes of DID-based identifiers in Veres One. The first type of identifier is called a cryptonym-based identifier. This identifier is a SHA-256 hash of a public key. Cryptonym-based identifiers are not required to be registered on the ledger and may be used as unregistered pseudonymous pairwise identifiers. These identifiers may also be registered on the ledger and MUST contain a authentication key with a public key fingerprint equal to the value of the cryptonym-based identifier.</p>
+
+  <p><strong>EXAMPLE 1: A valid Veres One Cryptonym-based Decentralized Identifier</strong></p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:v1:nym:4jWHwNdrG9-6jd9I7K1si3kTRneNwftZV9m6rkrAfWQ
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>The second type of identifier on Veres One is a UUID-based identifier and may be used by entities that want to store metadata on the ledger. These sorts of identifiers are often used, but not limited to, storing and refering to Capabilities and Revocation lists.</p>
+
+  <p><strong>EXAMPLE 2: A valid Veres One UUID-based Decentralized Identifier</strong></p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:v1:uuid:804c6ac3-ce3b-46ce-b134-17175d5bee74
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didcom"><a href="https://github.com/commercionetwork/Commercio.network-DID-Method-Specification/"><strong><code class="language-plaintext highlighter-rouge">did:com:</code></strong></a></h3>
+<h6 id="for-commercionetwork-by-commercio-consortium">For commercio.network, by Commercio Consortium</h6>
+
+<blockquote>
+  <p>Commercio.network is a cosmos based sovereign blockchain network, built on the base of cosmos sdk and tendermint state machine replication engine, adopting Proof of Stake as a consensus algorithm.</p>
+
+  <p>Commercio.network, aims to be known as “The Documents Blockchain” and is to become “the easiest way for companies to manage their business documents using the blockchain technology”.</p>
+
+  <p>Commercio.newtork ultimate goal is not just to share documents, but to create a network of trusted organizations, on the base of a web of trust, build on the Decentralized Identifier and Verifiable Credentials standard pillars.</p>
+
+  <p>In this document we specify the DID Method for Commercio.network, in comformance to the requirements specified in the DID specification[4] currently published by the W3C Credentials Community Group. For more information about DIDs and DID method specifications, please see DID Primer[6] and DID Specification[4].</p>
+</blockquote>
+
+<h3 id="didont"><a href="https://github.com/ontio/ontology-DID/blob/master/docs/en/DID-ONT-method.md"><strong><code class="language-plaintext highlighter-rouge">did:ont:</code></strong></a></h3>
+<h6 id="for-ontology-by-ontology-foundation">For Ontology, by Ontology Foundation</h6>
+
+<blockquote>
+  <p>This specification defines how Ontology blockchain[1] stores DIDs and DID documents, and how to do CRUD operations on DID documents. More importantly, this specification confirms to the requirements specified in the DID specification[2] currently published by the W3C Credentials Community Group.</p>
+
+  <p>Ontology provides high-performance public blockchains that include a series of complete distributed ledgers and smart contract systems. Ontology blockchain framework supports public blockchain systems and is able to customize different public blockchains for different applications.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>ont-did   = "did:ont:" id-string 
+id-string = 1* idchar
+idchar    = 1-9 / A-H / J-N / P-Z / a-k / m-z 
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didvvo"><a href="https://vivvo.github.io/vivvo-did-scheme/spec/did-method-spec-template.html"><strong><code class="language-plaintext highlighter-rouge">did:vvo:</code></strong></a></h3>
+<h6 id="for-vivvo-by-vivvo-application-studios">For Vivvo, by Vivvo Application Studios</h6>
+
+<blockquote>
+  <p>Vivvo is a private ledger designed specifically and only for privacy-preserving self-sovereign identity. The Vivvo Ledger is governed by Vivvo Application Studios. As a private ledger designed exclusively for self-sovereign identity, Vivvo is optimized for DIDs and DID Documents. DIDs are created, stored, and used with verifiable claims. This specification covers how these DIDs are managed. It also describes related features of Vivvo of particular interest to DID owners, guardians, and developers.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>vivvo-did = "did:vvo:idstring" *(":" subnamespace)
+idstring = 21*22(char)
+subnamespace = ALPHA *(ALPHA / DIGIT / "_" / "-")
+char = "1" / "2" / "3" / "4" / "5" / "6" / "7" / "8" / "9" / "A" / "B" / "C"
+    / "D" / "E" / "F" / "G" / "H" / "J" / "K" / "L" / "M" / "N" / "P" / "Q"
+    / "R" / "S" / "T" / "U" / "V" / "W" / "X" / "Y" / "Z" / "a" / "b" / "c"
+    / "d" / "e" / "f" / "g" / "h" / "i" / "j" / "k" / "m" / "n" / "o" / "p"
+    / "q" / "r" / "s" / "t" / "u" / "v" / "w" / "x" / "y" / "z"
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didaergo"><a href="https://github.com/aergoio/aergo-identity/blob/master/doc/did-method-spec.md"><strong><code class="language-plaintext highlighter-rouge">did:aergo:</code></strong></a></h3>
+<h6 id="for-httpswwwaergoio-by-httpswwwblockoio">For https://www.aergo.io/, by https://www.blocko.io/</h6>
+
+<blockquote>
+  <p>The described DID method allows any Aergo smart contract or key pair account to become a valid identity. An identity needs no registration. In the case that key management or additional attributes such as “service endpoints” are required, we deployed did registry smart contracts on:</p>
+
+  <p>Mainnet: <code class="language-plaintext highlighter-rouge">AmgUfj2ghDBRJsmpuSvBZq1Zp67kMc8QX72r1Eh7aS24ueADStPv</code>
+Testnet: <code class="language-plaintext highlighter-rouge">AmhPkt8JXujkN6TWEJbynaXqnQUh1AfUckJEyDvTYoA3PyXXf7as</code></p>
+
+  <p>Since each Aergo transaction must be funded, in order to update attributes, account balance must be greater than zero.</p>
+</blockquote>
+
+<h3 id="didicon"><a href="https://github.com/icon-project/icon-DID/blob/master/docs/ICON-DID-method.md"><strong><code class="language-plaintext highlighter-rouge">did:icon:</code></strong></a></h3>
+<h6 id="for-icon-by-iconloop">For ICON, by ICONLOOP</h6>
+
+<blockquote>
+  <p>ICON[1,2,3] is a decentralized network that connects various independent communities to enable interoperability between them. ICON DID is a decentralized identifier devised to provide a way to uniquely identify a person, an organization, or a digital device across the communities connected to the ICON network. ICON DID method specification conforms to the DID and the DID Documents Spec[4]. This document describes how ICON blockchain manages the DIDs and the DID documents, and specifies a set of rules for how a DID is created, queried, updated, and revoked.</p>
+</blockquote>
+
+<h3 id="didis"><a href="https://github.com/block-core/blockcore-did-method"><strong><code class="language-plaintext highlighter-rouge">did:is:</code></strong></a></h3>
+<h6 id="for-blockcore-by-blockcore">For Blockcore, by Blockcore</h6>
+
+<blockquote>
+  <p>Decentralized identifiers (DIDs) are a new type of identifiers that enables verifiable, self-sovereign digital identity. Blockcore supports decentralized identities through the Blockcore Storage feature.</p>
+
+  <p>This specification describes how the Blockcore Identity framework aligns with the DID specification and how the Blockcore Universal Resolver works.</p>
+
+  <p>This specification conforms to the requirements specified in the DIDs specification currently published by the W3C Credentials Community Group.</p>
+
+  <p>The Blockcore Identity registry is a permissionless and borderless runtime for identities.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:is:PLBNc1Ph6whu1vbQGEuRywTTHCEnfDDuXh
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didiwt"><a href="https://github.com/infowallet/did_method/blob/master/did_method.md"><strong><code class="language-plaintext highlighter-rouge">did:iwt:</code></strong></a></h3>
+<h6 id="for-infowallet-by-raonsecure">For InfoWallet, by Raonsecure</h6>
+
+<blockquote>
+  <p>InfoWallet is a decentralized network system for Self-Sovereign identity and Verifiable Claims. It can replace a legacy centralized credential system that with trusted blockchain node. In the InfoWallet system, several types of certificates are issued. DID(Decentralized Identifiers) is used as the unique identifier of the certificate. Also DID allows to obtain public key information for secure exchange of information between users.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>iwt-did = "did:iwt:" id-string id-string = 1* idchar idchar = 1-9 / A-H / J-N / P-Z / a-k / m-z
+
+Example did:iwt:4EFNaYeA9hDp6F55JAB38EFtNcYEbbM9nwKr
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didockam"><a href="https://github.com/ockam-network/did-method-spec/blob/master/README.md"><strong><code class="language-plaintext highlighter-rouge">did:ockam:</code></strong></a></h3>
+<h6 id="for-ockam-by-ockam">For Ockam, by Ockam</h6>
+
+<blockquote>
+  <p>A DID that uses this method MUST begin with the following prefix: did:ockam:. Per the DID specification, this prefix MUST be in lowercase. The format of remainder of the DID, after this prefix, is specified below in the section on Method Specific Identifiers.</p>
+</blockquote>
+
+<blockquote>
+  <p>Ockam DIDs conform with the Generic DID Scheme described in the DID spec. The format of the ockam-specific-idstring is described below in ABNF:</p>
+
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>ockam-did               = "did:ockam:" ockam-specific-idstring
+
+ockam-specific-idstring = *(zone ":") idstring
+
+zone                    = 1*zonechar
+zonechar                = %x61-7A / DIGIT ; 61-7A is a-z in US-ASCII
+
+idstring                = 28*31(base58char)
+base58char              = "1" / "2" / "3" / "4" / "5" / "6" / "7" / "8" / "9" / "A" / "B" / "C"
+                          / "D" / "E" / "F" / "G" / "H" / "J" / "K" / "L" / "M" / "N" / "P" / "Q"
+                          / "R" / "S" / "T" / "U" / "V" / "W" / "X" / "Y" / "Z" / "a" / "b" / "c"
+                          / "d" / "e" / "f" / "g" / "h" / "i" / "j" / "k" / "m" / "n" / "o" / "p"
+                          / "q" / "r" / "s" / "t" / "u" / "v" / "w" / "x" / "y" / "z"
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didala"><a href="https://github.com/alastria/alastria-identity/wiki/Alastria-DID-Method-Specification-(Quorum-version)"><strong><code class="language-plaintext highlighter-rouge">did:ala:</code></strong></a></h3>
+<h6 id="for-alastria-by-alastria-national-blockchain-ecosystem">For Alastria, by Alastria National Blockchain Ecosystem</h6>
+
+<blockquote>
+  <p>This document is divided into two parts:</p>
+  <ul>
+    <li>The first one defines the Alastria DID Method Specification, describing the Alastria DID Scheme and the Alastria DID Document.</li>
+    <li>The second part describes the format for Alastria Credentials and Presentations in the current Alastria Red T, based on Quorum.</li>
+    <li>The third part describes the Credentials and Presentation Life Cycle and the Private Credential Multi Hashes (PSM Hashes) used to anchor Credential and Presentation actions ensuring privacy.</li>
+  </ul>
+
+  <p>The objective of this document is to be aligned with the work on Decentralized IDs (DIDs) and Verifiable Credentials being carried out by the Verifiable Credentials Working Group. The specs are already on the CR (Candidate Recommendation) phase and they may still change. However, its maturity is enough to assume that the changes are going to be minor so it makes sense to align the Alastria DID Method Specification as much as possible to those specifications.</p>
+</blockquote>
+
+<h3 id="didop"><a href="https://github.com/oceanprotocol/OEPs/blob/master/7/v0.2/README.md"><strong><code class="language-plaintext highlighter-rouge">did:op:</code></strong></a></h3>
+<h6 id="for-ocean-protocol-by-ocean-protocol">For Ocean Protocol, by Ocean Protocol</h6>
+
+<blockquote>
+  <p><strong>Requirements are:</strong></p>
+  <ul>
+    <li>The DID resolving capabilities MUST be exposed in the client libraries, enabling to resolve a DDO directly in a totally transparent way</li>
+    <li>ASSETS are DATA objects describing RESOURCES under control of a PUBLISHER</li>
+    <li>KEEPER stores on-chain only the essential information about ASSETS</li>
+    <li>PROVIDERS store the ASSET metadata off-chain</li>
+    <li>KEEPER doesn’t store any ASSET metadata</li>
+    <li>OCEAN doesn’t store ASSET contents (e.g. files)</li>
+    <li>An ASSET is modeled in OCEAN as on-chain information stored in the KEEPER and metadata stored in OCEANDB</li>
+    <li>ASSETS on-chain information only can be modified by OWNERS or DELEGATED USERS</li>
+    <li>ASSETS can be resolved using a Decentralized ID (DID) included on-chain and off-chain</li>
+    <li>A DID Document (DDO) should include the ASSET metadata</li>
+    <li>Any kind of object registered in Ocean SHOULD have a DID allowing one to uniquely identify that object in the system</li>
+    <li>ASSET DDO (and the metadata included as part of the DDO) is associated to the ASSET information stored on-chain using a common DID</li>
+    <li>A DID can be resolved to get access to a DDO</li>
+    <li>ASSET DDOs can be updated without updating the on-chain information</li>
+    <li>ASSET information stored in the KEEPER will include a checksum attribute</li>
+    <li>The ASSET on-chain checksum attribute SHOULD include a one-way HASH calculated using the DDO content</li>
+    <li>After the DDO resolving, the DDO HASH can be calculated off-chain to validate if the on-chain and off-chain information is aligned</li>
+    <li>A HASH not matching with the checksum on-chain means the DDO was modified without the on-chain update</li>
+    <li>The function to calculate the HASH MUST BE standard</li>
+  </ul>
+</blockquote>
+
+<h3 id="didjlinc"><a href="https://did-spec.jlinc.org/"><strong><code class="language-plaintext highlighter-rouge">did:jlinc:</code></strong></a></h3>
+<h6 id="for-jlinc-protocol-by-victor-grey">For JLINC Protocol, by Victor Grey</h6>
+
+<blockquote>
+  <p>JLINC is a protocol for sharing data protected by an agreement on the terms under which the data is being shared.</p>
+
+  <p>This document specifies methods for creating and editing Decentralized IDs (DIDs) suitable for use with the JLINC protocol. It conforms to the requirements specified in the DID specification currently published by the W3C Credentials Community Group.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>jlinc-did = "did:jlinc:" id-string
+id-string = 1* idchar
+idchar    = ALPHA / DIGIT / "-" / "_"
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didion"><a href="https://github.com/decentralized-identity/ion-did-method"><strong><code class="language-plaintext highlighter-rouge">did:ion:</code></strong></a></h3>
+<h6 id="for-bitcoin-by-various-dif-contributors">For Bitcoin, by Various DIF contributors</h6>
+
+<blockquote>
+  <p>ION is a public, permissionless, Decentralized Identifier (DID) network that implements the blockchain-agnostic Sidetree protocol on top of Bitcoin (as a ‘Layer 2’ overlay) to support DIDs/DPKI (Decentralized Public Key Infrastructure) at scale.</p>
+
+  <p>IMPORTANT NOTE: The majority of ION’s code is developed under the blockchain-agnostic Sidetree protocol’s repo: <a href="https://github.com/decentralized-identity/sidetree">https://github.com/decentralized-identity/sidetree</a>, which this project uses internally with the code required to run the protocol on Bitcoin, as the ION network.</p>
+
+  <p><strong>Key Points:</strong></p>
+  <ul>
+    <li>ION is public and permissionless - the system is decentralized, no company, organization, or group owns/controls the identifiers and DPKI entries in the system, and no one dictates who can participate.</li>
+    <li>ION doesn’t introduce new tokens/coins - Bitcoin is the only unit of value relevant in the operation of the on-chain aspects of the ION network.</li>
+    <li>ION is not a sidechain or consensus system - the network nodes do not require any additional consensus mechanism.</li>
+  </ul>
+</blockquote>
+
+<h3 id="didjolo"><a href="https://github.com/jolocom/jolo-did-method/blob/master/jolocom-did-method-specification.md"><strong><code class="language-plaintext highlighter-rouge">did:jolo:</code></strong></a></h3>
+<h6 id="for-ethereum-by-jolocom">For Ethereum, by Jolocom</h6>
+
+<blockquote>
+  <p>The Jolocom distributed identity system aims to provide a secure, robust and flexible implementation of the DID and Verifiable Claims specifications published by the W3C and the Decentralised Identity Foundation. It’s core technologies are the Ethereum blockchain and the Interplanetary File System (IPFS).</p>
+
+  <p>The Jolocom DID method uses IPFS as a decentralised CAS layer for DID Documents. A deployed smart contract provides a mapping from a DID to an IPFS hash address of the corrosponding DID Document. This enables DID Documents on IPFS to be effectively addressed via their DIDs.</p>
+
+  <p>Jolocom DIDs are identifiable by their did:jolo: method string and conform to the <a href="https://w3c-ccg.github.io/did-spec/#the-generic-did-scheme">Generic DID Scheme</a>.</p>
+</blockquote>
+
+<h3 id="didbryk"><a href="https://github.com/bryk-io/did-method/blob/master/README.md"><strong><code class="language-plaintext highlighter-rouge">did:bryk:</code></strong></a></h3>
+<h6 id="for-bryk-by-marcos-allende-sandra-murcia-flavia-munhoso-ruben-cessa">For bryk, by Marcos Allende, Sandra Murcia, Flavia Munhoso, Ruben Cessa</h6>
+
+<blockquote>
+  <p>The method specification provides all the technical considerations, guidelines and recommendations produced for the design and deployment of the DID method implementation. The document is organized in 3 main sections.</p>
+
+  <ul>
+    <li>DID Schema. Definitions and conventions used to generate valid identifier instances.</li>
+    <li>DID Document. Considerations on how to generate and use the DID document associated with a given identifier instance.</li>
+    <li>Agent Protocol. Technical specifications detailing how to perform basic network operations, and the risk mitigation mechanisms in place, for tasks such as:
+      <ul>
+        <li>Publish a new identifier instance.</li>
+        <li>Update an existing identifier instance.</li>
+        <li>Resolve an existing identifier and retrieve the latest published version of its DID Document.</li>
+      </ul>
+    </li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p><strong>Schema</strong></p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did                = "did:" method-name ":" method-specific-id
+method-name        = 1*method-char
+method-char        = %x61-7A / DIGIT
+method-specific-id = *idchar *( ":" *idchar )
+idchar             = ALPHA / DIGIT / "." / "-" / "_"
+did-url            = did *( ";" param ) path-abempty [ "?" query ]
+                     [ "#" fragment ]
+param              = param-name [ "=" param-value ]
+param-name         = 1*param-char
+param-value        = *param-char
+param-char         = ALPHA / DIGIT / "." / "-" / "_" / ":" /
+                     pct-encoded
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:example:123456789abcdefghi
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>Expanding on the previous definitions the bryk DID Method specification use the following format.</p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did                = "did:bryk:" [tag ":"] specific-idstring
+tag                = 1*tagchar
+specific-idstring  = depends on the particular use case
+tagchar            = ALPHA / DIGIT / "." / "-"
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didpeer"><a href="https://identity.foundation/peer-did-method-spec/"><strong><code class="language-plaintext highlighter-rouge">did:peer:</code></strong></a></h3>
+<h6 id="for-peer-2-peer-by-daniel-hardman">For Peer 2 Peer, by Daniel Hardman</h6>
+
+<blockquote>
+  <p>Most documentation about decentralized identifiers (DIDs) describes them as identifiers that are rooted in a public source of truth like a blockchain, a database, a distributed filesystem, or similar. This publicness lets arbitrary parties resolve the DIDs to an endpoint and keys. It is an important feature for many use cases.</p>
+
+  <table>
+    <tbody>
+      <tr>
+        <td>However, the vast majority of relationships between people, organizations, and things have simpler requirements. When Alice(Corp</td>
+        <td>Device) and Bob want to interact, there are exactly and only 2 parties in the world who should care: Alice and Bob. Instead of arbitrary parties needing to resolve their DIDs, only Alice and Bob do. Peer DIDs are perfect in these cases. In many ways, peer DIDs are to public, blockchain-based DIDs what Ethereum Plasma or state channels are to on-chain smart contracts— or what Bitcoin’s Lightning Network is to on-chain cryptopayments. They move the bulk of interactions off-chain, but offer options to connect back to a chain-based ecosystem as needed. Peer DIDs create the conditions for people, organizations and things to have full control of their end of the digital relationships they sustain.</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h3 id="didselfkey"><a href="https://github.com/SelfKeyFoundation/selfkey-identity/blob/develop/DIDMethodSpecs.md"><strong><code class="language-plaintext highlighter-rouge">did:selfkey:</code></strong></a></h3>
+<h6 id="for-ethereum-by-selfkey">For Ethereum, by SelfKey</h6>
+
+<blockquote>
+  <p>The following document defines a DID method for the SelfKey Identity platform. Although this method provides support to the SelfKey ecosystem and its related applications, the underlying DID platform is fully decentralized, and it’s designed to serve as a DID layer for other systems that might find it valuable.</p>
+
+  <p>The following specifications are subject to change in the future, yet they MUST comply with the latest version of the <a href="https://w3c-ccg.github.io/did-spec/">generic DID specs</a> as specified by the W3C Credentials Community Group.</p>
+
+  <p>The functionality for this method is provided by the DIDLedger smart contract found in <a href="https://github.com/SelfKeyFoundation/selfkey-identity">this repository</a>.</p>
+</blockquote>
+
+<h3 id="didmeta"><a href="https://github.com/METADIUM/meta-DID/blob/master/doc/DID-method-metadium.md"><strong><code class="language-plaintext highlighter-rouge">did:meta:</code></strong></a></h3>
+<h6 id="for-metadium-by-metadium-foundation">For Metadium, by Metadium Foundation</h6>
+
+<blockquote>
+  <p>Metadium is the next-generation identity system powered by blockchain technology. Metadium Decentralized Identifiers is a distributed identifier designed to provide a way for a community connected to the Metadium Ecosystem to uniquely identify an individual, organization, or digital device. The role of a Metadium DID is to provide a service that supports user-authentication and personal information verification.</p>
+
+  <p>The Metadium DID method specification conforms to the requirements specified in the DID specification [1], currently published by the W3C Credentials Community Group. For more information about DIDs and DID method specifications, please see the DID Primer [2]</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>meta-did = "did:meta:" + meta-specific-idstring
+meta-specific-idstring = meta-network + ":" + MIN
+meta-network = "mainnet" | "testnet"
+meta-address = 40*HEXDIG
+</code></pre></div>  </div>
+  <p>The MIN is case-insensitive, but it is recommended to use mixed-case checksum for address encoding (see [3]).</p>
+</blockquote>
+
+<h3 id="didtys"><a href="https://github.com/chainyard-tys/tys/blob/master/README.md"><strong><code class="language-plaintext highlighter-rouge">did:tys:</code></strong></a></h3>
+<h6 id="for-did-specification-by-chainyard">For DID Specification, by Chainyard</h6>
+
+<blockquote>
+  <p>“Trust Your Supplier” aka “TYS” is actively in development at Chainyard, a leading Blockchain development firm located in RTP North Carolina. The network is undergoing beta testing and will go live in the next couple of months.</p>
+
+  <p>The TYS network is a cross industry source of supplier information and identity helping to simplify and accelerate the onboarding and lifecycle management process. TYS is a fit-for-purpose blockchain optimized for sharing supplier credentials in a supply chain environment. TYS DIDs may be used by Suppliers, Buyers, Verifiers, Banks and other organizations to establish identities for verifiable claims made by any party.</p>
+
+  <p>TYS is implemented on Hyperledger Fabric, a permissioned blockchain technology under the Linux Foundation’s Hyperledger Project. The “Smart Contract” Functions are written in “Golang” and all client APIs are provided as REST APIs written in “Javascript” running on “NodeJS.</p>
+</blockquote>
+
+<h3 id="didgit"><a href="https://github.com/dhuseby/did-git-spec/blob/master/did-git-spec.md"><strong><code class="language-plaintext highlighter-rouge">did:git:</code></strong></a></h3>
+<h6 id="for-did-specification-by-internet-identity-workshop">For DID Specification, by Internet Identity Workshop</h6>
+
+<blockquote>
+  <p>The Git revision control tool is designed to function in a decentralized peer-to-peer fashion to facilitate collaboration in the frequently-disconnected world. Git uses a directed acyclic graph (DAG) of commits that represent the changes to the folders and files in the repository. Because it uses blockchain-like hash-linking of commits, Git is effectively a blockchain and distributed ledger with the patch review and merge process functioning as the consensus mechanism. This makes it a great tool for tracking the provenance of data inside the repository. Git also records the author and other meta data such as digital signatures with each commit linking identity of committers to each commit. Git repos therefore contain all of the information needed to serve as the single source of truth for the provenance of the data it contains and the identities of the contributors that created it.</p>
+</blockquote>
+
+<h3 id="didtangle"><a href="https://github.com/TangleID/TangleID/blob/develop/did-method-spec.md"><strong><code class="language-plaintext highlighter-rouge">did:tangle:</code></strong></a></h3>
+<h6 id="for-iota-tangle-by-biilabs-co-ltd">For IOTA Tangle, by BiiLabs Co., Ltd.</h6>
+
+<blockquote>
+  <p>IOTA is a public distributed ledger that utilizes an invention called the Tangle at its core, address scalability issues and having no transaction fee, that encourages adoption of the technology in the industry. TangleID is intended to implement DIDs and DID Documents.</p>
+
+  <p>TangleID also optimizes MAM for key management and related features across the Tangle. Masked Authenticated Messaging (MAM) is a data communication protocol which adds functionality to broadcast and access data streams over the Tangle which adds integrity to these message streams. The owner of seed in MAM is able to create a channel structure like above to transfer the messages. TangleID stores and manages corresponding DID Documents on the MAM channels, and use the initial channel id as the DID’s idstring, each revision of the DID document is recorded on the message of the endpoint afterward.</p>
+</blockquote>
+
+<h3 id="didemtrust"><a href="https://github.com/Halialabs/did-spec/blob/gh-pages/readme.md"><strong><code class="language-plaintext highlighter-rouge">did:emtrust:</code></strong></a></h3>
+<h6 id="for-hyperledger-fabric-by-halialabs-pte-ltd">For Hyperledger Fabric, by Halialabs Pte Ltd.</h6>
+
+<blockquote>
+  <p>The Emtrust DID method utilizes Hyperledger fabric as the DLT implementation, having an identity channel which is shared among the identity nodes with participating organizations. The DID document along with metadata of third party endorsements resides on ledger and the private information of users are kept on the mobile or persona devices which never leaves the device. The Interaction of DID and blockchain ledger happens via the API servers hosted by any participating organizations.</p>
+</blockquote>
+
+<h3 id="didttm"><a href="https://github.com/TokenTM/TM-DID/blob/master/docs/en/DID_spec.md"><strong><code class="language-plaintext highlighter-rouge">did:ttm:</code></strong></a></h3>
+<h6 id="for-tmchain-by-tokentm">For TMChain, by Token.TM</h6>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:ttm:0xe32df42865e97135acfb65f3bae71bdc86f4d49150ad6a440b6f15878109880a
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>&lt;32 byte hexadecimal string&gt; corresponds to keccak256 and the hash value of Ethereum address connected by random numbers generated in the DID contract.</p>
+
+  <p>DID is registered in the contract and controlled by a single Ethereum address, which is set by default to the address where the createDID method was originally called. Then, this address can transfer control to a different address, or update/delete the corresponding DID in the contract.</p>
+</blockquote>
+
+<blockquote>
+  <p>The DID ledger is implemented as a simple layer of persistent identity registration on the Ethereum blockchain network. Meanwhile it can be extended to contain other data and functions. Scalability is achieved by using an identity contract as a controller for DID on the ledger. In particular, ERC725 combined with private key management contract, for example, ERC734 is expected to involve additional features with common conditions (such as defines service endpoint, private key rotation, delegation and licensing, etc.). At the meantime, it gives the permit of exploiting other standards, and even allows the owner of DID to transforms contract implementation to another without losing its identifier.</p>
+</blockquote>
+
+<h3 id="didwlk"><a href="https://weelink-team.github.io/weelink/DIDDesignEn"><strong><code class="language-plaintext highlighter-rouge">did:wlk:</code></strong></a></h3>
+<h6 id="for-weelink-network-by-weelink">For Weelink Network, by Weelink</h6>
+
+<blockquote>
+  <p>Weelink DID is a new blockchain-based authentication method that follows all the requirements of W3C. Based on Weelink Wallet, our method provides a series of APIs and services for a fast and secure authentication process.</p>
+
+  <p>The rapid development of Internet has provided unparalled convenience to the public, yet it is also inevitably bringing some potential problems. One of them is the leaking of private information that comes with traditional authentication systems. Taking advantage of blockchain’s decentralization and security characteristics, we thus propose our secure authentication method.</p>
+</blockquote>
+
+<h3 id="didpistis"><a href="https://github.com/uino95/ssi/blob/consensys/dashboard/server/pistis/pistis-did-resolver/README.md"><strong><code class="language-plaintext highlighter-rouge">did:pistis:</code></strong></a></h3>
+<h6 id="for-ethereum-by-andrea-taglia-matteo-sinico">For Ethereum, by Andrea Taglia, Matteo Sinico</h6>
+
+<blockquote>
+  <p>This specification defines how Pistis deals with DID and DID Documents and how it interacts with the Ethereum blockchain. Also CRUD operations on DID documents are described. This specification confirms to the requirements specified in the DID specification[1] currently published by the W3C Credentials Community Group.</p>
+
+  <p>Pistis is a credential management system based on the Ethereum blockchain. It provides a set of novel smart contracts to handle efficient multi signature operations, delegates management, permissioned access to extensible services based upon the Decentralized IDentifier specification.</p>
+</blockquote>
+
+<h3 id="didholo"><a href="https://github.com/WebOfTrustInfo/rwot9-prague/blob/master/draft-documents/did:hc-method.md"><strong><code class="language-plaintext highlighter-rouge">did:holo:</code></strong></a></h3>
+<h6 id="for-holochain-by-holohost">For Holochain, by Holo.Host</h6>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>holo-did = "did:holo:" holo-specific-idstring
+holo-specific-idstring = [ holo-network  ":" ] holo-address
+holo-network  = "mainnet" / "testnet"
+holo-address  = (Hex-encoded smart contract address)
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>All transactions on Holochain are signed by a user’s key. Therefore, by learning a holo DID, an observer/attacker is able to link the user’s Holochain activities with potential DID-based applications such as DID Auth or Verifiable Credentials. Users should be aware that he/she can publish their own data associated with their public key on a specific Holochain network.</p>
+</blockquote>
+
+<h3 id="didweb"><a href="https://github.com/w3c-ccg/did-method-web"><strong><code class="language-plaintext highlighter-rouge">did:web:</code></strong></a></h3>
+<h6 id="for-web-by-oliver-terbu-mike-xu-dmitri-zagidulin-amy-guy">For Web, by Oliver Terbu, Mike Xu, Dmitri Zagidulin, Amy Guy</h6>
+
+<blockquote>
+  <p>The target system of the Web DID method is the web host that the domain name described by the DID resolves to when queried through the Domain Name System (DNS).</p>
+</blockquote>
+
+<blockquote>
+  <p>The method specific identifier MUST match the common name used in the SSL/TLS certificate, and it MUST NOT include IP addresses or port numbers. Directories and subdirectories MAY optionally be included, delimited by colons rather than slashes.</p>
+
+  <p>web-did = “did:web:” domain-name
+web-did = “did:web:” domain-name * (“:” path)</p>
+
+  <p><strong>EXAMPLE 2: Example Web Method DIDs</strong></p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:web:w3c-ccg.github.io
+
+did:web:w3c-ccg.github.io:user:alice
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didio"><a href="https://github.com/iotexproject/iotex-did/blob/master/README.md"><strong><code class="language-plaintext highlighter-rouge">did:io:</code></strong></a></h3>
+<h6 id="for-iotex-by-iotex-foundation">For IoTeX, by IoTeX Foundation</h6>
+
+<blockquote>
+  <p>Our DID design allows each manufacture or entity to have its own namespace, which stores and manages DIDs through a self-managed DID contract. A self-managed contract could have customized business logic to adapt the application’s needs but has to implement the SelfManagedDID interface, defined as follows:</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>interface SelfManagedDID {
+    function createDID(string id, bytes32 hash, string uri) public returns (string);
+    function deleteDID(string did) public;
+    function updateHash(string did, bytes32 hash) public;
+    function updateURI(string did, string uri) public;
+    function getHash(string did) public view returns (bytes32);
+    function getURI(string did) public view returns (string);
+}
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didvaultie"><a href="https://github.com/vaultie/vaultie-did-method/blob/master/vaultie-did-method-specification.md"><strong><code class="language-plaintext highlighter-rouge">did:vaultie:</code></strong></a></h3>
+<h6 id="for-ethereum-by-vaultie-inc">For Ethereum, by Vaultie Inc.</h6>
+
+<blockquote>
+  <p>Vaultie DID method uses IPFS as a decentralised storage for DID Documents. An Ethereum transaction, that does not require any additional Smart Contracts, provides a mapping from a DID to an IPFS hash address of the corrosponding DID Document. This enables DID Documents on IPFS to be effectively addressed via their DIDs. While this method requires additional step in order to lookup DID Document, the method is much more cost effective than using Smart Contracts and Ethereum’s expensive storage.</p>
+</blockquote>
+
+<h3 id="didmoac"><a href="https://github.com/DavidRicardoWilde/moac-did/blob/master/did-moac-method.md"><strong><code class="language-plaintext highlighter-rouge">did:moac:</code></strong></a></h3>
+<h6 id="for-moac-by-moac-blockchain-tech-inc">For MOAC, by MOAC Blockchain Tech, Inc.</h6>
+
+<blockquote>
+  <p>The MOAC DID method uses MOAC blockchain as a decentralized storage layer for DID Documents. A deployed smart-contract provides a mapping from a DID to an MOAC blockchain hash address of the corrosponding DID Document. This enables DID Documents on MOAC blockchain to be effectively addressed via their DIDs.</p>
+</blockquote>
+
+<h3 id="didomn"><a href="https://github.com/OmniOneID/did_method/blob/master/did_method.md"><strong><code class="language-plaintext highlighter-rouge">did:omn:</code></strong></a></h3>
+<h6 id="for-omnione-by-omnione">For OmniOne, by OmniOne</h6>
+
+<blockquote>
+  <p>OmniOne is a decentralized network system for Self-Sovereign identity and Verifiable Claims. It can replace a legacy centralized credential system that with trusted blockchain node. In the OmniOne system, several types of certificates are issued. DID(Decentralized Identifiers) is used as the unique identifier of the certificate. Also DID allows to obtain public key information for secure exchange of information between users.</p>
+</blockquote>
+
+<h3 id="didwork"><a href="https://workday.github.io/work-did-method-spec/"><strong><code class="language-plaintext highlighter-rouge">did:work:</code></strong></a></h3>
+<h6 id="for-hyperledger-fabric-by-workday-inc">For Hyperledger Fabric, by Workday, Inc.</h6>
+
+<blockquote>
+  <p>Workday offers a decentralized Credentialing Platform with a Blockchain based trust layer. A key component of the platform is the WayTo by Workday mobile app which allows the user to store verifiable identity documents, encrypted using their own personal encryption key, which is managed in the Trusted Execution Environment (TEE) of their mobile device. The mobile app can hold official documents, training certifications, verified accomplishments and other credentials. The user can choose what to share, and with whom to share it with. Users of the Workday Credentialing Platform will have a DID and a corresponding DID Document on a permissioned ledger, which credential verifiers can use to validate users’ cryptographic signatures, included in their credentials.</p>
+</blockquote>
+
+<h3 id="didvid"><a href="https://github.com/vpayment/did-method-spec/blob/master/vid.md"><strong><code class="language-plaintext highlighter-rouge">did:vid:</code></strong></a></h3>
+<h6 id="for-vp-by-vp-inc">For VP, by VP Inc.</h6>
+
+<blockquote>
+  <p>The system aims to provide secure authentication and various payment services based on the DID and Verifiable Claims specificiatons published by the W3C and the Decentralised Identity Foundation. VP DID is a decentralized identifier devised to provide a way to uniquely identify a person, an organization. VP DID document contains information for providing various payment methods among network participants in a decentralized way. This specification defines how VP blockchain stores DIDs and DID documents, and how to do CRUD operations on DID documents.</p>
+</blockquote>
+
+<blockquote>
+  <p>The namestring that shall identify this DID method is: vp. A DID that uses this method MUST begin with the following prefix: did:vp. Per the DID specification, this string MUST be in lowercase. The remainder of the DID, after the prefix, is specified below.</p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did                 = "did:" method-name ":" method-specific-id
+method-name         = vid
+method-specific-id  = 40*HEXDIGIT
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didccp"><a href="https://did.baidu.com/did-spec/"><strong><code class="language-plaintext highlighter-rouge">did:ccp:</code></strong></a></h3>
+<h6 id="for-quorum-by-baidu-inc">For Quorum, by Baidu, Inc.</h6>
+
+<blockquote>
+  <p>Application scenarios:</p>
+
+  <ul>
+    <li>Digital identity</li>
+    <li>Joint member key customer system</li>
+    <li>Financial KYC</li>
+    <li>Exchange</li>
+    <li>Smart City</li>
+    <li>IoT deviceless identity management</li>
+  </ul>
+
+  <p>Program features:</p>
+
+  <p>Building a decentralized ID system based on blockchain and consortium chains will have almost equal control over the system and enhance cooperation intentions.
+Blockchain asymmetric encryption technology combines public and private keys to ensure the authenticity and reliability of ID and certification.
+Form a richer user portrait, with multiple tags (VIP authentication, privilege authentication, asset authentication…) and one ID.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:ccp:1FsbKR6UpV6GW8o8szccdxXkquzTg2VZLL
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>Where <code class="language-plaintext highlighter-rouge">&lt;method-specific-id&gt;</code> = <code class="language-plaintext highlighter-rouge">base58(ripemd160(sha256(&lt;Base DID Document&gt;)))</code> (Refer to Bitcoin, use double hash).</p>
+</blockquote>
+
+<h3 id="didjnctn"><a href="https://github.com/jnctn/did-method-spec/"><strong><code class="language-plaintext highlighter-rouge">did:jnctn:</code></strong></a></h3>
+<h6 id="for-jnctn-network-by-jnctn-limited">For Jnctn Network, by Jnctn Limited</h6>
+
+<blockquote>
+  <p>The system provides secure credential management services based on the DID and Verifiable Claims specifications published by the W3C and the Decentralised Identity Foundation. JNCTN DID method enables an interoperability bridge between the worlds of centralized, federated, and decentralized identifiers with self soverign identity services. JNCTN DID document contains information for accessing JNCTN DID network methods, how JNCTN stores DIDs and DID documents, and how to do CRUD operations on JNCTN DID documents. This specification is intended to be conformant with the DID Specification at https://w3c-ccg.github.io/did-spec/.</p>
+</blockquote>
+
+<blockquote>
+  <p>The namestring that shall identify this DID method is: jnctn. A DID that uses this method MUST begin with the following prefix: did:jnctn. Per the DID specification, this string MUST be in lowercase. The remainder of the DID, after the prefix, is specified below.</p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did                 = "did:" method-name ":" method-specific-id
+method-name         = jnctn
+method-specific-id  = 36*HEXDIGIT
+
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didevan"><a href="https://github.com/evannetwork/evan.network-DID-method-specification/blob/master/evan_did_method_spec.md"><strong><code class="language-plaintext highlighter-rouge">did:evan:</code></strong></a></h3>
+<h6 id="for-evannetwork-by-evan-gmbh">For evan.network, by evan GmbH</h6>
+
+<blockquote>
+  <p>evan.network is a blockchain for digitalization and automation of business transactions. The network members create digital twins for their machines and products and develop standards for cross-company transactions. The open technology allows integration into existing business models. evan.network guarantees 100% reliable and permanently secured information.</p>
+
+  <p>This document specifies the DID method for evan.network, including how an evan.network DID is assembled, several sample documents, details about CRUD operations on DID, as well as security and privacy considerations, as required by the W3C DID specification. For more information regarding DID, please refer to the W3C DID working draft.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>evan-did = "did:evan:" evan-specific-identifier
+evan-specific-identifier = [ evan-network ":" ] evan-identifier
+evan-network = "core" / "testcore"
+evan-identifier = evan-account / evan-asset
+evan-account = "0x"20*HEXDIG
+evan-asset = "0x"32*HEXDIG
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didelastos"><a href="https://github.com/elastos/Elastos.DID.Method/blob/master/DID/Elastos-DID-Method-Specification_en.md"><strong><code class="language-plaintext highlighter-rouge">did:elastos:</code></strong></a></h3>
+<h6 id="for-elastos-id-sidechain-by-elastos-foundation">For Elastos ID Sidechain, by Elastos Foundation</h6>
+
+<blockquote>
+  <p>DID is completely under the control of the DID subject, without reliance on any centralized registration body, commercial identity provider, or organization issuing certificates. The DID is described in the DID documents. Each DID document includes at least two items: encryption materials and verification methods. The encryption materials integrated with the verification methods provides a set of identify verification mechanisms (such as a public key, anonymous biological identification agreement, etc.), with other optional parts that can be used according to the needs of the application and of the user.</p>
+</blockquote>
+
+<blockquote>
+  <p>There are two goals for the creation of this specification. The first is to define an internal Elastos system standard for the DID documents description format and a basic DID property set, allowing Elastos ecosystem apps to understand the basic digital identity information defined in the standard set, thereby achieving standardization of digital identities in the Elastos ecosystem. The secondary goal is to define a set of general operation methods that can be used for any dApp to reference to the Elastos DID service.</p>
+</blockquote>
+
+<h3 id="didkilt"><a href="https://github.com/KILTprotocol/kilt-did-driver/blob/master/DID%20Method%20Specification.md"><strong><code class="language-plaintext highlighter-rouge">did:kilt:</code></strong></a></h3>
+<h6 id="for-kilt-blockchain-by-botlabs-gmbh">For KILT Blockchain, by BOTLabs GmbH</h6>
+
+<blockquote>
+  <p>KILT DIDs are stored on KILT Protocol’s blockchain that is public and by definition decentralized. The KILT Blockchain runs in a proof-of-authority manner and will become permissionless, see <code class="language-plaintext highlighter-rouge">§ Status of this document</code> in this specification document.</p>
+
+  <p>KILT Blockchain nodes implement a DID module to create, store, query and manage DIDs in the form of on-chain DID items. A DID item is a mapping between the DID owner’s public address and its public signature key <code class="language-plaintext highlighter-rouge">sign_key</code>, its public encryption key <code class="language-plaintext highlighter-rouge">box_key</code>, and an optional location for the associated DID Document <code class="language-plaintext highlighter-rouge">doc_ref</code>:</p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>owner =&gt; (sign_key, box_key, doc_ref)
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didelem"><a href="https://github.com/decentralized-identity/element/blob/master/docs/did-method-spec/spec.md"><strong><code class="language-plaintext highlighter-rouge">did:elem:</code></strong></a></h3>
+<h6 id="for-element-did-by-transmute">For Element DID, by Transmute</h6>
+
+<blockquote>
+  <p>Element is an implementation of the Sidetree protocol that uses the Ethereum blockchain as the ledger layer and IPFS as the Content-addressable storage layer</p>
+</blockquote>
+
+<blockquote>
+  <p>A DID that uses this method MUST begin with the following prefix: did:elem. Per the DID specification, this string MUST be in lowercase.</p>
+
+  <p>An additional optional network specific identifier may be added as such</p>
+
+  <ul>
+    <li><code class="language-plaintext highlighter-rouge">did:elem:ropsten:EiBOWH8368BI9NSaVZTmtxuqwpfN9NwAwy4Z95_VCl6A9g</code></li>
+    <li><code class="language-plaintext highlighter-rouge">did:elem:mainnet:EiBOWH8368BI9NSaVZTmtxuqwpfN9NwAwy4Z95_VCl6A9g</code></li>
+    <li>
+<code class="language-plaintext highlighter-rouge">did:elem:EiBOWH8368BI9NSaVZTmtxuqwpfN9NwAwy4Z95_VCl6A9g</code>
+By default, if the network specific identifier is not present, then the default is ropsten. The default may change in the future once mainnet is supported.</li>
+  </ul>
+
+  <p>The remainder of a DID after the prefix, called the did unique suffix, MUST be SHA256 hash of the encoded create payload (see below)</p>
+</blockquote>
+
+<h3 id="didgithub"><a href="https://docs.github-did.com/did-method-spec/"><strong><code class="language-plaintext highlighter-rouge">did:github:</code></strong></a></h3>
+<h6 id="for-github-by-transmute">For Github, by Transmute</h6>
+
+<blockquote>
+  <p>The <code class="language-plaintext highlighter-rouge">github</code> method is meant to make working with DIDs very simple at the cost of trusting Github.com for assisting in resolving DID Documents.</p>
+
+  <p>Many developers are familar with Github, and its 2 supported public key cryptosystems, GPG and SSH.</p>
+
+  <p>Linked Data Signatures are difficult to work with when operating a server or running a local node of some distributed system / blockchain is a requirement.</p>
+
+  <p>The objective of GitHub DID is to encourage contribution to the DID Spec and Linked Data Signatures, and allow rapid development of extensions to these without requiring the use of slow, or complicated more trustless infrastructure, such as blockchains or other distributed systems.</p>
+</blockquote>
+
+<h3 id="didbid"><a href="https://github.com/teleinfo-bif/bid/tree/master/doc/en"><strong><code class="language-plaintext highlighter-rouge">did:bid:</code></strong></a></h3>
+<h6 id="for-bif-by-teleinfo-caict">For bif, by teleinfo caict</h6>
+
+<blockquote>
+  <p>BID provides distributed identifiers and blockchain-based digital identity services for people, enterprises, devices and digital objects. It aims to build a decentralized, data-secure, privacy-protected and flexible identifier system that addresses trusted connections among people, enterprises, devices and digital objects，enabling the vision of the Internet of Things and trust ingress with everything.</p>
+
+  <p>BID is built on decentralized identification protocols and equipped with characters like decentralization, self-management, privacy protection, security and ease of use. Each BID links to one BIF DID Description Object (DDO).</p>
+</blockquote>
+
+<h3 id="didptn"><a href="https://github.com/palletone/palletone-DID/blob/master/docs/did-method/README.md"><strong><code class="language-plaintext highlighter-rouge">did:ptn:</code></strong></a></h3>
+<h6 id="for-palletone-by-palletone">For PalletOne, by PalletOne</h6>
+
+<blockquote>
+  <p>Description of each field in the Base DID Document example (★ required fields, others are optional fields):</p>
+
+  <ul>
+    <li>★ <code class="language-plaintext highlighter-rouge">context</code> A single value or an array, specifying the syntax standard that the DID Document format complies with.</li>
+    <li>
+<code class="language-plaintext highlighter-rouge">controller</code> Single value or array, other owners of DID Document. You can specify other DIDs to manage the file, and the permissions of other DIDs will be set in the corresponding operations authentication, updation, deletion, and recovery later. The default is controlled by the DID in the DID Document corresponding to the Base DID Document.</li>
+    <li>★ <code class="language-plaintext highlighter-rouge">publicKey</code> A single value or an array that controls the public key information corresponding to the private key of the DID Document.
+      <ul>
+        <li>★ <code class="language-plaintext highlighter-rouge">id</code> The ID of the public key, <code class="language-plaintext highlighter-rouge">#keys-&lt;num&gt;</code> expressed in a unified way, incremented <code class="language-plaintext highlighter-rouge">&lt;num&gt;</code> from the <code class="language-plaintext highlighter-rouge">1</code> beginning.</li>
+        <li>★ <code class="language-plaintext highlighter-rouge">type</code> The algorithm of public key generation is unified with the chain,</li>
+        <li>
+<code class="language-plaintext highlighter-rouge">controller</code> The owner of the public key <code class="language-plaintext highlighter-rouge">controller</code> corresponds to the one in the previous level. The format is <code class="language-plaintext highlighter-rouge">&lt;DID&gt;#keys-&lt;num&gt;</code>. The default situation is controlled by the document DID. <code class="language-plaintext highlighter-rouge">&lt;DID&gt;</code> The value on the stage controller, a <code class="language-plaintext highlighter-rouge">#keys-&lt;num&gt;</code> is <code class="language-plaintext highlighter-rouge">&lt;DID&gt;</code> a corresponding public key <code class="language-plaintext highlighter-rouge">id</code>.</li>
+        <li>
+<code class="language-plaintext highlighter-rouge">publicKeyHex</code> Hexadecimal information of the public key. When the above controller is the default, this field is <strong>required</strong>.</li>
+      </ul>
+    </li>
+    <li>★ <code class="language-plaintext highlighter-rouge">authentication</code> Specify <code class="language-plaintext highlighter-rouge">publicKey</code> which fields can be used for authentication.</li>
+    <li>
+<code class="language-plaintext highlighter-rouge">updation</code> Specify <code class="language-plaintext highlighter-rouge">publicKey</code> which fields can be used for DID Document <strong>update</strong> operations, such as updating information such as pubkey or service.</li>
+    <li>
+<code class="language-plaintext highlighter-rouge">deletion</code> Specify <code class="language-plaintext highlighter-rouge">publicKey</code> which fields can be used for DID Document <strong>delete</strong> operation.</li>
+    <li>
+<code class="language-plaintext highlighter-rouge">recovery</code> Specify <code class="language-plaintext highlighter-rouge">publicKey</code> which fields can be used for DID Document <strong>recovery</strong> operations.</li>
+  </ul>
+</blockquote>
+
+<h3 id="didecho"><a href="https://github.com/echoprotocol/uni-resolver-driver-did-echo/blob/master/echo_did_specifications.md"><strong><code class="language-plaintext highlighter-rouge">did:echo:</code></strong></a></h3>
+<h6 id="for-echo-by-echo-technological-solutions-llc">For Echo, by Echo Technological Solutions LLC</h6>
+
+<blockquote>
+  <p>We propose a new DID method that allows special objects in ECHO network to be treated as valid DIDs.</p>
+</blockquote>
+
+<blockquote>
+  <p>Method Specific Identifier
+The method specific identifier is composed of network type and id of object at ECHO network.</p>
+
+  <p>Network type can be ‘0’ for mainnet, ‘1’ for testnet and ‘2’ for devnet. Next goes triplet of numbers devided by points: id of object at ECHO network.</p>
+
+  <p>Note: if it’s not one of this networks, value will be ‘255’.</p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>echo-did = "did:echo:" echo-specific-idstring
+echo-specific-idstring = [ echo-network  ":" ] echo-object-id
+echo-network  = "0" / "1" / "2" / "255"
+echo-object-id  = 1*DIGIT "." 1*DIGIT "." 1*DIGIT
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didtrustbloc"><a href="https://github.com/trustbloc/trustbloc-did-method/blob/master/docs/spec/trustbloc-did-method.md"><strong><code class="language-plaintext highlighter-rouge">did:trustbloc:</code></strong></a></h3>
+<h6 id="for-hyperledger-fabric-by-securekey">For Hyperledger Fabric, by SecureKey</h6>
+
+<blockquote>
+  <p>The did:trustbloc DID method allows groups of independent entities to share custody of a DID registry consisting of a Sidetree implementation over a permissioned ledger. For more information on Sidetree, please refer to the Sidetree protocol specification.</p>
+
+  <p>Independent stakeholders wishing to transact with one another using DIDs can come together to form a consortium to manage their shared custody of a ledger.</p>
+
+  <p>This spec defines a discovery service. The discovery service provided by the TrustBloc DID Method allows a client to verify that a consortium is endorsed by its constituent stakeholders, verify that the configuration files of each stakeholder (which includes a list of Sidetree endpoints) are signed by the respective stakeholders, and use the provided Sidetree endpoints to perform Sidetree DID operations.</p>
+</blockquote>
+
+<h3 id="didsan"><a href="https://github.com/Baasze/DID-method-specification"><strong><code class="language-plaintext highlighter-rouge">did:san:</code></strong></a></h3>
+<h6 id="for-san-cloudchain-by-ylz-inc">For SAN Cloudchain, by YLZ Inc.</h6>
+
+<blockquote>
+  <p>The system aims to provide secure authentication and various health services based on the SAN blockchain and DID &amp; Verifiable Credential Specifications published by the W3C.</p>
+</blockquote>
+
+<blockquote>
+  <p>The namestring that shall identify this DID method is: san</p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:san:&lt;method-specific-id&gt;
+
+did:san:abcdefgh1234
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didgatc"><a href="https://github.com/gatacaid/gataca-did-method"><strong><code class="language-plaintext highlighter-rouge">did:gatc:</code></strong></a></h3>
+<h6 id="for-ethereum-hyperledger-fabric-hyperledger-besu-alastria-by-httpsgatacaio">For Ethereum, Hyperledger Fabric, Hyperledger Besu, Alastria, by https://gataca.io/</h6>
+
+<blockquote>
+  <p>Gataca’s platform is based on a mobile identity portfolio, a set of APIs, and controllers for multiple blockchain networks.</p>
+
+  <p>Gataca is agnostic to the blockchain network. We adapt our infrastructure to the third party’s preferred ledger. Gataca currently supports the public network Ethereum and private networks based on Hyperledger Fabric, Hyperledger Besu or Quorum. Other networks may be added as requested.</p>
+
+  <p>This document provides the DID method specs for how our DID schema is implemented on the Ethereum network.</p>
+
+  <p>The simple structure links an object to a DID with states and public keys. Users do not need privileges to read the information on the blockchain but do need them to write. Gataca is the unique user that can modify the smart contract.</p>
+</blockquote>
+
+<h3 id="didfactom"><a href="https://github.com/factom-protocol/FIS/blob/master/FIS/DID.md"><strong><code class="language-plaintext highlighter-rouge">did:factom:</code></strong></a></h3>
+<h6 id="for-factom-by-sphereon-factomatic-factom-inc">For Factom, by Sphereon, Factomatic, Factom Inc</h6>
+
+<blockquote>
+  <p>This proposal contains the interoperability specifications for products creating, reading (resolving) updating and deactivating Decentralized Identifiers on top of the Factom Protocol. This specification is not about other products wanting to use DIDs for their specific purpose, like signing or voting. This document describes the low level data structures and rules for DIDs, DID documents, resolution and registration on Factom itself.</p>
+
+  <p>Decentralized Identifiers are a cross ledger solution to support self sovereign identities. The Factom Protocol is ideally suited to store DIDs. This specification is the first step in creating a single specification for maximum interoperability with regards to identities across products and solutions on top of the Factom Protocol.</p>
+</blockquote>
+
+<h3 id="didsignor"><a href="https://github.com/cryptonicsconsulting/signor-did-contracts/blob/master/did-method-spec.md"><strong><code class="language-plaintext highlighter-rouge">did:signor:</code></strong></a></h3>
+<h6 id="for-ethereum-hedera-hashgraph-quorum-hyperledger-besu-by-httpscryptonicsconsulting">For Ethereum, Hedera Hashgraph, Quorum, Hyperledger Besu, by https://cryptonics.consulting/</h6>
+
+<blockquote>
+  <p>This method shall be identified with the name sginor. A Signor DID has the following format:</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:signor:&lt;network&gt;:&lt;20 byte hexadecimal string&gt;
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>did:signor:mainet:0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+</code></pre></div>  </div>
+</blockquote>
+
+<blockquote>
+  <p>The &lt;20 byte hexadecimal string&gt; corresponds to an Ethereum address in the current implementation, but maybe abstracted to different identfiers when implemented on different networks.</p>
+
+  <p>The <network> string corresponds to human readable form of an distributed ledger capable of running Ethereum smart contracts, including the following:</network></p>
+</blockquote>
+
+<p><strong>Ethereum mainet</strong> • <strong>ropsten</strong> • <strong>rinkeby</strong> • <strong>Kovan</strong></p>
+
+<blockquote>
+  <p>DIDs are registered in the DID Registry on-chain, and have a controller and a subject, expressed in the form of Ethereum addresses. The DID controller may or may not be the subject itself. Multiple controllers can be implemented through proxy smart contracts.</p>
+</blockquote>
+
+<h3 id="didhedera"><a href="https://github.com/hashgraph/did-method/blob/master/did-method-specification.md"><strong><code class="language-plaintext highlighter-rouge">did:hedera:</code></strong></a></h3>
+<h6 id="for-hedera-hashgraph-by-hedera-hashgraph-swisscom-blockchain-ag">For Hedera Hashgraph, by Hedera Hashgraph, Swisscom Blockchain AG</h6>
+
+<blockquote>
+  <p>This document defines a binding of the Decentralized Identifier architecture to Hedera Hashgraph - specifically how to use the Hedera File Service to record membership in ‘business application networks’ (appnets) and how to use the Hedera Consensus Service (HCS) for CRUD mechanisms on DID documents stored in such business application network. An business application network is a network of computers that store some set of business data (such as DID Documents) in a shared state, and rely on the Hedera mainnet for timestamping and ordering the transactions that cause that business application network state to change. An business application network could be exclusively dedicated to managing DID Documents and other identity artifacts in its state, or it could itself be multi-purpose. For instance, a Supply Chain could establish an business application network and, in addition to using HCS for tracking the location of shipments, use the DID method defined here to manage the identities of the associated companies, employees, and IoT devices. The HCS model is designed to off load from the Hedera mainnet node the burden of disk writes and long term storage and so allow those nodes to be optimized for high throughput ordering of transactions.</p>
+</blockquote>
+
+<h3 id="didsirius"><a href="https://gitlab.com/proximax-enterprise/siriusid/sirius-id-specs/-/blob/master/docs/did-method-spec.md"><strong><code class="language-plaintext highlighter-rouge">did:sirius:</code></strong></a></h3>
+<h6 id="for-proximax-sirius-chain-by-proximax-enterprise-proximax-inc">For ProximaX Sirius Chain, by ProximaX Enterprise, Proximax Inc.</h6>
+
+<blockquote>
+  <p>ProximaX SiriusID is intended to implement <code class="language-plaintext highlighter-rouge">did:sirius</code> and its DID Document.</p>
+</blockquote>
+
+<blockquote>
+  <p>A DID that uses this method MUST begin with the following prefix: did:sirius. Per the DID specification, this string MUST be in lowercase. The remainder of the DID, after the prefix, is specified below.</p>
+</blockquote>
+
+<blockquote>
+  <p>The SiriusID DID schema is defined by the following:</p>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>siriusid-did = "did:sirius:" idstring
+
+idstring = base58(version,network-identifier,address)
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="diddock"><a href="https://github.com/docknetwork/dock-did-driver/blob/master/Dock%20DID%20method%20specification.md"><strong><code class="language-plaintext highlighter-rouge">did:dock:</code></strong></a></h3>
+<h6 id="for-dock-by-httpswwwdockio">For Dock, by https://www.dock.io/</h6>
+
+<blockquote>
+  <p>Currently, three public key and signing algorithms are supported for authentication.</p>
+</blockquote>
+
+<blockquote>
+  <ul>
+    <li>Schnorr signatures with Sr25519. The public key is 32 bytes and signature is 64 bytes in size. These are supported by Substrate and Polkadot.</li>
+    <li>EdDSA signatures with Ed25519 curve. The public key is 32 bytes and signature is 64 bytes in size.</li>
+    <li>ECDSA signatures with secp256k1 curve. Compressed public keys are used, hence the public key is 33 bytes in size. Signature is 65 bytes in size.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>Dock is currently running as a proof of authority network but will evolve into a proof of stake chain. DIDs can be created by anyone holding Dock tokens but the creator of the DID is not necessarily the owner of the DID and thus cannot manage (update, remove) them. DIDs are managed using their corresponding private keys and these keys are independent of keys controlling the Dock tokens spent while creating the DID.</p>
+
+  <p>The chain does not store the full DID document but only the DID, the corresponding keys and controllers and block number for the last update and this block number changes with each update to the DID. This is needed for replay protection. Dock’s client SDK retrieves those details and constructs the full DID document.</p>
+
+  <p>Currently, Dock supports registering a new DID with only one public key on chain. The key can be rotated by providing a signed message from the current key. The DID can be removed by providing a signed message from the current key. In future, multiple keys for authentication and authorization and other relevant W3C compliant features will be supported.</p>
+</blockquote>
+
+<h3 id="didtwit"><a href="https://did-twit.github.io/did-twit/"><strong><code class="language-plaintext highlighter-rouge">did:twit:</code></strong></a></h3>
+<h6 id="for-twit-by-httpsgithubcomdid-twitdid-twitblobmasterspecindexmd">For Twit, by https://github.com/did-twit/did-twit/blob/master/spec/index.md</h6>
+
+<blockquote>
+  <p>Twitter is a highly used and influential social media network that lacks decentralization and higher levels of trust (i.e. signed messages). The <code class="language-plaintext highlighter-rouge">did:twit</code> specification makes an attempt to increase trust in Twitter interactions.</p>
+
+  <p>The method is similar to <a href="https://w3c-ccg.github.io/did-method-key">did:key</a> in the sense that it is uses a <code class="language-plaintext highlighter-rouge">did</code> to wrap a single public key.</p>
+
+  <p>The objective of Twitter DID, similar to that of the <a href="https://github.com/decentralized-identity/github-did">GitHub DID Method</a>,  is to encourage use of the <a href="https://w3c-ccg.github.io/did-spec/">DID Spec</a>, by lowering the barrier to entry for use of the technology, and promote higher trust interactions.</p>
+</blockquote>
+
+<h3 id="didnear"><a href="https://github.com/ontology-tech/DID-spec-near/blob/master/NEAR/DID-Method-NEAR.md"><strong><code class="language-plaintext highlighter-rouge">did:near:</code></strong></a></h3>
+<h6 id="for-near-by-ontology-foundation">For NEAR, by Ontology Foundation</h6>
+
+<blockquote>
+  <p>NEAR uses readable account identifiers instead of a hash of a public key, and the accounts have some DID features, but not all. We have developed this specification to define a new DID method for hosting DIDs on the NEAR blockchain, also referred to as NEAR DID, and facilitate developers to work with related contracts.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>near-did   = "did:near:" near-specific-idstring
+near-specific-idstring = *( 1*idchar ".") 2*idchar
+idchar    = %x30-39 / %x61-7A / "-" / "_"
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didvaa"><a href="https://github.com/caict-develop-zhangbo/vaa-method/blob/master/README.md"><strong><code class="language-plaintext highlighter-rouge">did:vaa:</code></strong></a></h3>
+<h6 id="for-bif-by-china-academy-of-information-and-communications-technology-caict">For bif, by China Academy of Information and Communications Technology (CAICT)</h6>
+
+<blockquote>
+  <p>Blockchain Identifier Infrastructure (BIF) is a permissioned public blockchain aiming for creating a distributed trust management framework typical for internet ID service, and the BIF blockchain (http://bidspace.cn/) is governed by China Academy of Information and Communications Technology (CAICT). CAICT is also the official issuing agency with Issuing Agency Code (IAC)——”VAA”, given by ISO/IEC 15459. The IAC indicates an authorized qualification of distributing identifiers with own allocation rules.</p>
+
+  <p>As the “VAA” means a self-defined rule for internet identifiers, these letters could be literal used as a DID method name conformant with W3C DID specification. The VAA method is created not only to define a random identifier generation rules, but ultimately to create smart contracts, which support different identifiers format.</p>
+</blockquote>
+
+<h3 id="didbba"><a href="https://github.com/blobaa/bba-did-method-specification/blob/master/docs/markdown/spec.md"><strong><code class="language-plaintext highlighter-rouge">did:bba:</code></strong></a></h3>
+<h6 id="for-ardor-by-attila-aldemir">For Ardor, by Attila Aldemir</h6>
+
+<blockquote>
+  <p>The <code class="language-plaintext highlighter-rouge">bba</code> DID method aims to enable the Ardor blockchain to act as a DPKI within the SSI ecosystem. It runs on the independent IGNIS child chain and utilizes Ardors Account Properties feature to manage DIDs and corresponding DID controllers. The Account Properties feature provides the possibility to tag an account with a small amount of data (160 characters). A DID controller is always represented in form of an Ardor account and is by default separated from the public keys (if present) embedded in a DID document. Think of a master key controlling the DID operations create, update and deactivate. A DID controller always corresponds to exactly one Ardor account, whereas one Ardor account can control multiple DIDs.</p>
+
+  <p>DID and DID document handling is decoupled so that multiple DID document storages can be defined and integrated to store DID document templates (DID documents without a DID reference). In its current state, the <code class="language-plaintext highlighter-rouge">bba</code> DID method defines only one storage type (Ardor Cloud Storage).</p>
+
+  <p>In the following, <code class="language-plaintext highlighter-rouge">bba</code> DID method compliant account properties are called DID attestations. An account property is <code class="language-plaintext highlighter-rouge">bba</code> DID method compliant if it aligns to the data model described in the DID Attestation Data Fields section and is self-set. A self-set account property is a property in which sender and receiver accounts are identical.</p>
+</blockquote>
+
+<h3 id="didmorpheus"><a href="https://developer.iop.global/w3c?id=personal-data"><strong><code class="language-plaintext highlighter-rouge">did:morpheus:</code></strong></a></h3>
+<h6 id="for-hydra-by-httpsiopglobal">For Hydra, by https://iop.global/</h6>
+
+<blockquote>
+  <p>Distributed ledger technologies (DLT, blockchain) are mostly used by cryptocurrencies, but their event ordering and decentralized consensus algorithms are useful for general purpose. Morpheus needs DLT for safe ordering DID updates and querying the historical state of a DID Document at any given point of time for signature validation. The main benefit of DLTs is that many parties with opposing interests run the infrastructure, therefore it is almost impossible to unilaterally control changes to the history and state of the ledger.</p>
+
+  <p>Morpheus currently uses the Hydra blockchain, a dPoS ledger built as an Ark bridgechain and customized with DID-related transactions. Morpheus has a ledger-agnostic design, thus could operate with other ledgers as well.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>morpheus-did = "did:morpheus:" morpheus-idstring
+morpheus-idstring = (multicipher-encoded asymmetric cryptographic keyId value)
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didetho"><a href="https://github.com/ontology-tech/DID-method-specs/blob/master/did-etho/DID-Method-etho.md"><strong><code class="language-plaintext highlighter-rouge">did:etho:</code></strong></a></h3>
+<h6 id="for-ethereum-by-ontology-foundation">For Ethereum, by Ontology Foundation</h6>
+
+<blockquote>
+  <p>Decentralized identifiers (DIDs) are a new type of identifiers that enables verifiable, self-sovereign digital identity. This ETHO DID method specification describes a new DID method, that is, ETHO DID and defines how Ethereum blockchain stores ETHO DIDs and their corresponding DID documents, and how to do CRUD operations on ETHO DID documents.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>etho-did   = "did:etho:" etho-specific-idstring
+etho-specific-idstring = 40*40HEXDIG
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didbnb"><a href="https://github.com/ontology-tech/DID-method-specs/blob/master/did-bnb/DID-Method-bnb.md"><strong><code class="language-plaintext highlighter-rouge">did:bnb:</code></strong></a></h3>
+<h6 id="for-binance-smart-chain-by-ontology-foundation">For Binance Smart Chain, by Ontology Foundation</h6>
+
+<blockquote>
+  <p>Decentralized identifiers (DIDs) are a new type of identifiers that enables verifiable, self-sovereign digital identity. This Binance DID method specification describes a new DID method, that is, Binance DID and defines how Binance Smart Chain stores Binance DIDs and their corresponding DID documents, and how to do CRUD operations on Binance DID documents.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>bnb-did   = "did:bnb:" bnb-specific-idstring
+bnb-specific-idstring = 40*40HEXDIG
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didcelo"><a href="https://github.com/ontology-tech/DID-method-specs/blob/master/did-celo/DID-Method-celo.md"><strong><code class="language-plaintext highlighter-rouge">did:celo:</code></strong></a></h3>
+<h6 id="for-celo-by-ontology-foundation">For Celo, by Ontology Foundation</h6>
+
+<blockquote>
+  <p>Decentralized identifiers (DIDs) are a new type of identifiers that enables verifiable, self-sovereign digital identity. This Celo DID method specification describes a new DID method, that is, Celo DID and defines how Celo blockchain stores Celo DIDs and their corresponding DID documents, and how to do CRUD operations on Celo DID documents.</p>
+</blockquote>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>celo-did   = "did:celo:" celo-specific-idstring
+celo-specific-idstring = 40*40HEXDIG
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didklay"><a href="https://github.com/ontology-tech/DID-method-specs/blob/master/did-klay/DID-Method-klay.md"><strong><code class="language-plaintext highlighter-rouge">did:klay:</code></strong></a></h3>
+<h6 id="for-klaytn-by-ontology-foundation">For Klaytn, by Ontology Foundation</h6>
+
+<blockquote>
+  <p>Decentralized identifiers (DIDs) are a new type of identifiers that enables verifiable, self-sovereign digital identity. This Klaytn DID method specification describes a new DID method, that is, Klaytn DID and defines how Klaytn blockchain stores Klaytn DIDs and their corresponding DID documents, and how to do CRUD operations on Klaytn DID documents.</p>
+</blockquote>
+
+<h3 id="didtrx"><a href="https://github.com/ontology-tech/DID-method-specs/blob/master/did-trx/DID-Method-trx.md"><strong><code class="language-plaintext highlighter-rouge">did:trx:</code></strong></a></h3>
+<h6 id="for-tron-by-ontology-foundation">For TRON, by Ontology Foundation</h6>
+
+<blockquote>
+  <p>Decentralized identifiers (DIDs) are a new type of identifiers that enables verifiable, self-sovereign digital identity. This TRON DID method specification describes a new DID method, that is, TRON DID and defines how TRON blockchain stores TRON DIDs and their corresponding DID documents, and how to do CRUD operations on TRON DID documents.</p>
+</blockquote>
+
+<h3 id="didgrg"><a href="https://github.com/GrgChain/DID-method-specs/blob/master/README.md"><strong><code class="language-plaintext highlighter-rouge">did:grg:</code></strong></a></h3>
+<h6 id="for-grgchain-by-grgbanking-blockchain-express-co-ltd">For GrgChain, by GRGBanking Blockchain Express Co. Ltd.</h6>
+
+<blockquote>
+  <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>1. Did document
+{
+	"@context": "https://w3id.org/did/v1",
+	"id": "did:grg:0x584b244f03BCE0e1e9766a880d0713410B955Fb3",
+	"version": 1,
+	"created": "2020-08-25T15:05:02.364Z",
+	"updated": "2020-08-25T15:05:02.364Z",
+	"publicKey": [{
+		"id": "did:grg:0x584b244f03BCE0e1e9766a880d0713410B955Fb3#keys-1",
+		"type": "SM2",
+		"publicKeyHex": "04712eb2f39204e9cf44728fe7e8191ad043091d0fc7d860be1339c565834b95862ed9956fe56caf9ddd46ae287d973f7d2ce974cdf474e56f1d204a65836f9882"
+	}, {
+		"id": "did:grg:0x584b244f03BCE0e1e9766a880d0713410B955Fb3#keys-2",
+		"type": "SM2",
+		"publicKeyHex": "048c89b67d48d9245ac20e600108b6dbb3a07f9275b0b0f0ad0b7457f8cb6aeb4c178c93f1d7fb7e0d7ee8b55261b28a4eba14158a6dd2d1b9a152fa9d2839c8bb"
+	}],
+	"authentication": ["did:grg:0x584b244f03BCE0e1e9766a880d0713410B955Fb3#keys-1"],
+	"recovery": ["did:grg:0x584b244f03BCE0e1e9766a880d0713410B955Fb3#keys-2"],
+	"service": [{
+		"id": "",
+		"type": "",
+		"serviceEndpoint": ""
+	}],
+	"proof": {
+		"type": "SM2",
+		"creator": "did:grg:0x584b244f03BCE0e1e9766a880d0713410B955Fb3#keys-1",
+		"signatureValue": "f12493e632f91e4f415732de62871fb3c3ffb943ce6e52682154837f0d8109bd65a183c8cf5b39d9c06e0a415ead1230b1d88db877fd6b0b2460acc503ead04b"
+	}
+}
+
+2. Claim
+{
+	"@context": "https://w3id.org/did/v1",
+	"id": "XXX",
+	"type": ["ProofClaim"],
+	"issuer": "did:grg:0x802B718AF528214931E2642C2b113436C847a16b",
+	"issuanceDate": "2020-02-27T15:55:42.956Z",
+	"expirationDate": "2020-04-01T12:01:20Z",
+	"credentialSubject": {
+		"id": "did:ccp:ceNobbK6Me9F5zwyE3MKY88QZLw",
+		"shortDescription": "实名认证声明",
+		"longDescription": "该用户经过了我司的实名认证",
+		"type": "RealNameAuthentication"
+	},
+	"revocation": {
+		"id": "https://example.com/v1/claim/revocations",
+		"type": "SimpleRevocationListV1"
+	},
+	"proof": {
+		"creator": "did:grg:0x802B718AF528214931E2642C2b113436C847a16b",
+		"type": "Secp256k1",
+		"signatureValue": "0x49a714001405bc39c12764a44e678854e388dca1edcce1384054d1e62244751358996e7593a46ccb6b35a2bfa85cea1ae1f90e98e81e2943e9c655f14d9ebb7b1c"
+	}
+}
+
+3. Did Info
+    {
+      did: "did:grg:0x584b244f03BCE0e1e9766a880d0713410B955Fb3",
+      mnemonic: "play smile scatter pigeon uncover among dismiss scatter fever rose wrestle rotate m/1 m/2",
+      mainPrivateKey: "82b28ff4626e3151f873c1af9b3a28a8723fd5a7a74092812c92435f88f6cf9c",
+      recoveryPrivateKey: "19863244cce676ccaf7507b49b2ae725d4603f8a7bbfe505978144129b56fa59"
+    },
+</code></pre></div>  </div>
+</blockquote>
+
+<h3 id="didschema"><a href="https://github.com/51nodes/schema-registry-did-method/blob/master/README.md"><strong><code class="language-plaintext highlighter-rouge">did:schema:</code></strong></a></h3>
+<h6 id="for-multiple-storage-networks-currently-public-ipfs-and-evannetwork-ipfs-by-51nodes-gmbh">For Multiple storage networks, currently public IPFS and evan.network IPFS, by 51nodes GmbH</h6>
+
+<blockquote>
+  <p>The Schema Registry DID Method aims to provide unique and universal identification for schemas in multiple formats hosted on multiple storage mechanisms or networks.</p>
+
+  <p>This first version will focus on JSON Schema and XML Schema Definition/XSD schemas stored using the IPFS (InterPlanetary File System) protocol, but the DID method and concept is open for contributions and extensions regarding further schema formats and storage/network options.</p>
+</blockquote>
+
+<h3 id="didkey"><a href="https://w3c-ccg.github.io/did-method-key/"><strong><code class="language-plaintext highlighter-rouge">did:key:</code></strong></a></h3>
+<h6 id="for-ledger-independent-did-method-based-on-publicprivate-key-pairs-by-rick-astley-thank-you-for-your-inspiration-manu-sporny-dmitri-zagidulin-dave-longley-orie-steele">For Ledger independent DID method based on public/private key pairs, by Rick Astley (thank you for your inspiration), Manu Sporny, Dmitri Zagidulin, Dave Longley, Orie Steele</h6>
+
+<blockquote>
+  <p>While DLT-based DID Methods have great decentralization characteristics, and some of the more centralized DID Methods provide strong system control guarantees, the general approaches tend to be expensive to setup and operate. Some use cases requiring DIDs do not need the guarantees provided by these heavy-weight systems. For example, a DID that will only be used for a single, ephemeral interaction might not need to be registered, updated, or deactivated. It is for this class of use cases that the did:key method exists.</p>
+</blockquote>
+
+<blockquote>
+  <p>The format for the did:key method conforms to the [DID-CORE] specification and is simple. It consists of the did:key prefix, followed by a Multibase [MULTIBASE] base58-btc encoded value that is a concatenation of the Multicodec [MULTICODEC] identifier for the public key type and the raw bytes associated with the public key format.</p>
+</blockquote>
+
+<h3 id="didtyron"><a href="https://www.tyronzil.com/"><strong><code class="language-plaintext highlighter-rouge">did:tyron:</code></strong></a></h3>
+<h6 id="for-zilliqa-by-julio-cabrapan-duarte">For Zilliqa, by Julio Cabrapan Duarte</h6>
+
+<blockquote>
+  <p>Self-Sovereign Identity (SSI) allows people to manage their digital identities, proving who they are without a middleman, by anchoring DIDs on blockchain platforms as a shared root of trust. However, most blockchains still can’t provide decentralized identity at scale. By implementing the Tyron SSI Protocol, tyronZIL aims to solve this issue and enable user-controlled digital identities.</p>
+
+  <p>The word Tyron derives from the Greek turannos that means sovereign, and Tyron’s purpose is to give people sovereignty over their data.</p>
+</blockquote>
+
+<h3 id="didcorda"><a href="https://htmlpreview.github.io/?https://github.com/persistentsystems/corda-did-method/blob/master/corda_did_method.html"><strong><code class="language-plaintext highlighter-rouge">did:corda:</code></strong></a></h3>
+<h6 id="for-corda-by-nitesh-solankimoritz-plattpranav-kirtani">For Corda, by Nitesh Solanki,Moritz Platt,Pranav Kirtani</h6>
+
+<blockquote>
+  <p>To understand the environment in which the Corda DID method operates, the permissioned nature of a Corda network and the point-to-point approach to data replication must be taken into account. While parties in permissionless blockchains remain anonymous and can join and leave at will, any Corda network utilizes a standard PKIX infrastructure for linking public keys to identities [corda-whitepaper]. As such, individually deployed entities in the network – nodes – have a strong notion of identity. This concept is instrumental in network communication. Similarly, the data-replication model implemented in Corda is different to that of a conventional public blockchain, which makes all in-ledger data visible to all network participants. In Corda, data are distributed to a configurable subset of network members only.</p>
+</blockquote>
+
+<blockquote>
+  <p>The Corda DID method operates in an environment where multiple nodes form a consortium in order to replicate decentralized identity data (cf. figure 1). These consortium nodes replicate decentralized identifier documents to form a network-wide and, ultimately, consistent view of the unity of decentralized identifiers, using the Corda DID method.</p>
+</blockquote>
+
+<h3 id="diduns"><a href="https://github.com/unik-name/did-method-spec/blob/main/did-uns/UNS-DID-Specification.md"><strong><code class="language-plaintext highlighter-rouge">did:uns:</code></strong></a></h3>
+<h6 id="for-httpsdocsunsnetwork-by-httpswwwspacelephantorg">For https://docs.uns.network/, by https://www.spacelephant.org/</h6>
+
+<blockquote>
+  <p>The uns DID method provides support for DIDs on the uns.network blockchain. More specifically, it associates a DID to every address in the ledger. This method is very minimalistic in the sense that it produces DID Document (DDoc) with minimal information: a DID and its associated public key. Furthermore, once a uns-did is created, it cannot be updated.</p>
+
+  <p>The goal of this method is to work in tandem with other, more complex DID methods based on the same blockchain. Uns.network is dedicated to the management of Non Fungible Tokens (NFT). The first type of NFT that it supports is <a href="https://docs.unikname.com/">@uniknames</a>, human-readable identifiers. Just like any other tokens, <a href="https://twitter.com/uniknames" class="user-mention">@uniknames</a> can be bought or exchanged, but they can also be linked to public properties the owner wishes to advertise, or used to connect to compliant websites in a private and secure fashion, among other things. The <code class="language-plaintext highlighter-rouge">unik</code> DID method associates a DID to these NFT tokens, using uns-did as controllers.</p>
+
+  <p>Identifiers are only the first use case for uns.network NFTs. Other use cases are likely to require their own DID method based on uns DIDs.</p>
+</blockquote>
+
+<h3 id="didpanacea"><a href="https://github.com/medibloc/panacea-core/blob/master/docs/did.md"><strong><code class="language-plaintext highlighter-rouge">did:panacea:</code></strong></a></h3>
+<h6 id="for-panacea-by-medibloc">For Panacea, by MediBloc</h6>
+
+<blockquote>
+  <p>Panacea is a public blockchain built by MediBloc to reinvent the healthcare experience. Panacea also supports DID operations. DIDs are created and stored in the Panacea, and they are used with verifiable credentials.</p>
+</blockquote>
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#51nodes" class="page__taxonomy-item" rel="tag">51nodes</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#abt-network" class="page__taxonomy-item" rel="tag">ABT Network</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#aergo" class="page__taxonomy-item" rel="tag">Aergo</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#alastria" class="page__taxonomy-item" rel="tag">Alastria</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#arcblock" class="page__taxonomy-item" rel="tag">ArcBlock</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ardor" class="page__taxonomy-item" rel="tag">Ardor</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#baidu" class="page__taxonomy-item" rel="tag">Baidu</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bcgov" class="page__taxonomy-item" rel="tag">BCGov</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#besu" class="page__taxonomy-item" rel="tag">Besu</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bif" class="page__taxonomy-item" rel="tag">bif</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#biilabs" class="page__taxonomy-item" rel="tag">BiiLabs</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#binance" class="page__taxonomy-item" rel="tag">Binance</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bitcoin" class="page__taxonomy-item" rel="tag">Bitcoin</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#blockcore" class="page__taxonomy-item" rel="tag">Blockcore</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#blocko" class="page__taxonomy-item" rel="tag">Blocko</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#blockstack" class="page__taxonomy-item" rel="tag">Blockstack</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#botlabs" class="page__taxonomy-item" rel="tag">BOTLabs</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#bryk" class="page__taxonomy-item" rel="tag">bryk</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#btcr" class="page__taxonomy-item" rel="tag">BTCR</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#caict" class="page__taxonomy-item" rel="tag">CAICT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#celo" class="page__taxonomy-item" rel="tag">Celo</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#chainyard" class="page__taxonomy-item" rel="tag">Chainyard</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#cloudchain" class="page__taxonomy-item" rel="tag">Cloudchain</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#commercio" class="page__taxonomy-item" rel="tag">Commercio</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#consensys" class="page__taxonomy-item" rel="tag">Consensys</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#consent" class="page__taxonomy-item" rel="tag">Consent</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#corda" class="page__taxonomy-item" rel="tag">Corda</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#cosmos" class="page__taxonomy-item" rel="tag">Cosmos</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#credentials-community-group" class="page__taxonomy-item" rel="tag">Credentials Community Group</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#cryptonics" class="page__taxonomy-item" rel="tag">cryptonics</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#did" class="page__taxonomy-item" rel="tag">DID</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#digital-bazaar" class="page__taxonomy-item" rel="tag">Digital Bazaar</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#dock" class="page__taxonomy-item" rel="tag">Dock</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#echo" class="page__taxonomy-item" rel="tag">Echo</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#elastos" class="page__taxonomy-item" rel="tag">Elastos</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#element" class="page__taxonomy-item" rel="tag">Element</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#erc725" class="page__taxonomy-item" rel="tag">ERC725</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ethereum" class="page__taxonomy-item" rel="tag">Ethereum</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#evan" class="page__taxonomy-item" rel="tag">evan</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#evernym" class="page__taxonomy-item" rel="tag">Evernym</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#fabric" class="page__taxonomy-item" rel="tag">Fabric</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#factom" class="page__taxonomy-item" rel="tag">Factom</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#gatica" class="page__taxonomy-item" rel="tag">Gatica</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#github" class="page__taxonomy-item" rel="tag">Github</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#grgbanking" class="page__taxonomy-item" rel="tag">GRGBanking</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#grgchain" class="page__taxonomy-item" rel="tag">GrgChain</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#halialabs" class="page__taxonomy-item" rel="tag">Halialabs</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#hashgraph" class="page__taxonomy-item" rel="tag">Hashgraph</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#holochain" class="page__taxonomy-item" rel="tag">Holochain</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#hydra" class="page__taxonomy-item" rel="tag">Hydra</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#hyland-credentials" class="page__taxonomy-item" rel="tag">Hyland Credentials</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#hyperledger-foundation" class="page__taxonomy-item" rel="tag">Hyperledger Foundation </a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ibm" class="page__taxonomy-item" rel="tag">IBM</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#iconloop" class="page__taxonomy-item" rel="tag">ICONLOOP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#iiw" class="page__taxonomy-item" rel="tag">IIW</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#infowallet" class="page__taxonomy-item" rel="tag">InfoWallet</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ion" class="page__taxonomy-item" rel="tag">ION</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#iop" class="page__taxonomy-item" rel="tag">IOP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#iota" class="page__taxonomy-item" rel="tag">IOTA</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#iotex" class="page__taxonomy-item" rel="tag">IoTeX</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ipfs" class="page__taxonomy-item" rel="tag">IPFS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ipid" class="page__taxonomy-item" rel="tag">IPID</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#jlinc" class="page__taxonomy-item" rel="tag">JLinc</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#jnctn" class="page__taxonomy-item" rel="tag">Jnctn</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#jolocom" class="page__taxonomy-item" rel="tag">Jolocom</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#kilt" class="page__taxonomy-item" rel="tag">KILT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#klaytn" class="page__taxonomy-item" rel="tag">Klaytn</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#lifeid" class="page__taxonomy-item" rel="tag">lifeID</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#medibloc" class="page__taxonomy-item" rel="tag">MediBloc</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#metadium" class="page__taxonomy-item" rel="tag">Metadium</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#microsoft" class="page__taxonomy-item" rel="tag">Microsoft</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#moac" class="page__taxonomy-item" rel="tag">MOAC</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#near" class="page__taxonomy-item" rel="tag">NEAR</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ocean-protocol" class="page__taxonomy-item" rel="tag">Ocean Protocol</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ockam" class="page__taxonomy-item" rel="tag">Ockam</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#omnione" class="page__taxonomy-item" rel="tag">OmniOne</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ontology" class="page__taxonomy-item" rel="tag">Ontology</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#panacea" class="page__taxonomy-item" rel="tag">Panacea</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#peer-did" class="page__taxonomy-item" rel="tag">Peer DID</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#proximax" class="page__taxonomy-item" rel="tag">ProximaX</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#quorum" class="page__taxonomy-item" rel="tag">Quorum</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#raonsecure" class="page__taxonomy-item" rel="tag">Raonsecure</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rchain" class="page__taxonomy-item" rel="tag">RChain</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rebooting-wot" class="page__taxonomy-item" rel="tag">Rebooting WoT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#securekey" class="page__taxonomy-item" rel="tag">SecureKey</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#selfkey" class="page__taxonomy-item" rel="tag">SelfKey</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#sovrin-foundation" class="page__taxonomy-item" rel="tag">Sovrin Foundation</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#spaceelephant" class="page__taxonomy-item" rel="tag">SpaceElephant</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#sphereon" class="page__taxonomy-item" rel="tag">Sphereon</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#swisscom" class="page__taxonomy-item" rel="tag">Swisscom </a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#teleinfo" class="page__taxonomy-item" rel="tag">teleinfo </a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tmchain" class="page__taxonomy-item" rel="tag">TMChain</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#token-tm" class="page__taxonomy-item" rel="tag">Token.TM</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#transendx" class="page__taxonomy-item" rel="tag">TranSendX</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#transmute" class="page__taxonomy-item" rel="tag">Transmute</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tron" class="page__taxonomy-item" rel="tag">TRON</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#twitter" class="page__taxonomy-item" rel="tag">Twitter</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#uns" class="page__taxonomy-item" rel="tag">UNS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#uport" class="page__taxonomy-item" rel="tag">uPort</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#vaultie" class="page__taxonomy-item" rel="tag">Vaultie</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#veres-one" class="page__taxonomy-item" rel="tag">Veres One</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#vivvo" class="page__taxonomy-item" rel="tag">Vivvo</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#vp" class="page__taxonomy-item" rel="tag">VP</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#w3c" class="page__taxonomy-item" rel="tag">W3C</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#web" class="page__taxonomy-item" rel="tag">Web</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#weelink" class="page__taxonomy-item" rel="tag">Weelink</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#workday" class="page__taxonomy-item" rel="tag">Workday</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#xdi" class="page__taxonomy-item" rel="tag">XDI</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ylz" class="page__taxonomy-item" rel="tag">YLZ </a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#zilliqa" class="page__taxonomy-item" rel="tag">Zilliqa</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#web-standards" class="page__taxonomy-item" rel="tag">Web Standards</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-02">December 02, 2020</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/web-standards/w3c/working-groups/did-wg/2020-01-10-decentralized-identifier-did.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&amp;text=%28DID%29+the+Decentralized+Identifier%20https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fdid%2Fdecentralized-identifier%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fdid%2Fdecentralized-identifier%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fdid%2Fdecentralized-identifier%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fdid%2Fdecentralized-identifier%2F&amp;title=%28DID%29+the+Decentralized+Identifier" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a>
+</h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2">
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="decentralized-identifier-did">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/did-square.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/object-capabilities/" rel="permalink">Object Capability Model
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Computer scientist E. Dean Tribble stated that in smart contracts, identity-based access control did not support well dynamically changing permissions, compared to the object-capability model. He analogized the ocap model with giving a valet the key to one’s car, without handing over the right to...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2021-04-19 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    <div class="tags">Cosmos</div> <div class="tags">JSON-LD</div> <div class="tags">oCap</div> <div class="tags">zCap</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/dataweb/dataweb-whitepaper-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/xdi-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xri-tc/" rel="permalink">XDI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of the OASIS XDI TC is to define a generalized, extensible, location-, application-, and transport-independent service for sharing, linking, and synchronizing data over the Internet and other data networks using XML documents and XRIs (Extensible Resource Identifiers), a URI-compatibl...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">RDF</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/xri-tc-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xdi-tc/" rel="permalink">XRI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of this TC is to define a syntax for abstract structured identifiers – identifiers that can be used within other URI schemes (such as http: and https: URIs) to share semantics across any number of domains and applications. The TC is also defining a simple XML descriptor format and HTT...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

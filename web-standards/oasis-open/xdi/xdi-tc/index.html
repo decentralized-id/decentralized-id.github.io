@@ -1,0 +1,1338 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>XRI Technical Committee |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Defining a syntax for abstract structured identifiers to share semantics across different URI schemes, domains, and applications (XRI); plus defining a simple XML format for uniform metadata discovery for all URIs (XRD)">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="XRI Technical Committee">
+<meta property="og:url" content="https://decentralized-id.com/web-standards/oasis-open/xdi/xdi-tc/">
+
+
+  <meta property="og:description" content="Defining a syntax for abstract structured identifiers to share semantics across different URI schemes, domains, and applications (XRI); plus defining a simple XML format for uniform metadata discovery for all URIs (XRD)">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/xri-tc-header.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="XRI Technical Committee">
+  <meta name="twitter:description" content="Defining a syntax for abstract structured identifiers to share semantics across different URI schemes, domains, and applications (XRI); plus defining a simple XML format for uniform metadata discovery for all URIs (XRD)">
+  <meta name="twitter:url" content="https://decentralized-id.com/web-standards/oasis-open/xdi/xdi-tc/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://decentralized-id.com/images/xri-tc-header.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-12-01T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2020-12-01T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/web-standards/oasis-open/xdi/xdi-tc/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero" style=" ">
+  
+    <img src="/images/xri-tc-header.webp" alt="XRI Technical Committee" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/images/the-world-map-from-a-binary-code.webp" alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources &amp; Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="XRI Technical Committee">
+    <meta itemprop="description" content="The purpose of this TC is to define a syntax for abstract structured identifiers – identifiers that can be used within other URI schemes (such as http: and https: URIs) to share semantics across any number of domains and applications. The TC is also defining a simple XML descriptor format and HTTP(S) protocol for uniform resource metadata discovery.">
+    <meta itemprop="datePublished" content="December 01, 2020">
+    <meta itemprop="dateModified" content="December 01, 2020">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">XRI Technical Committee
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><strong><a href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=xri">OASIS Extensible Resource Identifier (XRI) TC</a></strong></p>
+
+<ul>
+  <li>
+<a href="https://docs.oasis-open.org/xri/xri/V2.0/xri-intro-V2.0.pdf">An Introduction to XRIs</a>
+    <blockquote>
+      <ul>
+        <li>XRIs provide a uniform syntax and resolution protocol for both persistent and reassignable abstract identifiers.</li>
+        <li>XRIs provide a uniform syntax for delegating abstract identifiers between authorities at any level or context.</li>
+        <li>XRIs provide a uniform syntax (called “cross-references”) for sharing abstract identifiers across all contexts.</li>
+        <li>XRIs provide both a generic and a trusted protocol for resolving a single abstract identifier into any number of concrete identifiers.</li>
+        <li>XRIs provide a simple, standard means of discovering URIs that may be associated with a resource, including those needed for additional metadata discovery.</li>
+        <li>XRIs provide a standard means of protecting privacy by revealing the least possible information in an identifier and allowing an authority to control further access.</li>
+        <li>XRIs provide a standard means of extension without sacrificing interoperability.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.oasis-open.org/committees/xdi/faq.php">XDI FAQ</a>
+    <blockquote>
+      <p><strong><em>What features do XRIs have that URIs don’t?</em></strong></p>
+      <ul>
+        <li>
+<strong>XRIs are “location-independent”</strong> - the content of an XRI is decoupled from the network location of any data or services associated with the XRI. This means, among other things, that accessing a resource associated with an XRI isn’t limited to a particular network location or protocol. (Most URI schemes in wide use today use identifiers that imply a close association to a network location or protocol.)</li>
+        <li>
+<strong>XRIs can assert persistence of all or parts of an identifier</strong>. XRIs allow two types of separators (persistent and reassignable) between segments of an XRI, so the XRI can suggest that certain parts of the identifier are intended to be long-lived “primary keys” (a concept borrowed from database technology) and others are subject to change. Most URI schemes, on the other hand, are all-or-nothing. With URNs, for example, the entire identifier is persistent. With HTTP URIs, the entire identifier is potentially transient. The XRI scheme allows both characteristics to be combined in one federated identifier.</li>
+        <li>
+<strong>XRIs provide the ability to “contain” other URIs or XRIs in the form of cross-references</strong>. Conceptually this is similar to using quote marks in English to talk about someone else’s text. Cross references allow a well-defined URI or XRI to identify not only a concept or resource, but also to identify that concept or resource relative to another concept or resource. For example, a URI could identify a book, and an XRI could then identify a particular library’s copies of the book by using that URI in a cross-reference appended to the library’s XRI. So if “ urn:isbn:0-131-10362-8” represents The C Programming Language by Kernighan and Ritchie, and “xri:<a href="https://twitter.com/SeattlePublicLibrary" class="user-mention">@SeattlePublicLibrary</a>” represents the Seattle Public Library, then “xri:@SeattlePublicLibrary/(urn:isbn:0-131-10362-8) “ represents The C Programming Language in the context of the Seattle Public Library.</li>
+        <li>
+<strong>XRIs also support self-references</strong>, a special form of cross-reference that indicates that an XRI is not intended to be resolved on the network but is intended solely as a unique identifier. For example, “xri:(@SeattlePublicLibrary/(urn:isbn:0-131-10362-8))” is a self-reference because it is entirely enclosed by parentheses, and as such represents the identifier itself.</li>
+        <li>
+<strong>XRIs allow unlimited delegation of namespaces</strong>. While many URI schemes rely on DNS delegation, XRIs also have the ability to use abstract (non-DNS) names or identifiers that can contain a wider set of characters and strings. The XRI specification includes several global context symbols for this purpose (e.g., the “@” in “xri:@example/foo” represents a standard global namespace for organizations). In addition, a cross-reference can also serve as a namespace root, thus creating a private or community-based identifier space whose management is entirely community defined (for example, “xri:(http://www.example.com)/foo”).</li>
+        <li>
+<strong>XRIs are fully internationalized</strong>. XRI syntax builds on the W3C IRI (Internationalized Resource Identifier) specifications that adapt URIs to the Unicode character set.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="http://www.oasis-open.org/committees/download.php/5109/xri-syntax-resolution-1.0-cd.pdf">Extensible Resource Identifier (XRI) Syntax V2.0</a> - Committee Specification, 14 November 2005
+    <blockquote>
+      <p>Extensible Resource Identifiers (XRIs) provide a standard means of abstractly identifying a resource independent of any particular concrete representation of that resource—or, in the case of a completely abstract resource, of any representation at all.</p>
+
+      <p>As shown in Figure 1, XRIs build on the foundation established by URIs (Uniform Resource Identifiers) and IRIs (Internationalized Resource Identifiers) as defined by [URI] and [IRI], respectively.<br>
+<img src="https://i.imgur.com/mq9znfO.png" alt=""><br>
+The IRI specification created a new identifier by extending the unreserved character set to include characters beyond those allowed in generic URIs. It also defined rules for transforming this identifier into a syntactically legal URI. Similarly, this specification creates a new identifier, an XRI, that extends the syntactic elements (but not the character set) allowed in IRIs. To accommodate applications that expect IRIs or URIs, this specification also defines rules for transforming an XRI reference into a valid IRI or URI reference.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.oasis-open.org/committees/download.php/11854/xri-metadata-V2.0-cd-01.pdf">Extensible Resource Identifier (XRI) Metadata V2.0</a>
+    <blockquote>
+      <p>[XRISyntax] establishes five global context symbol (GCS) characters that may be used to begin an XRI authority segment for the purpose of expressing the abstract global context of an identifier. One of these GCS characters, “$”, is reserved for identifiers for which the authority is a standards specification.</p>
+
+      <p>A second key XRI feature, cross-references (see section 2.2.2 of [XRISyntax]), allows XRIs to be embedded within other XRIs in order to share identifiers across contexts. This syntactic feature allows XRIs in the $ namespace to be used as metadata to describe an XRI itself. For example, the following XRI includes a cross-reference with version metadata.</p>
+      <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>xri://@example*resource*($v/3)
+                        \----/ cross-reference with XRI metadata
+</code></pre></div>      </div>
+      <p>The purpose of this specification is to define a set of XRIs in the $ namespace that function as identifier metadata—attributes that may be used describe an identifier itself, as opposed to attributes of the resource it identifies. This specification defines four such types of identifier metadata:</p>
+      <ul>
+        <li>Language metadata that specifies the human language in which an identifier is intended to be interpreted.</li>
+        <li>Date/time metadata that specifies the point in time an identifier was established.</li>
+        <li>Version metadata that specifies the identifier’s position in a sequence of identifiers for the same logical resource.</li>
+        <li>Annotation metadata that allows XRI producers to add annotations to XRIs or XRI segments.
+The definition of each metadata type also specifies comparison rules, significance in resolution, and any other special processing rules specific to that type.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://docs.oasis-open.org/xri/xri-resolution/2.0/specs/cs01/xri-resolution-V2.0-cs-01.pdf">Extensible Resource Identifier (XRI) Resolution Version 2.0</a>
+    <blockquote>
+      <p>Extensible Resource Identifier (XRI) provides a uniform syntax for abstract structured identifiers as defined in [XRISyntax]. Because XRIs may be used across a wide variety of communities and applications (as Web addresses, database keys, filenames, object IDs, XML IDs, tags, etc.), no single resolution mechanism may prove appropriate for all XRIs. However, in the interest of promoting interoperability, this specification defines a simple generic resource description format called XRDS (Extensible Resource Descriptor Sequence), a standard protocol for requesting XRDS documents using HTTP(S) URIs, and standard protocol for resolving XRIs using XRDS documents and HTTP(S) URIs. Both generic and trusted versions of the XRI resolution protocol are defined (the latter using HTTPS [RFC2818] and/or signed SAML assertions [SAML]). In addition, an HTTP(S) proxy resolution service is specified both to provide network-based resolution services and for backwards compatibility with existing HTTP(S) infrastructure.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Resolution Component</th>
+            <th>DNS Architecture</th>
+            <th>XRI Architecture</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Identifier</td>
+            <td>domain name</td>
+            <td>XRI (authority + path + query)</td>
+          </tr>
+          <tr>
+            <td>Resource record format</td>
+            <td>text (resource record)</td>
+            <td>XML (XRDS document)</td>
+          </tr>
+          <tr>
+            <td>Attribute identifier</td>
+            <td>string</td>
+            <td>anyURI</td>
+          </tr>
+          <tr>
+            <td>Network endpoint identifier</td>
+            <td>IP address</td>
+            <td>URI</td>
+          </tr>
+          <tr>
+            <td>Synonyms</td>
+            <td>CNAME</td>
+            <td>LocalID, EquivID, CanonicalID, CanonicalEquivID</td>
+          </tr>
+          <tr>
+            <td>Primary resolution protocol</td>
+            <td>UDP</td>
+            <td>HTTP(S)</td>
+          </tr>
+          <tr>
+            <td>Trusted resolution options</td>
+            <td>DNSSEC</td>
+            <td>HTTPS and/or SAML</td>
+          </tr>
+          <tr>
+            <td>Resolution client</td>
+            <td>resolver</td>
+            <td>resolver</td>
+          </tr>
+          <tr>
+            <td>Resolution server</td>
+            <td>authoritative nameserver</td>
+            <td>authority server</td>
+          </tr>
+          <tr>
+            <td>Recursing resolution</td>
+            <td>recursing nameserver</td>
+            <td>recursing authority server or proxy resolver</td>
+          </tr>
+        </tbody>
+      </table>
+    </blockquote>
+  </li>
+</ul>
+
+<div style="width:800px"> <strong style="display:block;margin:12px 0 4px"><a href="https://slideplayer.com/slide/4808597/" title="What do OpenID, Higgins, I-Names, and XDI Have in Common? An OASIS Webinar on XRI and XRDS May 6, 2008 Gabe Wachob, XRI TC Co-Chair Paul Trevithick, The." target="_blank">What do OpenID, Higgins, I-Names, and XDI Have in Common? An OASIS Webinar on XRI and XRDS May 6, 2008 Gabe Wachob, XRI TC Co-Chair Paul Trevithick, The.</a></strong><iframe src="https://player.slideplayer.com/15/4808597/" width="800" height="649" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0" allowfullscreen=""></iframe><div style="padding:5px 0 12px"></div>
+</div>
+
+<h2 id="i-names">i-names</h2>
+
+<ul>
+  <li>
+<a href="https://web.archive.org/web/20150801134550/http://inames.net/">inames</a>
+    <blockquote>
+      <p>URLs are for connecting web pages. Now get the address for connecting people and businesses in rich, long-lasting digital relationships: i-names.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://web.archive.org/web/20111001110114/http://dev.inames.net/wiki/Main_Page">http://dev.inames.net/wiki/Main_Page</a>
+    <blockquote>
+      <p>The goal of this wiki is to be a portal for everything XRI and i-names developers need to know to integrate i-names and XRI infrastructure into their identity-enabled sites, services, and applications. Please let us know via the About Us page if you don’t find what you are looking for, or just add a request directly to the wiki.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://en.wikipedia.org/wiki/I-name">I Names</a>
+    <blockquote>
+      <p>I-names are one form of an XRI — an OASIS open standard for digital identifiers designed for sharing resources and data across domains and applications.[1] I-names are human readable XRIs intended to be as easy as possible for people to remember and use. For example, a personal i-name could be =Mary or =Mary.Jones. An organizational i-name could be <a href="https://twitter.com/Acme" class="user-mention">@Acme</a> or @Acme.Corporation.</p>
+    </blockquote>
+  </li>
+</ul>
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#dataweb" class="page__taxonomy-item" rel="tag">Dataweb</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#oasis" class="page__taxonomy-item" rel="tag">OASIS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#xdi" class="page__taxonomy-item" rel="tag">XDI</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#xri" class="page__taxonomy-item" rel="tag">XRI</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#web-standards" class="page__taxonomy-item" rel="tag">Web Standards</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-12-01">December 01, 2020</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/web-standards/oasis-open/xdi/2020-12-01-xri-technical-committee.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&amp;text=XRI+Technical+Committee%20https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Foasis-open%2Fxdi%2Fxdi-tc%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Foasis-open%2Fxdi%2Fxdi-tc%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Foasis-open%2Fxdi%2Fxdi-tc%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Foasis-open%2Fxdi%2Fxdi-tc%2F&amp;title=XRI+Technical+Committee" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a>
+</h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2">
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="xri-technical-committee">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/did-square.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/object-capabilities/" rel="permalink">Object Capability Model
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Computer scientist E. Dean Tribble stated that in smart contracts, identity-based access control did not support well dynamically changing permissions, compared to the object-capability model. He analogized the ocap model with giving a valet the key to one’s car, without handing over the right to...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2021-04-19 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    <div class="tags">Cosmos</div> <div class="tags">JSON-LD</div> <div class="tags">oCap</div> <div class="tags">zCap</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/dataweb/dataweb-whitepaper-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/xdi-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xri-tc/" rel="permalink">XDI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of the OASIS XDI TC is to define a generalized, extensible, location-, application-, and transport-independent service for sharing, linking, and synchronizing data over the Internet and other data networks using XML documents and XRIs (Extensible Resource Identifiers), a URI-compatibl...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">RDF</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/baseline-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/ethereum-oasis/" rel="permalink">Ethereum Oasis Open Project • Baseline Protocol
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The Ethereum OASIS Open Project is an OASIS Open Project that exists to provide a neutral forum for diverse stakeholders to create high-quality specifications that facilitate Ethereum’s longevity, interoperability, and ease of integration. The Ethereum OASIS Project intends to develop clear, open...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    <div class="tags">Chainlink</div> <div class="tags">ConsenSys</div> <div class="tags">Enterprise Ethereum Alliance</div> <div class="tags">Ernst &amp; Young</div> <div class="tags">Ethereum</div> <div class="tags">Ethereum Foundation</div> <div class="tags">Limechain</div> <div class="tags">Microsoft</div> <div class="tags">Nethermind</div> <div class="tags">OASIS</div> <div class="tags">Provide</div> <div class="tags">Unibright</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

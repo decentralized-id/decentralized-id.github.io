@@ -1,0 +1,1601 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Bitcoin Identity Standards and Applications |  Decentralized Identity Web Directory</title>
+<meta name="description" content="The Bitcoin Reference DID method (did:btcr) supports DIDs on the public Bitcoin blockchain. The Bitcoin Reference method has minimal design goals: a DID trust anchor based on the Bitcoin blockchain, updates publicly visible and auditable via Bitcoin transactions, and optionally, additional DID Document information referenced in the transaction OP_RETURN data field.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Bitcoin Identity Standards and Applications">
+<meta property="og:url" content="https://decentralized-id.com/blockchain/bitcoin/">
+
+
+  <meta property="og:description" content="The Bitcoin Reference DID method (did:btcr) supports DIDs on the public Bitcoin blockchain. The Bitcoin Reference method has minimal design goals: a DID trust anchor based on the Bitcoin blockchain, updates publicly visible and auditable via Bitcoin transactions, and optionally, additional DID Document information referenced in the transaction OP_RETURN data field.">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/btcr-header.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Bitcoin Identity Standards and Applications">
+  <meta name="twitter:description" content="The Bitcoin Reference DID method (did:btcr) supports DIDs on the public Bitcoin blockchain. The Bitcoin Reference method has minimal design goals: a DID trust anchor based on the Bitcoin blockchain, updates publicly visible and auditable via Bitcoin transactions, and optionally, additional DID Document information referenced in the transaction OP_RETURN data field.">
+  <meta name="twitter:url" content="https://decentralized-id.com/blockchain/bitcoin/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://decentralized-id.com/images/btcr-header.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-03-11T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2020-01-07T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/blockchain/bitcoin/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero" style=" ">
+  
+    <img src="/images/btcr-header.webp" alt="Bitcoin Identity Standards and Applications" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/images/the-world-map-from-a-binary-code.webp" alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources &amp; Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Bitcoin Identity Standards and Applications">
+    <meta itemprop="description" content="The Bitcoin Reference DID method (did:btcr) supports DIDs on the public Bitcoin blockchain. The Bitcoin Reference method has minimal design goals: a DID trust anchor based on the Bitcoin blockchain, updates publicly visible and auditable via Bitcoin transactions, and optionally, additional DID Document information referenced in the transaction OP_RETURN data field.">
+    <meta itemprop="datePublished" content="March 11, 2019">
+    <meta itemprop="dateModified" content="January 07, 2020">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Bitcoin Identity Standards and Applications
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><img src="https://i.imgur.com/q32lAXY.png" alt=""></p>
+
+<p><a href="https://www.youtube.com/watch?v=TQqu0bLLXSY">Panel Discussion on Decentralized Identity at Bitcoin Wednesday</a></p>
+<blockquote>
+  <p>This excellent panel discussion on decentralized identity capped off an evening of presentations during Bitcoin Wednesday held at the Volkshotel in Amsterdam on 7 November, 2018.</p>
+  <ul>
+    <li>Martin Riedel of Civic,</li>
+    <li>Orfeas Litos of the University of Edinburgh,</li>
+    <li>Moritz Neto of Tenzorum,</li>
+    <li>Michael Mainelli of Z/Yen and</li>
+    <li>Eric Tang of LivePeer.</li>
+  </ul>
+</blockquote>
+
+<h2 id="early-history-in-using-bitcoin-for-digital-identity">Early History in using Bitcoin for Digital Identity</h2>
+
+<ul>
+  <li>
+<a href="https://en.bitcoin.it/wiki/Identity_protocol_v1">Identity protocol v1</a> - bitcoin wiki</li>
+  <li><a href="https://www.newsbtc.com/2015/09/09/bitnation-taps-blockchain-tech-to-aid-refugees/">Bitnation taps Blockchain tech to aid Refugees</a></li>
+</ul>
+
+<h2 id="btcr">BTCR</h2>
+
+<p><a href="https://www.okimsrazor.com/project/btcr-project/">BTCR Project - OKim’s Razor</a></p>
+<blockquote>
+  <p>BTCR is a Decentralized Identifier (DID) method specification based on the bitcoin blockchain. I helped develop the initial versions of the BTCR method specification and implementations.</p>
+
+  <p>It’s completely open source, so you can experiment with the BTCR playground (which demonstrates BTCR DID lookup and creation), supporting libraries, and specifications around resolving BTCR DIDs. This is a community effort, and if you’d like to be involved, please let me know (<a href="https://twitter.com/kimdhamilton" class="user-mention">@kimdhamilton</a> on twitter).
+<a href="https://medium.com/@kimdhamilton/btcr-did-method-updates-d0fd14386139">BTCR DID Method Updates</a> by Kim Hamilton Duffy
+The Bitcoin Reference DID method (did:btcr) is designed as a minimal, secure, and open Decentralized Identifier (DID) method anchored to the Bitcoin blockchain. DIDs are an interoperable locator for identity that does not require permission from anyone else. The BTCR method specifically is fully open source — not tied to a commercial vendor — which makes it a valuable vendor-agnostic demonstration of the emerging DID specification.</p>
+</blockquote>
+
+<p><a href="https://slideplayer.com/slide/15397169/"><img src="/images/btcr.webp" alt=""></a></p>
+
+<ul>
+  <li>
+<a href="https://w3c-ccg.github.io/didm-btcr/">BTCR DID Method</a> • <a href="https://github.com/w3c-ccg/didm-btcr">source</a> - WORK ITEM: BTCR DID Method Spec did:btcr:
+    <ul>
+      <li>The Bitcoin Reference DID method (did:btcr) supports DIDs on the public Bitcoin blockchain. The Bitcoin Reference method has minimal design goals: a DID trust anchor based on the Bitcoin blockchain, updates publicly visible and auditable via Bitcoin transactions, and optionally, additional DID Document information referenced in the transaction OP_RETURN data field. No other Personal Identifiable Information (PII) would be placed on the immutable blockchain.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://nbviewer.jupyter.org/github/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/btcr-resolver.pdf">BTCR DID Resolver Specification</a>
+    <blockquote>
+      <p>This describes the process of resolving a BTCR DID into a DID Document. The draft reference implementation is available at <a href="https://github.com/WebOfTrustInfo/btcr-did-tools-js">https://github.com/WebOfTrustInfo/btcr-did-tools-js</a> (see didFormatter.js). Note not all steps described in this document are implemented yet.</p>
+
+      <p>See the <a href="https://weboftrustinfo.github.io/btcr-tx-playground.github.io/">BTCR playground</a> for a live demonstration. The BTCR playground uses the draft reference implementation BTCR DID resolver.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://w3c-ccg.github.io/didm-btcr/">BTCR DID Method</a>
+    <blockquote>
+      <p>The Bitcoin Reference DID method (did:btcr) supports DIDs on the public Bitcoin blockchain. The Bitcoin Reference method has minimal design goals: a DID trust anchor based on the Bitcoin blockchain, updates publicly visible and auditable via Bitcoin transactions, and optionally, additional DID Document information referenced in the transaction OP_RETURN data field. No other Personal Identifiable Information (PII) would be placed on the immutable blockchain.</p>
+    </blockquote>
+    <ul>
+      <li><a href="https://weboftrustinfo.github.io/btcr-tx-playground.github.io/">btcr tx conversion playground</a></li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/WebOfTrustInfo/btcr-tx-playground.github.io">WebOfTrustInfo/btcr-tx-playground.github.io</a></li>
+  <li><a href="https://github.com/WebOfTrustInfo/btcr-did-tools-js">WebOfTrustInfo/btcr-did-tools-js</a></li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/btcr-hackathon">WebOfTrustInfo/btcr-hackathon</a> - Virtual hackathon to create spec and code for Bitcoin-based Decentralized Identifiers (DIDs)</li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/btcr_0_1.pdf">BTCR v0.1 Decisions</a> by Kim Hamilton Duffy, Christopher Allen, Dan Pape (01/19)
+    <blockquote>
+      <p>The Bitcoin Reference (BTCR) DID method supports DIDs using the Bitcoin blockchain. This method has been under development through Rebooting Web of Trust events and hackathons over the past year. The BTCR method’s reliance on the Bitcoin blockchain presents both advantages and design challenges. During RWOT7, the authors made a number of design and implementation decisions – largely scope-cutting in nature – in order to lock down a Minimum Viable Product (MVP) version, which we’ll refer to as v0.1. This paper documents those decisions, which will apply to the upcoming v0.1 BTCR method specification and associated v0.1 BTCR reference implementation.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://ssimeetup.org/dids-demystified-hands-intro-dids-btcr-did-method-kim-hamilton-duffy-webinar-5/">DIDs Demystified: A hands-on intro to DIDs via the BTCR DID Method – Kim Hamilton Duffy – Webinar 5</a>
+    <blockquote>
+      <p>This talk will demystify Decentralized Identifiers (DIDs) via the simple Bitcoin Reference (BTCR) DID Method. Kim will introduce the basics of DIDs and show how they work in action through demos of the creation/updating and resolution process in BTCR. We’ll build on this knowledge by discussing advanced features enabled by DIDs, along with a brief survey of other DID methods. By the end of the talk, you’ll be able to create and resolve your own BTCR DIDs through the live BTCR playground.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://github.com/WebOfTrustInfo/rwot5-boston/tree/master/topics-and-advance-readings/first-xdi-link-contract-between-btcr-did-and-sov-did.md">First XDI Link Contract between “btcr” DID and “sov” DID</a> by Markus Sabadello</li>
+</ul>
+
+<center><iframe src="//www.slideshare.net/slideshow/embed_code/key/B2YIOdRYlqiiPd" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""></iframe></center>
+<p><a href="https://www.slideshare.net/SSIMeetup/dids-demystified-a-handson-intro-to-dids-via-the-bitcoin-reference-btcr-did-method" title="DIDs Demystified: A hands-on intro to DIDs via the Bitcoin Reference (BTCR) DID Method" target="_blank">DIDs Demystified: A hands-on intro to DIDs via the Bitcoin Reference (BTCR) DID Method</a></p>
+
+<h2 id="ion">ION</h2>
+
+<p><a href="https://www.coindesk.com/microsoft-launches-decentralized-identity-tool-on-bitcoin-blockchain">Microsoft is launching the first decentralized infrastructure implementation by a major tech company that is built directly on the bitcoin blockchain.</a></p>
+<blockquote>
+  <p>“To have Microsoft say they are not scared of bitcoin, and in fact, it has some very good properties and we are willing to take advantage of those properties, is, I think, a step in the right direction.”</p>
+</blockquote>
+
+<center><iframe src="//www.slideshare.net/slideshow/embed_code/key/e4v6fZdFL5fdu3" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe></center>
+
+<p><a href="https://ssimeetup.org/introduction-ion-layer-2-network-decentralized-identifiers-bitcoin-daniel-buchner-webinar-29/">Introduction to Ion – a layer 2 network for Decentralized Identifiers with Bitcoin - Daniel Buchner</a> • <a href="https://www.youtube.com/watch?v=agPVWVe0p3Q">Video</a></p>
+
+<ul>
+  <li>
+<a href="https://techcommunity.microsoft.com/t5/azure-active-directory-identity/toward-scalable-decentralized-identifier-systems/ba-p/560168">Toward scalable decentralized identifier systems</a> (ION ANN)
+    <blockquote>
+      <p>Today’s post is the next step in realizing our vision for the future of decentralized identities, <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2018/02/12/decentralized-digital-identities-and-blockchain-the-future-as-we-see-it/">which we laid out last year</a>. We believe every person needs a decentralized, digital identity they own and control, backed by self-owned identifiers that enable secure, privacy preserving interactions. This self-owned identity must seamlessly integrate into their lives and put them at the center of everything they do in the digital world.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE2DjfY">Decentralized Identity - Own and control your identity</a> - Microsoft Identity Whitepaper</li>
+  <li><a href="https://github.com/decentralized-identity/ion">decentralized-identity/ion</a></li>
+  <li><a href="https://medium.com/hackernoon/aries-and-ion-two-different-perspectives-of-decentralized-identity-in-blockchain-applications-c80dbe0bb241">Aries and ION: Two Different Perspectives of Decentralized Identity in Blockchain Applications</a></li>
+</ul>
+
+<iframe src="https://castbox.fm/app/castbox/player/id1098037/id155192208?v=8.3.0&amp;autoplay=0" frameborder="0" width="100%" height="500"></iframe>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/agPVWVe0p3Q" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+<h2 id="spidchain">Spidchain</h2>
+
+<p><a href="http://www.spidchain.com/">Spidchain</a> 
+<a href="https://drive.google.com/file/d/0B89WE3IIHmy1Z0ZSSWVmVEtaaG8/view">Whitepaper</a></p>
+<ul>
+  <li>“offers a platform for self-sovereign identity, including desktop and mobile apps for end-users. It uses Decentralized Identifiers (DIDs) - backed by optionally Bitcoin or Ethereum - to implement a marketplace for verifiable claims. The Spidchain applications allow individuals to create, recover, and revoke DIDs, to authenticate, to sign and verify files and claims, and more.”</li>
+</ul>
+
+<h3 id="spidchain-bitcoin-repos">Spidchain Bitcoin Repos</h3>
+<ul>
+  <li>
+<a href="https://github.com/SpidChain/spidchain-btcr">SpidChain/spidchain-btcr</a> - An implementation of the btcr standard for self sovereign distributed digital identity</li>
+  <li>
+<a href="https://github.com/SpidChain/electrumx">SpidChain/electrumx</a> Forked from kyuupichan/electrumx
+    <ul>
+      <li>Alternative implementation of spesmilo/electrum-server</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/SpidChain/btcr-spv">SpidChain/btcr-spv</a> - Poc of an SPV implementation of BTCR</li>
+  <li>
+<a href="https://github.com/SpidChain/satoshis-wheel-of-fortune">SpidChain/satoshis-wheel-of-fortune</a> - Pick a name from a list randomly in a provably honest way</li>
+  <li>
+<a href="https://github.com/SpidChain/txref-conversion-js">SpidChain/txref-conversion-js</a> - Forked from <a href="https://github.com/WebOfTrustInfo/txref-conversion-js">WebOfTrustInfo/txref-conversion-js</a>
+    <ul>
+      <li>Javascript library for converting txids to txrefs and back</li>
+    </ul>
+  </li>
+</ul>
+
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#bitcoin" class="page__taxonomy-item" rel="tag">Bitcoin</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#btcr" class="page__taxonomy-item" rel="tag">BTCR</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ethereum" class="page__taxonomy-item" rel="tag">Ethereum</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ion" class="page__taxonomy-item" rel="tag">ION</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#microsoft" class="page__taxonomy-item" rel="tag">Microsoft</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rebooting-wot" class="page__taxonomy-item" rel="tag">Rebooting WoT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#w3c" class="page__taxonomy-item" rel="tag">W3C</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#xdi" class="page__taxonomy-item" rel="tag">XDI</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#blockchain" class="page__taxonomy-item" rel="tag">Blockchain</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-01-07">January 07, 2020</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/blockchain/bitcoin/2019-03-11-bitcoin.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&amp;text=Bitcoin+Identity+Standards+and+Applications%20https%3A%2F%2Fdecentralized-id.com%2Fblockchain%2Fbitcoin%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fblockchain%2Fbitcoin%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdecentralized-id.com%2Fblockchain%2Fbitcoin%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fblockchain%2Fbitcoin%2F&amp;title=Bitcoin+Identity+Standards+and+Applications" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a>
+</h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2">
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="bitcoin">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/veres_one-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blockchain/veres-one/" rel="permalink">Veres One
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Our vision is to enable all people and organizations in the world to create and own their online identifiers, control their identity data and with whom they share that data.
+</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-10 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    <div class="tags">DID</div> <div class="tags">Digital Bazaar</div> <div class="tags">Veres One</div> <div class="tags">Veres One Community Group</div> <div class="tags">Verifiable Credentials</div> <div class="tags">W3C</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/handshake_teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blockchain/handshake/" rel="permalink">Handshake
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Handshake is a UTXO-based blockchain protocol which manages the registration, renewal and transfer of DNS top-level domains (TLDs). Our naming protocol differs from its predecessors in that it has no concept of namespacing or subdomains at the consensus layer. Its purpose is not to replace DNS, b...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-10 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    <div class="tags">DNS</div> <div class="tags">Handshake</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/factom-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/companies/factom/" rel="permalink">Factom Inc.
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Established in 2014, the founders recognized bitcoin’s limitations to be a practical blockchain for Enterprise data solutions. Generally, distributed records, information and documents have been difficult to protect, challenging to synchronize, and impossible to truly verify because of the manual...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-02 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    <div class="tags">Blockchain</div> <div class="tags">DHS</div> <div class="tags">DID</div> <div class="tags">Factom</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/dhs-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/government/usa/dhs/" rel="permalink">Department Homeland Security (DHS)
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The DHS Science and Technology Directorate (S&amp;T) Silicon Valley Innovation Program (SVIP) is keeping pace with the innovation community to tackle the hardest problems faced by DHS and the Homeland Security Enterprise. SVIP expands DHS S&amp;T’s reach to find new technologies that strengthen n...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-02 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  17 minute read
+</p>
+    <div class="tags">Blockcerts</div> <div class="tags">Celerity</div> <div class="tags">DHS</div> <div class="tags">DKMS</div> <div class="tags">Danube Tech</div> <div class="tags">Digital Bazaar</div> <div class="tags">Dignario</div> <div class="tags">Evernym</div> <div class="tags">Factom</div> <div class="tags">Indicio</div> <div class="tags">Learning Machine</div> <div class="tags">MATTR</div> <div class="tags">Mavnet</div> <div class="tags">Mesur</div> <div class="tags">Narf</div> <div class="tags">Respect Network</div> <div class="tags">SICPA</div> <div class="tags">SecureKey</div> <div class="tags">Solarity</div> <div class="tags">Spherity</div> <div class="tags">Stranger Labs</div> <div class="tags">Transmute</div> <div class="tags">Trinsic</div> <div class="tags">USA</div> <div class="tags">Verifiable Credentials</div> <div class="tags">Verified.ME</div> <div class="tags">W3C</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

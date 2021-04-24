@@ -1,0 +1,1461 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>KERI - Key Event Receipt Infrastructure |  Decentralized Identity Web Directory</title>
+<meta name="description" content="The first truly fully decentralized identity system.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="KERI - Key Event Receipt Infrastructure">
+<meta property="og:url" content="https://decentralized-id.com/organizations/identity-foundation/keri/">
+
+
+  <meta property="og:description" content="The first truly fully decentralized identity system.">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/keri-header.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="KERI - Key Event Receipt Infrastructure">
+  <meta name="twitter:description" content="The first truly fully decentralized identity system.">
+  <meta name="twitter:url" content="https://decentralized-id.com/organizations/identity-foundation/keri/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://decentralized-id.com/images/keri-header.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-11-22T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2020-11-22T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/organizations/identity-foundation/keri/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="/images/keri-header.webp" alt="KERI - Key Event Receipt Infrastructure" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/images/the-world-map-from-a-binary-code.webp"
+        
+        alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources & Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="KERI - Key Event Receipt Infrastructure">
+    <meta itemprop="description" content="An identity system based secure overlay for the Internet is presented. This includes a primary root-of-trust in self-certifying identifiers. It presents a formalism for Autonomic Identifiers (AIDs) and Autonomic Namespaces (ANs). They are part of an Autonomic Identity System (AIS). This system uses the design principle of minimally sufficient means to provide a candidate trust spanning layer for the internet. Associated with this system is a decentralized key management infrastructure (DKMI).">
+    <meta itemprop="datePublished" content="November 22, 2020">
+    <meta itemprop="dateModified" content="November 22, 2020">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">KERI - Key Event Receipt Infrastructure
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-link"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#presentations">Presentations</a></li>
+  <li><a href="#github">GitHub</a></li>
+  <li><a href="#background">Background</a>
+    <ul>
+      <li><a href="#related">Related</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <p><a href="https://keri.one">Website</a> - <a href="https://keri.one/keri-resources/">Resources</a> - <a href="https://github.com/decentralized-identity/keri">GitHub</a> - <a href="https://identity.foundation/working-groups/identifiers-discovery.html">Identifiers &amp; Discovery WG</a></p>
+
+<ul>
+  <li><a href="https://raw.githubusercontent.com/SmithSamuelM/Papers/master/whitepapers/KERI_WP_2.x.web.pdf">KEY EVENT RECEIPT INFRASTRUCTURE (KERI) DESIGN</a> Samuel M. Smith Ph.D. v2.54 2020/10/22, v1.60 2019/07/03 [<a href="https://arxiv.org/abs/1907.02143">arXiv</a>]
+    <blockquote>
+      <p>An identity system based secure overlay for the Internet is presented. This includes a primary root-of-trust in self-certifying identifiers. It presents a formalism for Autonomic Identifiers (AIDs) and Autonomic Namespaces (ANs). They are part of an Autonomic Identity System (AIS). This system uses the design principle of minimally sufficient means to provide a candidate trust spanning layer for the internet. Associated with this system is a decentralized key management infrastructure (DKMI). The primary root-of-trust are self-certifying identifiers that are strongly bound at issuance to a cryptographic signing (public, private) key-pair. These are self-contained until/unless control needs to be transferred to a new key-pair. In that event an append only chained key-event log of signed transfer statements provides end verifiable control provenance. This makes intervening operational infrastructure replaceable because the event logs may be therefore be served up by ambient infrastructure. End verifiable logs on ambient infrastructure enables ambient verifiability (verifiable by anyone, anywhere, at anytime). The primary key management operation is key rotation (transference) via a novel key pre-rotation scheme. Two primary trust modalities motivated the design, these are a direct (one-to-one) mode and an indirect (one-to-any) mode. In the direct mode, the identity controller establishes control via verified signatures of the controlling key-pair. The indirect mode extends that trust basis with witnessed key event receipt logs (KERLs) for validating events. The security and accountability guarantees of indirect mode are provided by KERIs Agreement Algorithm for Control Establishment (KACE) among a set of witnesses.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://raw.githubusercontent.com/SmithSamuelM/Papers/master/whitepapers/10-ssi-key-management.pdf">Decentralized key management</a> Sam Smith (Manning)
+    <blockquote>
+      <p>● Why any form of digital key management is hard<br />
+● Standardsand best practices for conventional key management<br />
+● The starting point for key management architectures: roots-of-trust<br />
+● The special challenges of decentralizedkey management<br />
+● The new tools that verifiable credentials (VCs), decentralized identifiers (DIDs), and self-sovereign identity (SSI) bring to decentralized key management<br />
+● Key management for ledger-based DID methods<br />
+● Key management for peer-based DID methods<br />
+● Fully autonomous decentralized key management with Key Event Receipt Infrastructure (KERI)</p>
+    </blockquote>
+  </li>
+  <li><a href="https://raw.githubusercontent.com/SmithSamuelM/Papers/master/whitepapers/IdentifierTheory_web.pdf">UNIVERSAL IDENTIFIER THEORY</a>
+    <blockquote>
+      <p>Abstract—A universal theory for identifiers is presented. This theory is based on a unified model of identifiers that include cryptographic autonomic identifiers (AIDs) and legitimized (authorized) human meaningful identifiers (LIDs). This model provides truly decentralized trust bases each derived from the cryptographic root-of-trust of a given AID. An AID is based on a self-certifying identifier (SCID) prefix. Self certifying identifiers are not human meaningful but have strong cryptographic properties. The associated self-certifying trust basis gives rise to a trust do- main for associated cryptographically verifiable non-repudiable statements. Every other type of identifier including human meaningful identifiers may then be secured in this resultant trust do- main via an end-verifiable authorization. This authorization legitimizes that human meaningful identifier as an LID though its association with an AID. The result is a secured trust domain specific identifier couplet of aid|lid. AIDs are provided by the open standard key event receipt infrastructure (KERI). This unified model provides a systematic methodology for the design and implementation of secure decentralized identifier systems that underpin decentralized trust bases and their associated ecosystems of interactions.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://ssimeetup.org/key-event-receipt-infrastructure-keri-secure-identifier-overlay-internet-sam-smith-webinar-58/">Key Event Receipt Infrastructure (KERI): A secure identifier overlay for the internet – Sam Smith – Webinar 58</a> SSI-Meetup</li>
+</ul>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/izNZ20XSXR0" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+<h2 id="presentations">Presentations</h2>
+
+<ul>
+  <li><a href="https://raw.githubusercontent.com/SmithSamuelM/Papers/master/presentations/KERI2_Overview.web.pdf">KERI Overview</a> Key Event Receipt Infrastructure Samuel M. Smith Ph.D. sam@keri.one https://keri.oneversion 2.54 2020/10/22
+    <blockquote>
+      <p><strong>Separation of Control</strong><br />
+Shared (permissioned) ledger = shared control over shared data.</p>
+      <ul>
+        <li>Shared data = good, shared control = bad.</li>
+        <li>Shared control between controller and validator may be problematic for governance, scalability, and performance.<br />
+KERI  = separated control over shared data.</li>
+        <li>Separated control between controller and validator may provide better decentralization, more flexibility, better scalability, lower cost, higher performance, and more privacy at comparable security.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><a href="https://raw.githubusercontent.com/SmithSamuelM/Papers/master/presentations/DuplicityGame_IIW_2020_A.pdf">The Duplicity Game: or why you can trust KERI</a>
+    <blockquote>
+      <p><strong>Inconsistency vs. Duplicity</strong></p>
+      <ul>
+        <li>inconsistency: lacking agreement, as two or more things in relation to each other</li>
+        <li>duplicity: acting in two different ways to different people concerning the same matter
+<strong>Internal vs. External Inconsistency</strong></li>
+        <li>Internally inconsistent log = not verifiable.</li>
+        <li>Log verification from self-certifying root-of-trust protects against internal inconsistency.</li>
+        <li>Externally inconsistent log with a purported copy of log but both verifiable = duplicitous.</li>
+        <li>Duplicity detection protects against external inconsistency.</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><a href="https://raw.githubusercontent.com/SmithSamuelM/Papers/master/presentations/KERI_Overview.pdf">Key Event Receipt Infrastructure (KERI) Model for a Universal DKMI</a> - December 2019
+    <blockquote>
+      <p><strong>KERI Nomenclature</strong></p>
+      <ul>
+        <li><strong>self-certifying identifier</strong>: includes public key</li>
+        <li><strong>digital signature</strong>: unique non-repudiable (cypher suite known)</li>
+        <li><strong>digest</strong>: collision resistant hash of content</li>
+        <li><strong>signed digest</strong>: commitment to content</li>
+        <li><strong>controller</strong>: controlling entity of identifier</li>
+        <li><strong>message</strong>: serialized data structure event: actionable message</li>
+        <li><strong>key event</strong>: key management operation</li>
+        <li><strong>inception event</strong>: unique self-signed event that creates identifier and controlling key(s)</li>
+        <li><strong>rotation event</strong>: self-signed uniquely ordered event from a sequence that changes the set of controlling keys</li>
+        <li><strong>verifier</strong>: cryptographically verifies signature(s) on an event message.</li>
+        <li><strong>witness</strong>: entity that may receive, verify, and store key events for an identifier. Each witness controls its own identifier used to sign key event messages, controller is a special case of witness.</li>
+        <li><strong>receipt</strong>: event message or reference with one or more witness signatures</li>
+        <li><strong>key event log</strong>: ordered record of all self-signed key event messages key event</li>
+        <li><strong>receipt log</strong>: ordered record of all key event receipts for a given set of witnesses</li>
+        <li><strong>validator</strong>: determines current authoritative key set for identifier from at least one key event (receipt) log.</li>
+        <li><strong>judge</strong>: determines current authoritative key set for identifier from the key event receipt logs from a set of witnesses.</li>
+        <li><strong>pre-rotation</strong>: commitment to next rotated key set in previous rotation or inception event</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><a href="https://raw.githubusercontent.com/SmithSamuelM/Papers/master/presentations/KERI_for_Muggles.pdf">KERI for Muggles IIW #31 Day 1 - Session #220 October 2020</a>
+    <blockquote>
+      <p>KERI is a new approach to decentralized identifiers and decentralized key management that promises significant benefits for SSI (self-sovereign identity) and ToIP (Trust over IP) infrastructure</p>
+    </blockquote>
+  </li>
+  <li><a href="https://raw.githubusercontent.com/SmithSamuelM/Papers/master/presentations/KERIVerifiableTrustBases.web.pdf">Verifiable Trust Bases</a> Samuel M. Smith Ph.D. sam@keri.one https://keri.one version 2.53 2020/10/20 - Renewing the Web of Trust
+    <blockquote>
+      <ul>
+        <li>KERI enables cryptographic proof-of-control-authority (provenance) for each identifier.
+          <ul>
+            <li>A proof is in the form of an identifier’s key event receipt log (KERL).</li>
+          </ul>
+        </li>
+        <li>KERLs are <em>End Verifiable</em>:
+          <ul>
+            <li>End user alone may verify. Zero trust in intervening infrastructure.</li>
+          </ul>
+        </li>
+        <li>KERLs may be <em>Ambient Verifiable</em>:
+          <ul>
+            <li>Anyone may verify anylog, anywhere, at anytime.</li>
+          </ul>
+        </li>
+        <li>KERI = self-cert root-of-trust + certificate transparency + KA2CE + recoverable + post-quantum.</li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="github">GitHub</h2>
+<ul>
+  <li><a href="https://github.com/decentralized-identity/keri">decentralized-identity/keri</a> - Key Event Receipt Infrastructure - the spec and implementation of the KERI protocol
+    <ul>
+      <li><a href="https://raw.githubusercontent.com/decentralized-identity/keri/master/kids/KERI_WP.pdf">KERI Whitepaper</a></li>
+      <li><a href="https://github.com/decentralized-identity/keri/blob/master/implementation.md">Implementation Notes for KERI</a> [<a href="https://hackmd.io/orhyiJkLT721v4PCPkvQiA?both">HackMD</a>]
+        <blockquote>
+          <p>The interpretation of the data associated with the digest or hash tree root in the seal is independent of KERI. This allows KERI to be agnostic about anchored data semantics. Another way of saying this is that seals are data agnostic; they don’t care about the semantics of its associated data. This better preserves privacy because the seal itself does not leak any information about the purpose or specific content of the associated data. Furthermore, because digests are a type of content address, they are self-discoverable. This means there is no need to provide any sort of context or content specific tag or label for the digests. Applications that use KERI may provide discovery of a digest via a hash table (mapping) whose indexes (hash keys) are the digests and the values in the table are the location of the digest in a specific event. To restate, the semantics of the digested data are not needed for discovery of the digest within a key event sequence.</p>
+        </blockquote>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://github.com/decentralized-identity/keriox">decentralized-identity/keriox</a> - Rust Implementation of the KERI Core Library</li>
+  <li><a href="https://github.com/decentralized-identity/keripy">decentralized-identity/keripy</a> - Python Implementation of the KERI Core Libraries</li>
+  <li><a href="https://github.com/decentralized-identity/kerigo">decentralized-identity/kerigo</a> - Go implementation of KERI (Key Event Receipt Infrastructure)</li>
+  <li><a href="https://github.com/decentralized-identity/kerijs">decentralized-identity/kerijs</a> - JavaScript (nodes) Implementation of the KERI core library.</li>
+</ul>
+
+<h2 id="background">Background</h2>
+
+<ul>
+  <li><a href="https://keri.one/keri-resources/">Resources</a></li>
+  <li><a href="https://github.com/SmithSamuelM/Papers/">SmithSamuelM/Papers</a>
+    <ul>
+      <li><a href="https://github.com/SmithSamuelM/Papers/tree/master/whitepapers">Whitepapers</a></li>
+      <li><a href="https://github.com/SmithSamuelM/Papers/tree/master/presentations">Presentations</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Self-Certifying Identifiers</strong></p>
+<ul>
+  <li>Girault, M., “<a href="https://link.springer.com/content/pdf/11007%2F3-540-46416-6_42.pdf">Self-certifiepublic keys</a>,” EUROCRYPT 1991: Advances in Cryptology, pp. 490-497, 1991</li>
+  <li>Kaminsky, M. and Banks, E., “<a href="https://pdos.csail.mit.edu/~kaminsky/sfs-http.ps">SFS-HTTP: Securing the Web with Self-Certifying URLs</a>,” MIT, 1999</li>
+  <li>Mazieres, D. and Kaashoek, M. F., “<a href="http://www.sigops.org/ew-history/1998/papers/mazieres.ps">Escaping the Evils of Centralized Control with self-certifying pathnames</a>,” MIT Laboratory for Computer Science, 2000</li>
+  <li>Mazieres, D., “<a href="https://pdos.csail.mit.edu/~ericp/doc/sfs-thesis.ps">Self-certifying File System</a>,” MIT Ph.D. Dissertation, 2000/06/01</li>
+  <li>TCG, “<a href="https://trustedcomputinggroup.org/wp-content/uploads/TCG-DICE-Arch-Implicit-Identity-Based-Device-Attestation-v1-rev93.pdf">Implicit Identity Based Device Attestation</a>,” Trusted Computing Group, vol. Version 1.0, 2018/03/05</li>
+</ul>
+
+<p><strong>Autonomic Identifiers</strong></p>
+
+<p>Smith, S. M., “<a href="https://github.com/SmithSamuelM/Paperblob/master/whitepapers/open-reputation-low-level-whitepaper.pdf">Open Reputation Framework</a>,” vol. Version 1.2, 2015/05/13<br />
+Smith, S. M. and Khovratovich, D., “<a href="https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/Identity-System-Essentials.pdf">Identity System Essentials</a>,” 2016/03/29</p>
+<ul>
+  <li>Smith, S. M., “<a href="https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/DecentralizedAutonomicData.pdf">Decentralized Autonomic Data (DAD) and the three R’s of Key Management</a>,” Rebooting the Web of Trust RWOT 6, Spring 2018</li>
+  <li>Smith, S. M., “<a href="https://arxiv.org/abs/1907.02143">Key Event Receipt Infrastructure (KERI) Design and Build</a>,” arXiv, 2019/07/03</li>
+  <li>Conway, S., Hughes, A., Ma, M. et al., “<a href="https://github.com/SmithSamuelM/Papers/blob/master/whitepapers/A_DID_for_everything.pdf">A DID for Everything</a>,” Rebooting the Web of Trust RWOT 7, 2018/09/26</li>
+  <li>Stocker, C., Smith, S. and Caballero, J., “<a href="https://github.com/WebOfTrustInfo/rwot10-buenosaires/blob/master/final-documents/quantum-secure-dids.pdf">Quantum Secure DIDs</a>,” RWOT10, 2020/07/09</li>
+</ul>
+
+<p><strong>Certificate Transparency</strong></p>
+
+<p>Laurie, B., “[Certificate Transparency: Public, verifiable, append-only log(https://queue.acm.org/detail.cfm?id=2668154),” ACMQueue, vol. Vol 12, Issue 9, 2014/09/08</p>
+<ul>
+  <li>Google, “<a href="http://www.certificate-transparency.org/home">Certificate Transparency</a>,”</li>
+  <li>Laurie, B. and Kasper, E., “<a href="https://www.links.org/files/RevocationTransparency.pdf">Revocation Transparency</a>,”</li>
+</ul>
+
+<h3 id="related">Related</h3>
+
+<ul>
+  <li><a href="https://github.com/SmithSamuelM/Papers/blob/master/presentations/W3C_DID_Security_Concerns.pdf">W3C DID Security Concerns</a> 2020/01/14
+    <blockquote>
+      <p><strong>Certificate Transparency Solution</strong></p>
+      <ul>
+        <li>Public end-verifiable append-only event log with consistency and inclusion proofs</li>
+        <li>End-verifiable duplicity detection = ambient verifiability of duplicity</li>
+        <li>Event log is third party infrastructure but it is not trusted because logs are verifiable.</li>
+        <li>Sparse Merkle trees for revocation of certificates</li>
+        <li>(related EFF SSL Observatory)</li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<p><strong>Non Conformist Innovation Summit Closing Keynote #2 - Sam Smith</strong></p>
+
+<p>The Economics of Its &amp; Bits - Digital Identity - Freedom Privacy Control Security</p>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/L82O9nqHjRE" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr/>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#did" class="page__taxonomy-item" rel="tag">DID</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#dif" class="page__taxonomy-item" rel="tag">DIF</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#dkmi" class="page__taxonomy-item" rel="tag">DKMI</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#keri" class="page__taxonomy-item" rel="tag">KERI</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rebooting-wot" class="page__taxonomy-item" rel="tag">Rebooting WoT</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#identity-foundation-dif" class="page__taxonomy-item" rel="tag">Identity Foundation (DIF)</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-22">November 22, 2020</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/organizations/identity-foundation-DIF/2020-11-22-keri.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&text=KERI+-+Key+Event+Receipt+Infrastructure%20https%3A%2F%2Fdecentralized-id.com%2Forganizations%2Fidentity-foundation%2Fkeri%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Forganizations%2Fidentity-foundation%2Fkeri%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdecentralized-id.com%2Forganizations%2Fidentity-foundation%2Fkeri%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Forganizations%2Fidentity-foundation%2Fkeri%2F&title=KERI+-+Key+Event+Receipt+Infrastructure" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr/>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a></h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" />
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" />
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="keri">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/secure-data-storage-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/organizations/decentralized-identity-foundation/wg/secure-data-storage/" rel="permalink">Secure Data Storage WG - DIF
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Secure, encrypted, privacy-preserving storage and computation of data is a critical component of decentralized identity systems. As with identifiers and names must be self-sovereign to the owning entity, a user’s identity data must remain private, only accessible to the entities they allow. DIF m...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-26 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    <div class="tags">DIF</div> <div class="tags">Encrypted Data Vaults</div> <div class="tags">Hubs</div> <div class="tags">Secure Data Storage</div> <div class="tags">Storage and Compute WG</div> <div class="tags">W3C</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/dif-interop-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/organizations/decentralized-identity-foundation/wg/interop/" rel="permalink">Interop Working Group - DIF
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Community collaboration and project management on Interoperability. Develop and publish definitions of success with respect to business interoperability, at the highest level. Defining points of protocol-defined touchpoints for maximum interchangeability of components at every layer; it is assume...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-26 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    <div class="tags">Credentials Community Group</div> <div class="tags">DIF</div> <div class="tags">Hyperledger Foundation</div> <div class="tags">IETF</div> <div class="tags">Interop WG</div> <div class="tags">Trust over IP</div> <div class="tags">W3C</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/identifiers-discovery-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/organizations/identity-foundation/identifiers-and-discovery-wg/wg/identifiers-and-discovery/" rel="permalink">Identifiers &amp; Discovery Working Group - DIF
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Members of the Working Group are engaged in development of protocols and systems that enable creation, resolution, and discovery of decentralized identifiers and names across underlying decentralized systems, like blockchains and distributed ledgers.
+</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-26 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    <div class="tags">BTCR</div> <div class="tags">DID</div> <div class="tags">DIF</div> <div class="tags">ERC725</div> <div class="tags">Ethereum</div> <div class="tags">ION</div> <div class="tags">Identifiers and Discovery WG</div> <div class="tags">JSON-LD</div> <div class="tags">KERI</div> <div class="tags">Linked Data</div> <div class="tags">Peer DID</div> <div class="tags">Universal Registrar</div> <div class="tags">Universal Resolver</div> <div class="tags">Verifiable Credentials</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/didauth-wg-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/organizations/decentralized-identity-foundation/wg/secure-data-storage/" rel="permalink">(DID) Authentication Working Group - DIF
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of this working group is to design, recommend and implement authentication and authorization protocols that rely upon open standards and cryptographic protocols using DIDs and DID Documents. Recommendations and development of specifications, protocols, and formats for data structures ...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-26 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    <div class="tags">Aries</div> <div class="tags">DID</div> <div class="tags">DIDAuth</div> <div class="tags">DIDAuth WG</div> <div class="tags">DIDComm</div> <div class="tags">DIF</div> <div class="tags">SOIP</div> <div class="tags">Verifiable Credentials</div> <div class="tags">W3C</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

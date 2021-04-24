@@ -1,0 +1,1333 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Linked Data and the Semantic Web |  Decentralized Identity Web Directory</title>
+<meta name="description" content="  In 2001, Tim Berners-Lee, inventor of the World Wide Web, published an article in Scientific American. Berners-Lee, along with two other researchers, Ora Lassila and James Hendler, wanted to give the world a preview of the revolutionary new changes they saw coming to the web. Since its introduction only a decade before, the web had fast become the world’s best means for sharing documents with other people. Now, the authors promised, the web would evolve to encompass not just documents but every kind of data one could imagine.  - Whatever Happened to the Semantic Web?">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Linked Data and the Semantic Web">
+<meta property="og:url" content="https://decentralized-id.com/web-standards/linked-data/">
+
+
+  <meta property="og:description" content="  In 2001, Tim Berners-Lee, inventor of the World Wide Web, published an article in Scientific American. Berners-Lee, along with two other researchers, Ora Lassila and James Hendler, wanted to give the world a preview of the revolutionary new changes they saw coming to the web. Since its introduction only a decade before, the web had fast become the world’s best means for sharing documents with other people. Now, the authors promised, the web would evolve to encompass not just documents but every kind of data one could imagine.  - Whatever Happened to the Semantic Web?">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Linked Data and the Semantic Web">
+  <meta name="twitter:description" content="  In 2001, Tim Berners-Lee, inventor of the World Wide Web, published an article in Scientific American. Berners-Lee, along with two other researchers, Ora Lassila and James Hendler, wanted to give the world a preview of the revolutionary new changes they saw coming to the web. Since its introduction only a decade before, the web had fast become the world’s best means for sharing documents with other people. Now, the authors promised, the web would evolve to encompass not just documents but every kind of data one could imagine.  - Whatever Happened to the Semantic Web?">
+  <meta name="twitter:url" content="https://decentralized-id.com/web-standards/linked-data/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-01-10T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2020-01-09T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/web-standards/linked-data/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/images/the-world-map-from-a-binary-code.webp"
+        
+        alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources & Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Linked Data and the Semantic Web">
+    <meta itemprop="description" content="  In 2001, Tim Berners-Lee, inventor of the World Wide Web, published an article in Scientific American. Berners-Lee, along with two other researchers, Ora Lassila and James Hendler, wanted to give the world a preview of the revolutionary new changes they saw coming to the web. Since its introduction only a decade before, the web had fast become the world’s best means for sharing documents with other people. Now, the authors promised, the web would evolve to encompass not just documents but every kind of data one could imagine.  - Whatever Happened to the Semantic Web?">
+    <meta itemprop="datePublished" content="January 10, 2020">
+    <meta itemprop="dateModified" content="January 09, 2020">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Linked Data and the Semantic Web
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-link"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#getting-started">Getting Started</a></li>
+  <li><a href="#linked-data">Linked Data</a></li>
+  <li><a href="#github-repos">GitHub Repos</a>
+    <ul>
+      <li><a href="#w3c-ccg">W3C-CCG</a></li>
+      <li><a href="#db---linked-data">DB - Linked Data</a></li>
+    </ul>
+  </li>
+  <li><a href="#rdf">RDF</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <blockquote>
+  <p>In 2001, Tim Berners-Lee, inventor of the World Wide Web, published an article in Scientific American. Berners-Lee, along with two other researchers, Ora Lassila and James Hendler, wanted to give the world a preview of the revolutionary new changes they saw coming to the web. Since its introduction only a decade before, the web had fast become the world’s best means for sharing documents with other people. Now, the authors promised, the web would evolve to encompass not just documents but every kind of data one could imagine.  - <a href="https://twobithistory.org/2018/05/27/semantic-web.html">Whatever Happened to the Semantic Web?</a></p>
+</blockquote>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p><a href="http://linkeddata.org/">linkeddata.org</a></p>
+<blockquote>
+  <p>“Linked Data is about using the Web to connect related data that wasn’t previously linked, or using the Web to lower the barriers to linking data currently linked using other methods. More specifically, Wikipedia defines Linked Data as “a term used to describe a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using URIs and RDF.”</p>
+</blockquote>
+
+<ul>
+  <li><a href="https://github.com/semantalytics/awesome-semantic-web">semantalytics/awesome-semantic-web</a> - A curated list of various semantic web and linked data resources.</li>
+  <li><a href="https://github.com/nandana/awesome-linkeddata">Awesome Linked Data</a> - A list of tools for publishing and consuming Linked Data.</li>
+  <li><a href="https://datahub.io/collections/linked-open-data">Linked Open Data</a> - An overview of the Linked Open Data datasets.</li>
+  <li><a href="https://www.w3.org/2001/sw/interest/ldh/">Publishing and consuming Linked Data embedded in HTML</a></li>
+  <li><a href="https://kerfors.blogspot.com/">Linked Data for Enterprises</a></li>
+  <li><a href="https://github.com/linkeddata/dokieli">linkeddata/dokieli</a> • <a href="https://github.com/linkeddata/dokieli/wiki">wiki</a> - Examples in the Wild « Pretty Awesome List
+    <blockquote>
+      <p>dokieli is a decentralised article authoring, annotation, and social notification tool which works from Web browsers. It is built with the following principles in mind: freedom of expression, decentralisation, interoperability, and accessibility.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/solid/understanding-linked-data">solid/understanding-linked-data</a> - A slide deck introduction to Linked Data aimed at developers.</li>
+  <li><a href="https://www.w3.org/2013/dwbp/wiki/RDF_AND_JSON-LD_UseCases">RDF AND JSON-LD UseCases</a></li>
+</ul>
+
+<p><a href="http://www.linkeddatatools.com/semantic-web-basics">Introducing Linked Data And The Semantic Web</a></p>
+<blockquote>
+  <p>What is Linked Data and the Semantic Web and what is all the hype about? Principally, the Semantic Web is a Web 3.0 web technology - a way of linking data between systems or entities that allows for rich, self-describing interrelations of data available across the globe on the web.</p>
+</blockquote>
+
+<h2 id="linked-data">Linked Data</h2>
+
+<ul>
+  <li><a href="https://ruben.verborgh.org/blog/2018/12/28/designing-a-linked-data-developer-experience/">Designing a Linked Data developer experience</a>
+    <blockquote>
+      <p>Making decentralized Web app development fun</p>
+
+      <p>While the Semantic Web community was fighting its own internal battles, we failed to gain traction with the people who build apps that are actually used: front-end developers. Ironically, Semantic Web enthusiasts have failed to…</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/WebOfTrustInfo/rwot5-boston/blob/master/final-documents/lds-ocap.md">Linked Data Capabilities</a> By Christopher Lemmer Webber and Mark S. Miller
+    <blockquote>
+      <p>Linked Data Signatures enable a method of asserting the integrity of linked data documents that are passed throughout the web. The object capability model is a powerful system for ensuring the security of computing systems. In this paper, we explore layering an object capability model on top of Linked Data Signatures via chains of signed proclamations. fn:1 We call this system “Linked Data Capabilities”, or “ld-ocap” for short.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/identity-as-linked-data-on-immutable-ledgers.md">Identity as Linked Data on Immutable Ledgers</a>
+    <blockquote>
+      <p>Content creators on the Web are getting a raw deal. They get a fraction of a cent for an ad played on YouTube, and nothing on Facebook, for filling these sites with traffic-driving content. It’s hard to make a living when you’re a creative. Licensing is hard; the user experience is bad, so lawyers and middlemen extract the most value. In the music industry, more money flows into the pockets of distributors than creatives. Consumers are often happy to pay for their content. Instead, they’re forced to sit through ads.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/WebOfTrustInfo/rwot3-sf/blob/master/topics-and-advance-readings/blockchain-extensions-for-linked-data-signatures.md">Blockchain Extensions for Linked Data Signatures</a> by Manu Sporny, Harlan Wood, Noah Thorp, Wayne Vaughn, Christopher Allen, Jason Bukowski, and Dave Longley
+    <blockquote>
+      <p>The term Linked Data is used to describe a recommended best practice for exposing, sharing, and connecting information on the Web using standards, such as URLs, to identify things and their properties. When information is presented as Linked Data, other related information can be easily discovered and new information can be easily linked to it. Linked Data is extensible in a decentralized way, greatly reducing barriers to large scale integration.</p>
+
+      <p>With the increase in usage of Linked Data for a variety of applications, there is a need to be able to verify the authenticity and integrity of Linked Data documents. The Linked Data Signatures specification added authentication and integrity protection to linked data documents through the use of public/private key cryptography without sacrificing Linked Data features such as extensibility and composability.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/WebOfTrustInfo/rwot7-toronto/blob/master/final-documents/resource-integrity-proofs.md">Resource Integrity Proofs</a> by Ganesh Annan and Kim Hamilton Duffy
+    <blockquote>
+      <p>Cryptographic linking provides discoverability, integrity, and scheme agility
+Contributors: Manu Sporny, Dave Longley, David Lehn, and Bohdan Andriyiv</p>
+
+      <p>Currently, the Web provides a simple yet powerful mechanism for the dissemination of information via links. Unfortunately, there is no generalized mechanism that enables verifying that a fetched resource has been delivered without unexpected manipulation. Would it be possible to create an extensible and multipurpose cryptographic link that provides discoverability, integrity, and scheme agility?</p>
+
+      <p>Cryptographic linking solutions today have yet to provide a generalized mechanism for creating tamper-evident links. The Subresource Integrity standard limits this guarantee to script and link resources loaded on Web pages via the use of HTML attributes. IPFS provides a verification mechanism that is constrained to hash-based, content-addressable links, with no ability to complete content negotiation. RFC6920 proposes another mechanism that cannot be applied to existing links: it recommends the use of named information hashes and a resolution method that creates a content addressable URL [1]. Resource Integrity Proofs incorporates ideas from these standards and solutions to provide a new data format for cryptographic links that is fit for the open world.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/WebOfTrustInfo/rwot6-santabarbara/blob/master/topics-and-advance-readings/ld-ocap-recent-happenings.md">Recent happenings with Linked Data Capabilities</a>
+    <blockquote>
+      <p>Veres One’s architecture has been adjusted to take full advantage of Linked Data Capabilities as its primary mechanism for granting authority to perform operations on the ledger as well as on DID Documents. permission to update key materials can be conditionally handed out to an entity (or entities) and later revoked if deemed appropriate using Linked Data Capabilities’ design.</p>
+
+      <p>As for ledger updates, Accelerators also make use of Linked Data Capabilities. To prevent spamming the ledger, the costs of an update must somehow be accounted for. The traditional way to do this on a blockchain is to use proof of work, and this is also an option in Veres One, but for those use cases where expending time and energy on proof of work is less desirable users can use an “accelerator”.</p>
+
+      <p>An accelerator is an entity that has been granted a capability to perform updates on the ledger more quickly. Accelerators may likewise take advantage of Linked Data Capabilities’ support for delegation, with or without caveats.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://nbviewer.jupyter.org/github/WebOfTrustInfo/rebooting-the-web-of-trust-spring2017/blob/master/final-documents/ld-signatures.pdf">LD Signature Format Alignment</a>
+    <blockquote>
+      <p>The goal of the “LD Signature Format Alignment” Working Group at Rebooting the Web of Trust IV was to investigate the feasibility and impact of the proposed 2017 RSA Signature Suite spec, which brings JSON-LD signatures into alignment with the JOSE JSON Web Signature (JWS) standards.The 2017 RSA Signature Suite is based on RFC 7797, the JSON Web Signature (JWS) Unencoded Payload Option specifcation. This approach avoids past concerns about JWT raised in the LD signature adopters, including:•Increased space consumption associated withbase-64 encoding.•Difculty of nesting or chaining signatures, leading to data duplication.•Use of a format that is not a JSON object, preventing ability to rely exclusively on a JSON document-based storage engine (whilepreserving the signature)</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="github-repos">GitHub Repos</h2>
+
+<ul>
+  <li><a href="https://github.com/WebOfTrustInfo/ld-signatures-java">WebOfTrustInfo/ld-signatures-java</a> - Java implementation of Linked Data Signatures</li>
+  <li><a href="https://github.com/WebOfTrustInfo/ld-signatures-python">WebOfTrustInfo/ld-signatures-python</a></li>
+</ul>
+
+<h3 id="w3c-ccg">W3C-CCG</h3>
+<ul>
+  <li><a href="https://w3c-ccg.github.io/zcap-ld/">Authorization Capabilities for Linked Data v0.3</a> - An object capability framework for linked data systems
+    <blockquote>
+      <p>Authorization Capabilities for Linked Data (ZCAP-LD for short) provides a secure way for linked data systems to grant and express authority utilizing the object capability model. Capabilities are represented as linked data objects which are signed with Linked Data Signatures. ZCAP-LD supports delegating authority to other entities on the network by chaining together capability documents. “Caveats” may be attached to capability documents which may be used to restrict the scope of their use, for example to restrict the actions which may be used or providing a mechanism by which the capability may be later revoked.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/w3c-ccg/ld-cryptosuite-registry">w3c-ccg/ld-cryptosuite-registry</a> -  REGISTRY: Linked Data Keys Registry (managed by W3C Credentials Community Group) - w3c-ccg/ld-cryptosuite-registry</li>
+</ul>
+
+<h3 id="db---linked-data">DB - Linked Data</h3>
+
+<ul>
+  <li><a href="https://github.com/digitalbazaar/ocapld.js">digitalbazaar/ocapld.js</a> - Linked Data Capabilities reference implementation</li>
+  <li><a href="https://github.com/digitalbazaar/cuckoo-ldp">digitalbazaar/cuckoo-ldp</a> - Cuckoo Cycle Based Linked Data Proofs</li>
+  <li><a href="https://github.com/digitalbazaar/bedrock-ldn-receiver">digitalbazaar/bedrock-ldn-receiver</a> - Bedrock module for Linked Data Notification Receiver</li>
+  <li><a href="https://github.com/digitalbazaar/bedrock-ldn-inbox">digitalbazaar/bedrock-ldn-inbox</a> - Bedrock module for Linked Data Notification Inboxes</li>
+  <li><a href="https://github.com/digitalbazaar/bedrock-angular-ldn">digitalbazaar/bedrock-angular-ldn</a> - Bedrock AngularJS module for Linked Data Notification Sender+Consumer</li>
+  <li><a href="https://github.com/digitalbazaar/flex-ledger">digitalbazaar/flex-ledger</a> - Forked from web-payments/flex-ledger
+A decentralized Linked Data Ledger for the Web</li>
+</ul>
+
+<h2 id="rdf">RDF</h2>
+<p><a href="https://www.w3.org/community/rdfjs/wiki/Comparison_of_RDFJS_libraries">Comparison of RDFJS libraries</a>
+<a href="https://www.w3.org/DesignIssues/LinkedData.html">Design Issues - LinkedData</a> -w3.org</p>
+<blockquote>
+  <p>The Semantic Web isn’t just about putting data on the web. It is about making links, so that a person or machine can explore the web of data.  With linked data, when you have some of it, you can find other, related, data.</p>
+
+  <p>Like the web of hypertext, the web of data is constructed with documents on the web. However,  unlike the web of hypertext,  where links are relationships anchors in hypertext documents written in HTML, for data they links  between arbitrary things described by RDF,.  The URIs identify any kind of object or  concept.   But for HTML or RDF, the same expectations apply to make the web grow:</p>
+
+  <ul>
+    <li>Use URIs as names for things</li>
+    <li>Use HTTP URIs so that people can look up those names.</li>
+    <li>When someone looks up a URI, provide useful information, using the standards (RDF*, SPARQL)</li>
+    <li>Include links to other URIs. so that they can discover more things.
+<a href="https://www.w3.org/community/rdfjs/2018/04/23/rdf-js-the-new-rdf-and-linked-data-javascript-library/">RDF.js: The new RDF and Linked Data JavaScript library</a>
+A diverse web requires decentralized data storage and maintenance. According to MIT’s Tim Berners-Lee, “it is about making links, so that a person or machine can explore the web of data. With Linked Data, when you have some of it, you can find other, related, data”.</li>
+  </ul>
+
+  <p>Zazuko’s CTO Thomas Bergwinkl adds that “Linked Data is built on top of the web stack and the programming language of the web is JavaScript. It is crucial for Web Developers to have access to well-designed JavaScript libraries to work with RDF and Linked Data”.</p>
+
+  <p>The RDFJS W3C Community Group did a tremendous job in defining a standard to represent Linked Data in JavaScript. Several individuals and groups started to implement the RDFJS specification.</p>
+</blockquote>
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr/>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#json-ld" class="page__taxonomy-item" rel="tag">JSON-LD</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#linked-data" class="page__taxonomy-item" rel="tag">Linked Data</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rdf" class="page__taxonomy-item" rel="tag">RDF</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rsa" class="page__taxonomy-item" rel="tag">RSA</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#solid" class="page__taxonomy-item" rel="tag">Solid</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#veres-one" class="page__taxonomy-item" rel="tag">Veres One</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#w3c" class="page__taxonomy-item" rel="tag">W3C</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#web-standards" class="page__taxonomy-item" rel="tag">Web Standards</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-01-09">January 09, 2020</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/web-standards/2020-01-10-linked-data.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&text=Linked+Data+and+the+Semantic+Web%20https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Flinked-data%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Flinked-data%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Flinked-data%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Flinked-data%2F&title=Linked+Data+and+the+Semantic+Web" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr/>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a></h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" />
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" />
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="linked-data">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/did-square.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/object-capabilities/" rel="permalink">Object Capability Model
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Computer scientist E. Dean Tribble stated that in smart contracts, identity-based access control did not support well dynamically changing permissions, compared to the object-capability model. He analogized the ocap model with giving a valet the key to one’s car, without handing over the right to...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2021-04-19 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    <div class="tags">Cosmos</div> <div class="tags">JSON-LD</div> <div class="tags">oCap</div> <div class="tags">zCap</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/dataweb/dataweb-whitepaper-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/xdi-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xri-tc/" rel="permalink">XDI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of the OASIS XDI TC is to define a generalized, extensible, location-, application-, and transport-independent service for sharing, linking, and synchronizing data over the Internet and other data networks using XML documents and XRIs (Extensible Resource Identifiers), a URI-compatibl...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">RDF</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/xri-tc-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xdi-tc/" rel="permalink">XRI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of this TC is to define a syntax for abstract structured identifiers – identifiers that can be used within other URI schemes (such as http: and https: URIs) to share semantics across any number of domains and applications. The TC is also defining a simple XML descriptor format and HTT...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

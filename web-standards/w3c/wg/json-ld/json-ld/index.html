@@ -1,0 +1,1369 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>JSON-LD |  Decentralized Identity Web Directory</title>
+<meta name="description" content="The Semantic Web isn’t just about putting data on the web. It is about making links, so that a person or machine can explore the web of data.  With linked data, when you have some of it, you can find other, related, data.Like the web of hypertext, the web of data is constructed with documents on the web. However, unlike the web of hypertext, where links are relationships anchors in hypertext documents written in HTML, for data they links between arbitrary things described by RDF. The URIs identify any kind of object or concept.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="JSON-LD">
+<meta property="og:url" content="https://decentralized-id.com/web-standards/w3c/json-ld-wg/json-ld/">
+
+
+  <meta property="og:description" content="The Semantic Web isn’t just about putting data on the web. It is about making links, so that a person or machine can explore the web of data.  With linked data, when you have some of it, you can find other, related, data.Like the web of hypertext, the web of data is constructed with documents on the web. However, unlike the web of hypertext, where links are relationships anchors in hypertext documents written in HTML, for data they links between arbitrary things described by RDF. The URIs identify any kind of object or concept.">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/did-twitter.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="JSON-LD">
+  <meta name="twitter:description" content="The Semantic Web isn’t just about putting data on the web. It is about making links, so that a person or machine can explore the web of data.  With linked data, when you have some of it, you can find other, related, data.Like the web of hypertext, the web of data is constructed with documents on the web. However, unlike the web of hypertext, where links are relationships anchors in hypertext documents written in HTML, for data they links between arbitrary things described by RDF. The URIs identify any kind of object or concept.">
+  <meta name="twitter:url" content="https://decentralized-id.com/web-standards/w3c/json-ld-wg/json-ld/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="https://decentralized-id.com/images/did-twitter.webp">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-01-04T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2021-04-18T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/web-standards/w3c/json-ld-wg/json-ld/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/images/the-world-map-from-a-binary-code.webp"
+        
+        alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources & Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="JSON-LD">
+    <meta itemprop="description" content="The Semantic Web isn’t just about putting data on the web. It is about making links, so that a person or machine can explore the web of data.  With linked data, when you have some of it, you can find other, related, data.Like the web of hypertext, the web of data is constructed with documents on the web. However, unlike the web of hypertext, where links are relationships anchors in hypertext documents written in HTML, for data they links between arbitrary things described by RDF. The URIs identify any kind of object or concept.">
+    <meta itemprop="datePublished" content="January 04, 2020">
+    <meta itemprop="dateModified" content="April 18, 2021">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">JSON-LD
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-link"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#101">101</a></li>
+  <li><a href="#info">info</a></li>
+  <li><a href="#json-ld-articles-and-presentations-source">JSON-LD Articles and Presentations (source)</a>
+    <ul>
+      <li><a href="#introductory-material">Introductory Material</a></li>
+      <li><a href="#presentations">Presentations</a></li>
+      <li><a href="#blog-posts">Blog Posts</a></li>
+    </ul>
+  </li>
+  <li><a href="#github-repositories">GitHub Repositories</a>
+    <ul>
+      <li><a href="#json-ld-wg">JSON-LD WG</a></li>
+    </ul>
+  </li>
+  <li><a href="#json-ld-public-repositories">JSON-LD Public Repositories</a>
+    <ul>
+      <li><a href="#digital-bazaar">Digital Bazaar</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h2 id="101">101</h2>
+
+<ul>
+  <li><a href="https://moz.com/blog/json-ld-for-beginners">JSON-LD for Beginners</a></li>
+  <li><a href="https://jsonld.com/why-json-ld/">Why JSON-LD</a>
+    <blockquote>
+      <p>JSON-LD is able to accomplish the same thing, but does not require HTML. It can exist in and of itself. In short, JSON-LD can be inserted into your web page without disrupting the current content or HTML.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="info">info</h2>
+
+<ul>
+  <li><a href="https://medium.com/transmute-techtalk/on-json-ld-and-the-semantics-of-identity-42d051d3ce14">On JSON-LD and the semantics of Identity</a> Orie Steele
+    <blockquote>
+      <p>In this post, we’ll explore how JSON-LD is used in a number of contexts including decentralized identity and verifiable credentials. We’ll also cover the basics of what you should know before using JSON-LD and how you can contribute to software and standards that rely on it.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://datalanguage.com/news/publishing-json-ld-for-developers">Publishing JSON-LD for Developers</a> • <a href="https://news.ycombinator.com/item?id=17021939">Hacker News</a></li>
+  <li><a href="https://sitechecker.pro/json-ld-markup/">What Is JSON-LD Markup and Why Is It Better than Schema.org?</a>
+    <blockquote>
+      <p>If you understand how to use schema.org, but do not dare to mark pages up because of the complexity of the process, this article is for you. There is an effective and easy-to-use alternative - the JSON-LD format.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://librelounge.org/episodes/episode-17-activitypub-part-2.html">‎Libre Lounge: Episode 17: ActivityPub Part 2 on Apple Podcasts</a> • <a href="https://librelounge.org/episodes/episode-12-activitypub-part-1.html">Part 1</a> • <a href="https://librelounge.org/episodes/episode-20-activitypub-part-3.html">Part 3</a>
+    <blockquote>
+      <p>In our ongoing series about ActivityPub, Chris and Serge explore the world of JSON-LD and the ActivityStreams vocabulary.</p>
+
+      <p>Links: <a href="https://www.w3.org/TR/activitypub/">ActivityPub Specification (w3c)</a> • <a href="https://www.w3.org/TR/activitystreams-core/">ActivityStreams (w3c)</a> • <a href="https://json-ld.org/">JSON-LD (json-ld.org)</a> <a href="https://json-ld.org/playground/">JSON-LD Playground (json-ld.org)</a> • <a href="https://en.wikipedia.org/wiki/Cyc">Cyc (wikipedia)</a> • <a href="https://www.w3.org/RDF/">RDF (w3c)</a></p>
+    </blockquote>
+  </li>
+  <li><a href="http://manu.sporny.org/2014/json-ld-origins-2/">JSON-LD and Why I Hate the Semantic Web</a> • <a href="https://news.ycombinator.com/item?id=14474222">Hacker News</a></li>
+  <li><a href="https://www.lfph.io/wp-content/uploads/2021/02/Verifiable-Credentials-Flavors-Explained.pdf">Verifiable Credentials Flavors Explained</a> Kaliya IdentityWoman
+    <blockquote>
+      <p>Below are the three primary flavors of VCs discussed in this paper. All have more than one critical implementation in various stages of production. There are advocated variations of these types, but they are less common.</p>
+      <ul>
+        <li>JSON-LD family with LD Signatures or with BBS+ Signatures that enable Zero Knowledge Proofs (ZKP or ZKPs)</li>
+        <li>JSON with JSON Web Signatures, precisely in the form of a JSON Web Token (JWT)</li>
+        <li>ZKP withCamenisch-LysyanskayaSignatures (ZKP-CL)</li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="json-ld-articles-and-presentations-source"><a href="https://json-ld.org/learn.html">JSON-LD Articles and Presentations</a> (<a href="https://github.com/json-ld/json-ld.org">source</a>)</h2>
+
+<h3 id="introductory-material">Introductory Material</h3>
+
+<ul>
+  <li><a href="http://www.youtube.com/watch?v=4x_xzT5eF5Q">What is Linked Data?</a> Short video introduction to Linked Data by Manu Sporny.</li>
+  <li><a href="http://www.youtube.com/watch?v=vioCbTo3C-4">What is JSON-LD?</a> Short video introduction to JSON-LD by Manu Sporny.</li>
+  <li><a href="https://www.youtube.com/watch?v=UmvWk_TQ30A">JSON-LD: Core Markup</a> An overview of some of the core markup features of JSON-LD including types, aliasing, nesting, and internationalization support by Manu Sporny.</li>
+  <li><a href="https://www.youtube.com/watch?v=Tm3fD89dqRE">JSON-LD: Compaction and Expansion</a> An overview of JSON-LD’s compaction and expansion features and how you can use them to merge data from multiple sources by Manu Sporny.</li>
+  <li><a href="https://www.youtube.com/watch?v=QdUZaYeQblY">Linked Data Signatures</a> An overview of how digital signatures can be added to Linked Data to provide verifiable statements on the Web by Manu Sporny.</li>
+  <li><a href="https://www.youtube.com/watch?v=eWtOg3vSzxI">Credentials on the Web</a> A quick introduction to verifiable credentials on the Web by Manu Sporny.</li>
+  <li><a href="http://m.lanthi.com/www2013-paper">Creating 3rd Generation Web APIs with JSON-LD and Hydra</a>, Markus Lanthaler. Proceedings of the Proceedings of the 22nd International World Wide Web Conference (WWW2013), pp. 35-37. Rio de Janeiro, Brazil: ACM Press.</li>
+  <li><a href="http://m.lanthi.com/wsrest2013-paper">Model Your Application Domain, Not Your JSON Structures</a>, Markus Lanthaler and Christian Gütl. Proceedings of the 4th International Workshop on RESTful Design (WS-REST 2013) at WWW2013, pp. 1415-1420. Rio de Janeiro, Brazil: ACM Press.</li>
+  <li><a href="http://m.lanthi.com/ldow2013-paper">Hydra: A Vocabulary for Hypermedia-Driven Web APIs</a>, Markus Lanthaler and Christian Gütl. Proceedings of the 6th Workshop on Linked Data on the Web (LDOW2013) at WWW2012. Rio de Janeiro.</li>
+  <li><a href="http://m.lanthi.com/jsonld4rest-paper">On Using JSON-LD to Create Evolvable RESTful Services</a>, Markus Lanthaler and Christian Gütl. Proceedings of the 3rd International Workshop on RESTful Design (WS-REST 2012) at WWW2012, pp. 25-32. Lyon, France: ACM Press.</li>
+</ul>
+
+<h3 id="presentations">Presentations</h3>
+
+<ul>
+  <li><a href="http://www.slideshare.net/gkellogg1/jsonld-json-for-the-social-web">JSON-LD: JSON for the Social Web</a> by Gregg Kellogg, W3C Social Standards Workshop 2013, San Francisco, CA, USA.</li>
+  <li><a href="http://slidesha.re/sl-portland2013">Building Next-Generation Web APIs with JSON-LD and Hydra</a> by Markus Lanthaler, Symfony Live Portland 2013, OR, USA.</li>
+  <li><a href="http://slidesha.re/wsrest2013-preso">Model Your Application Domain, Not Your JSON Structures</a> by Markus Lanthaler, World Wide Web Conference (WWW2013), Rio de Janeiro, Brazil.</li>
+  <li><a href="http://slidesha.re/ldow2013-preso">Hydra: A Vocabulary for Hypermedia-Driven Web APIs</a> by Markus Lanthaler, World Wide Web Conference (WWW2013), Rio de Janeiro, Brazil.</li>
+  <li><a href="http://www.slideshare.net/gkellogg1/json-for-linked-data">JSON-LD: JSON for Linked Data</a> by Gregg Kellogg, Semantic Technology &amp; Business Conference (SemTechBiz SF 2012), San Francisco, CA, USA.</li>
+  <li><a href="http://slidesha.re/jsonld4rest">JSON-LD for RESTful Services</a> by Markus Lanthaler, World Wide Web Conference (WWW2012), Lyon, France.</li>
+  <li><a href="http://www.slideshare.net/gkellogg1/jsonld-and-mongodb">JSON-LD and MongoDB</a> by Gregg Kellogg, NoSQL Now! 2012, San Jose, CA, USA.</li>
+  <li><a href="http://www.greggkellogg.net/presentations/JSON-LD-Update-DC-2017/">JSON-LD Update – DC-2017</a> by Gregg Kellogg, DC 2017, October 2017, Washington DC.</li>
+  <li><a href="https://json-ld.org/presentations/JSON-LD-Update-TPAC-2017/">JSON-LD Update – W3C TPAC 2017</a> by Gregg Kellogg, October 2017, Washington DC.</li>
+  <li><a href="https://json-ld.org/presentations/JSON-LD-Support-for-Property-Graphs/">JSON-LD Support for Property Graphs – W3C Data Workshop</a> by Gregg Kellogg, May 2019, Berlin.</li>
+  <li><a href="https://json-ld.org/presentations/JSON-LD-Update-TPAC-2019/">JSON-LD Update – W3C TPAC 2019</a> by Gregg Kellogg, September 2019, Fukuoka, Japan.</li>
+</ul>
+
+<h3 id="blog-posts">Blog Posts</h3>
+
+<ul>
+  <li><a href="http://blog.codeship.com/json-ld-building-meaningful-data-apis/">JSON-LD: Building Meaningful Data APIs</a>, <a href="http://bigbluehat.com/">Benjamin Young</a>.</li>
+  <li><a href="https://cloudant.com/blog/webizing-your-database-with-linked-data-in-json-ld/">Webizing your database with Linked Data in JSON-LD on Cloudant</a>, <a href="http://bigbluehat.com/">Benjamin Young</a>.</li>
+</ul>
+
+<p>Website content released under a <a href="http://creativecommons.org/about/cc0">Creative Commons CC0 Public Domain Dedication</a> except where an alternate is specified. Part of the <a href="http://payswarm.com/">PaySwarm</a> standardization initiative.</p>
+
+<h2 id="github-repositories">GitHub Repositories</h2>
+
+<ul>
+  <li><a href="https://github.com/Torann/json-ld">Torann/json-ld</a> - Extremely simple JSON-LD Generator</li>
+  <li><a href="https://github.com/piprate/json-gold">piprate/json-gold</a> - JSON-goLD Documentations Travis CI results GoCover.io
+    <blockquote>
+      <p>This library is an implementation of the JSON-LD 1.1 specification in Go. It supports both URDNA2015 and URGNA2012 RDF dataset normalisation algorithms.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/JayHoltslander/Structured-Data-JSON-LD">JayHoltslander/Structured-Data-JSON-LD</a>
+    <blockquote>
+      <p>Collection of structured data snippets in Google preferred JSON-LD format. <a href="https://codepen.io/collection/DNvPJE/">codepen.io/collection/DNvPJE/</a></p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/codemeta/codemeta">codemeta/codemeta</a>
+    <blockquote>
+      <p>CodeMeta contributors are creating a minimal metadata schema for science software and code, in JSON and XML. The goal of CodeMeta is to create a concept vocabulary that can be used to standardize the exchange of software metadata across repositories and organizations. CodeMeta started by comparing the software metadata used across multiple repositories, which resulted in the CodeMeta Metadata Crosswalk. That crosswalk was then used to generate a set of software metadata concepts, which were arranged into a JSON-LD context for serialization.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="json-ld-wg"><a href="https://www.w3.org/2018/json-ld-wg/">JSON-LD WG</a></h3>
+<ul>
+  <li><a href="https://github.com/w3c/json-ld-framing">w3c/json-ld-framing</a> - JSON-LD 1.1 Framing Specification</li>
+  <li><a href="https://github.com/w3c/json-ld-api">w3c/json-ld-api</a> - JSON-LD 1.1 Processing Algorithms and API Specification</li>
+  <li><a href="https://github.com/w3c/json-ld-syntax">w3c/json-ld-syntax</a> - JSON-LD 1.1 Specification</li>
+  <li><a href="https://github.com/w3c/json-ld-bp">w3c/json-ld-bp</a> JSON-LD 1.1 Best Practices Note <a href="https://w3c.github.io/json-ld-bp/">w3c.github.io/json-ld-bp</a></li>
+  <li><a href="https://github.com/w3c/json-ld-rc">w3c/json-ld-rc</a></li>
+</ul>
+
+<h2 id="json-ld-public-repositories">JSON-LD Public Repositories</h2>
+<ul>
+  <li><a href="https://github.com/json-ld/json-ld.org">json-ld/json-ld.org</a> - JSON for Linked Data</li>
+  <li><a href="https://github.com/json-ld/json-ld-patch">json-ld/json-ld-patch</a> - JSON-LD Patch</li>
+  <li><a href="https://github.com/json-ld/minutes">json-ld/minutes</a> - Teleconference minutes - text and audio logs</li>
+  <li><a href="https://github.com/json-ld/normalization">json-ld/normalization</a> - RDF Dataset Normalization</li>
+  <li><a href="https://github.com/json-ld/tests">json-ld/tests</a> Archived - [READ-ONLY] Subtree split of the JSON-LD tests – obsolete, please see WG test suites</li>
+  <li><a href="https://github.com/json-ld/scrawl.js">json-ld/scrawl.js</a>
+Scribe tool used by the JSON-LD Community Group</li>
+  <li><a href="https://github.com/json-ld/Charter">json-ld/Charter</a>
+Charter for JSON-LD WG</li>
+</ul>
+
+<h3 id="digital-bazaar">Digital Bazaar</h3>
+<ul>
+  <li><a href="https://github.com/digitalbazaar/json-ld">json-ld</a> - A Context-based JSON Serialization for Linked Data</li>
+  <li><a href="https://github.com/digitalbazaar/jsonld-cli">jsonld-cli</a> - JSON-LD command line interface tool</li>
+  <li><a href="https://github.com/digitalbazaar/pyld">pyld</a> - JSON-LD processor written in Python</li>
+  <li><a href="https://github.com/digitalbazaar/jsonld.js">jsonld.js</a> - A JSON-LD Processor and API implementation in JavaScript</li>
+  <li><a href="https://github.com/digitalbazaar/php-json-ld">php-json-ld</a> - PHP implementation of a JSON-LD Processor and API</li>
+  <li><a href="https://github.com/digitalbazaar/jsonld-signatures">jsonld-signatures</a> - An implementation of the Linked Data Signatures specification for JSON-LD. Works in the browser and Node.js.</li>
+  <li><a href="https://github.com/digitalbazaar/jsonld-request">jsonld-request</a> - LIbrary to load JSON-LD from stdin, URLs, or files.</li>
+  <li><a href="https://github.com/digitalbazaar/jsonld-patch">jsonld-patch</a> - JSON patch for JSON-LD</li>
+  <li><a href="https://github.com/digitalbazaar/crypto-ld">crypto-ld</a></li>
+  <li><a href="https://github.com/digitalbazaar/ecdsa-koblitz-signature-2016">ecdsa-koblitz-signature-2016</a> - Provides EcdsaKoblitzSignature2016 LD proof suite</li>
+  <li><a href="https://github.com/digitalbazaar/bedrock-angular-jsonld">bedrock-angular-jsonld</a> - JSON-LD support for bedrock-angular apps</li>
+  <li><a href="https://github.com/digitalbazaar/cuckoo-ldp">cuckoo-ldp</a> - Cuckoo Cycle Based Linked Data Proofs</li>
+  <li><a href="https://github.com/digitalbazaar/proofs-ld">proofs-ld</a></li>
+  <li><a href="https://github.com/digitalbazaar/ld-signature-demo">ld-signature-demo</a></li>
+  <li><a href="https://github.com/digitalbazaar/bedrock-angular-ldn">bedrock-angular-ldn</a> - Bedrock AngularJS module for Linked Data Notification Sender+Consumer</li>
+  <li><a href="https://github.com/digitalbazaar/bedrock-ldn-inbox">bedrock-ldn-inbox</a> - Bedrock module for Linked Data Notification Inboxes</li>
+  <li><a href="https://github.com/digitalbazaar/bedrock-ldn-receiver">bedrock-ldn-receiver</a> - Bedrock module for Linked Data Notification Receiver</li>
+  <li><a href="https://github.com/digitalbazaar/x25519-key-pair">x25519-key-pair</a> - An X25519 (Curve25519) DH key implementation to work with the crypto-ld LDKeyPair API</li>
+</ul>
+
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr/>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#credentials-community-group" class="page__taxonomy-item" rel="tag">Credentials Community Group</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#digital-bazaar" class="page__taxonomy-item" rel="tag">Digital Bazaar</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#json-ld" class="page__taxonomy-item" rel="tag">JSON-LD</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#linked-data" class="page__taxonomy-item" rel="tag">Linked Data</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rdf" class="page__taxonomy-item" rel="tag">RDF</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#schema-org" class="page__taxonomy-item" rel="tag">Schema.org</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#veres-one" class="page__taxonomy-item" rel="tag">Veres One</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#verifiable-credentials" class="page__taxonomy-item" rel="tag">Verifiable Credentials</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#w3c" class="page__taxonomy-item" rel="tag">W3C</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#web-standards" class="page__taxonomy-item" rel="tag">Web Standards</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-18">April 18, 2021</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/web-standards/w3c/working-groups/json-ld-wg/2020-01-04-JSON-LD.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&text=JSON-LD%20https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fjson-ld%2Fjson-ld%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fjson-ld%2Fjson-ld%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fjson-ld%2Fjson-ld%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fw3c%2Fwg%2Fjson-ld%2Fjson-ld%2F&title=JSON-LD" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr/>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a></h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" />
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" />
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="JSON-LD">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/did-square.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/object-capabilities/" rel="permalink">Object Capability Model
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Computer scientist E. Dean Tribble stated that in smart contracts, identity-based access control did not support well dynamically changing permissions, compared to the object-capability model. He analogized the ocap model with giving a valet the key to one’s car, without handing over the right to...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2021-04-19 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    <div class="tags">Cosmos</div> <div class="tags">JSON-LD</div> <div class="tags">oCap</div> <div class="tags">zCap</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/dataweb/dataweb-whitepaper-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/xdi-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xri-tc/" rel="permalink">XDI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of the OASIS XDI TC is to define a generalized, extensible, location-, application-, and transport-independent service for sharing, linking, and synchronizing data over the Internet and other data networks using XML documents and XRIs (Extensible Resource Identifiers), a URI-compatibl...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">RDF</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/xri-tc-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xdi-tc/" rel="permalink">XRI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of this TC is to define a syntax for abstract structured identifiers – identifiers that can be used within other URI schemes (such as http: and https: URIs) to share semantics across any number of domains and applications. The TC is also defining a simple XML descriptor format and HTT...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

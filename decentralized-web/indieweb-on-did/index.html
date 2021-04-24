@@ -1,0 +1,1624 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>FreeNode IRC #indieweb-dev on IIW RWoT and DID’s |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Conversation about RWoT and DIDs at #indieweb-dev on Freenode">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="FreeNode IRC #indieweb-dev on IIW RWoT and DID’s">
+<meta property="og:url" content="https://decentralized-id.com/decentralized-web/indieweb-on-did/">
+
+
+  <meta property="og:description" content="Conversation about RWoT and DIDs at #indieweb-dev on Freenode">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/indieweb-header.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="FreeNode IRC #indieweb-dev on IIW RWoT and DID’s">
+  <meta name="twitter:description" content="Conversation about RWoT and DIDs at #indieweb-dev on Freenode">
+  <meta name="twitter:url" content="https://decentralized-id.com/decentralized-web/indieweb-on-did/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://decentralized-id.com/images/indieweb-header.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-06-04T10:22:33+00:00">
+
+
+
+  <meta property="article:modified_time" content="2019-06-03T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/decentralized-web/indieweb-on-did/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero" style=" ">
+  
+    <img src="/images/indieweb-header.webp" alt="FreeNode IRC #indieweb-dev on IIW RWoT and DID’s" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/images/the-world-map-from-a-binary-code.webp" alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources &amp; Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="FreeNode IRC #indieweb-dev on IIW RWoT and DID’s">
+    <meta itemprop="description" content="OAuth has become the de facto standard for authorization and authentication on the web. Nearly every company with an API used by third party developers has implemented OAuth to enable people to build apps on top of it.While OAuth is a great framework for this, the way it has ended up being used is much more centralized and closed than prior efforts like OpenID 1. Every service that spins up an OAuth-enabled API ends up being its own isolated system. For example, if I want to build an app that can read someone’s step count from FitBit, I have to first go register as a developer on FitBit’s website in order to get API keys to use with their OAuth API">
+    <meta itemprop="datePublished" content="June 04, 2019">
+    <meta itemprop="dateModified" content="June 03, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">FreeNode IRC #indieweb-dev on IIW RWoT and DID’s
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  17 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-link"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#contents">Contents</a></li>
+  <li>
+<a href="#links">Links</a>
+    <ul>
+      <li><a href="#related">Related</a></li>
+      <li>
+<a href="#in-chat-links">In-chat Links</a>
+        <ul>
+          <li><a href="#peer-to-peer-dids">Peer-to-Peer DIDs</a></li>
+          <li><a href="#indieauth">IndieAuth</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#indieweb-dev-on-rwot-dids-2019-03-02">indieweb-dev on RWoT-DIDs 2019-03-02</a></li>
+  <li><a href="#indieweb-dev-on-iiw-2018-08-19">#indieweb-dev on IIW 2018-08-19</a></li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h2 id="contents">Contents</h2>
+<ul>
+  <li>
+<a href="#links">Links</a>
+    <ul>
+      <li>
+<a href="#in-chat-links">In-Chat Links</a>
+        <ul>
+          <li><a href="#peer-to-peer-dids">Peer to Peer DIDs</a></li>
+          <li><a href="#indieauth">IndieAuth</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#indieweb-dev-on-rwot-dids-2019-03-02">#indieweb-dev on RWoT-DIDs 2019-03-02</a></li>
+  <li><a href="#indieweb-dev-on-iiw-2018-08-19">#indieweb-dev on IIW 2018-08-19</a></li>
+</ul>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="https://indieweb.org/discuss#Join_Discussions">indieweb.org/discuss#Join_Discussions</a></li>
+  <li><a href="https://riot.im/develop/#/room/#freenode_#indieweb-dev:matrix.org">Matrix bridge to #dev channnel chat (via riot.im)</a></li>
+  <li><a href="https://freenode.logbot.info/indieweb-dev/20190302">#indieweb-dev on DIDs 2019-03-02-chat log</a></li>
+  <li><a href="https://freenode.logbot.info/indieweb-dev/20180819">#indieweb-dev on IIW 2018-08-19-chat log</a></li>
+</ul>
+
+<h3 id="related">Related</h3>
+
+<ul>
+  <li><a href="https://datatracker.ietf.org/doc/draft-mayrhofer-did-dns/">The Decentralized Identifier (DID) in the DNS</a></li>
+</ul>
+
+<h3 id="in-chat-links">In-chat Links</h3>
+
+<ul>
+  <li>https://docs.ipfs.io/guides/concepts/dnslink/
+    <ul>
+      <li>DNSLink uses DNS TXT records to map a domain name (like ipfs.io) to an IPFS address. Because you can edit your DNS records, you can use them to always point to the latest version of an object in IPFS (remember that an IPFS object’s address changes if you modify the object). Because DNSLink uses DNS records, the names it produces are also usually easy to type and read.</li>
+      <li>A DNSLink address looks like an IPNS address, but it uses a domain name in place of a hashed public key:</li>
+    </ul>
+  </li>
+  <li><a href="https://indieweb.org/checkin#Posting_checkins_from_clients">indieweb.org/checkin#Posting_checkins_from_clients</a></li>
+</ul>
+
+<h4 id="peer-to-peer-dids">Peer-to-Peer DIDs</h4>
+
+<ul>
+  <li><a href="https://docs.google.com/document/d/1SwSWIOOujRCdrwVyrKojwAvQVp-wJJ9P6NBiuQ3bDN4/edit">Comparing WebIDs and DIDs</a></li>
+  <li><a href="https://github.com/WebOfTrustInfo/rwot8-barcelona/blob/master/topics-and-advance-readings/P2P-DID.md">Peer to Peer DIDs</a></li>
+  <li>
+<a href="https://dhh1128.github.io/peer-did-method-spec/index.html">dhh1128.github.io/peer-did-method-spec/index.html</a>
+    <ul>
+      <li><a href="https://dhh1128.github.io/peer-did-method-spec/index.html#grafting-peer-dids-into-another-did-method-namespace">#grafting-peer-dids-into-another-did-method-namespace</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="indieauth">IndieAuth</h4>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/EeCNlB7v08I" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+<ul>
+  <li>
+<a href="https://indieauth.spec.indieweb.org">indieauth.spec.indieweb.org</a>
+    <ul>
+      <li>IndieAuth is an identity layer on top of OAuth 2.0 [RFC6749], primarily used to obtain an OAuth 2.0 Bearer Token [RFC6750] for use by [Micropub] clients. End-Users and Clients are all represented by URLs. IndieAuth enables Clients to verify the identity of an End-User, as well as to obtain an access token that can be used to access resources under the control of the End-User.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://w3.org/TR/2018/NOTE-indieauth-20180123">W3C Working Group Note 23 January 2018</a>
+    <ul>
+      <li>An IndieAuth implementation can implement one or more of the roles of an IndieAuth server or client. This section describes the conformance criteria for each role.</li>
+      <li>Listed below are known types of IndieAuth implementations.</li>
+      <li>2.1.1 Authorization Endpoint
+        <ul>
+          <li>An IndieAuth Authorization Endpoint is responsible for obtaining authorization or authentication consent from the end user and generating and verifying authorization codes.</li>
+        </ul>
+      </li>
+      <li>2.1.2 Token Endpoint
+        <ul>
+          <li>An IndieAuth Token Endpoint is responsible for generating and verifying OAuth 2.0 Bearer Tokens.</li>
+        </ul>
+      </li>
+      <li>2.1.3 Micropub Client
+        <ul>
+          <li>A Micropub client will attempt to obtain an OAuth 2.0 Bearer Token given an IndieAuth profile URL, and will use the token when making Micropub requests.</li>
+        </ul>
+      </li>
+      <li>2.1.4 IndieAuth Client
+        <ul>
+          <li>An IndieAuth client is a client that is attempting to authenticate a user given their profile URL, but does not need an OAuth 2.0 Bearer Token.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<a href="https://aaronparecki.com/2018/07/07/7/oauth-for-the-open-web">aaronparecki.com - Oath for the Open Web</a>
+    <ul>
+      <li>OAuth has become the de facto standard for authorization and authentication on the web. Nearly every company with an API used by third party developers has implemented OAuth to enable people to build apps on top of it.</li>
+      <li>While OAuth is a great framework for this, the way it has ended up being used is much more centralized and closed than prior efforts like OpenID 1. Every service that spins up an OAuth-enabled API ends up being its own isolated system. For example, if I want to build an app that can read someone’s step count from FitBit, I have to first go register as a developer on FitBit’s website in order to get API keys to use with their OAuth API</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/indieweb/indieauth/issues/23#issuecomment-414152219">indieweb/indieauth #23#issuecomment-414152219</a>
+    <ul>
+      <li>21:13 <strong>Loqi</strong> - [Zegnat] The table above has been updated with new statistics. This shows that <code class="language-plaintext highlighter-rouge">rel="manifest"</code> are equally as likely to be found on client pages as <code class="language-plaintext highlighter-rouge">h-x-app</code>. This Web App Manifests may be a more logical alternative than previously realised.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/indieweb/wordpress-indieauth/pull/127/files#diff-F81F3DFF36BF04B7A070D642C858E883">indieweb/wordpress-indieauth #127/files#diff-F81F3DFF36BF04B7A070D642C858E883</a>
+    <ul>
+      <li>
+<strong>dshanske</strong> commented on Feb 24- Returns a jf2 h-card in the token return on verification so the client can display name and user avatar on an application</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="indieweb-dev-on-rwot-dids-2019-03-02">indieweb-dev on RWoT-DIDs 2019-03-02</h2>
+
+<p><a href="https://freenode.logbot.info/indieweb-dev/20190302"><img src="https://imgur.com/A4IPjIi.png" alt=""></a></p>
+
+<p><a href="https://freenode.logbot.info/indieweb-dev/20190302">#indieweb-dev on DIDs 2019-03-02-chat log</a></p>
+<ul>
+  <li>16:14 <a href="https://twitter.com/sandhawke">@sandhawke</a> - I don’t think I have that level of interest to attend IIW - but I happen to be at RWoT right now, and that seems like a sweet spot for me to work on while I’m here. I just made this:</li>
+  <li>16:14 <a href="https://twitter.com/sandhawke">@sandhawke</a> - <a href="https://docs.google.com/document/d/1SwSWIOOujRCdrwVyrKojwAvQVp-wJJ9P6NBiuQ3bDN4/edit">Comparing WebIDs and DIDs</a>
+</li>
+  <li>16:14 <a href="https://twitter.com/sandhawke">@sandhawke</a> - which should perhaps have a column for IndieAuth</li>
+  <li>16:15 <a href="https://twitter.com/sandhawke">@sandhawke</a> -although it’s not quite the same type of thing, it kina is</li>
+  <li>16:15 <a href="https://twitter.com/sandhawke">@sandhawke</a> -Anyway - DIDs seem to have a lot of momentum, so I’m inclined to fit webids &amp; indieauth, which I much prefer, into the DID world</li>
+  <li>16:16 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -DIDs lost me when they make the assumption that blockchains are the only resolution mechanism</li>
+  <li>16:16 <a href="https://twitter.com/sandhawke">@sandhawke</a> -In person everyone here denies that, and they seem to welcome other mechanisms.</li>
+  <li>16:17 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -any examples yet?</li>
+  <li>16:17 <a href="https://twitter.com/sandhawke">@sandhawke</a> -Yes, “peer”</li>
+  <li>16:17 <a href="https://twitter.com/sandhawke">@sandhawke</a> -<a href="https://github.com/WebOfTrustInfo/rwot8-barcelona/blob/master/topics-and-advance-readings/P2P-DID.md">Peer to Peer DIDs</a>
+</li>
+  <li>16:18 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -Even just reading w3c-ccg.github.io/did-primer/#the-format-of-a-did-0 they casually drop a mention of blockchain as the only option</li>
+  <li>16:18 <a href="https://twitter.com/sandhawke">@sandhawke</a> -<a href="https://dhh1128.github.io/peer-did-method-spec/index.html">dhh1128.github.io/peer-did-method-spec/index.html</a>
+</li>
+  <li>16:18 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -I’d recommend revising that sentence if they want to not have people think that</li>
+  <li>16:18 <a href="https://twitter.com/sandhawke">@sandhawke</a> -Yes, I know, and they know.</li>
+  <li>16:19 <a href="https://twitter.com/sandhawke">@sandhawke</a> -But the best solution IMHO is just deploy something as nice and simple as indieauth</li>
+  <li>16:19 <a href="https://twitter.com/sandhawke">@sandhawke</a> -But I agree there’s a culture clash</li>
+  <li>16:19 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -From what I understand they have no interest in relying on DNS so that takes them completely out of the realm of working with current browsers or anything like IndieAuth</li>
+  <li>16:20 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -in theory you could make a dns resolver method for did and use domain names as the identifier and get close to something like IndieAuth</li>
+  <li>16:20 <a href="https://twitter.com/sandhawke">@sandhawke</a> -Right.</li>
+  <li>16:21 <a href="https://twitter.com/sandhawke">@sandhawke</a> -And it doesn’t matter if they want that</li>
+  <li>16:21 <a href="https://twitter.com/sandhawke">@sandhawke</a> -The end-users benefit</li>
+  <li>16:22 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -The other thing missing from DID is the authorization framework that comes with IndieAuth since it’s built on OAuth 2.0</li>
+  <li>16:22 <a href="https://twitter.com/sandhawke">@sandhawke</a> -They’re working on DID-Auth, trying to figure out what that means. There are two papers about that this weekend, one from Microsoft.</li>
+  <li>16:23 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -The DID and OIDC groups weren’t even getting along very well and while OIDC is way overkill for what we use IndieAuth for, its still more similar to IndieAuth than blockchain stuff is</li>
+  <li>16:24 <a href="https://twitter.com/sandhawke">@sandhawke</a> -I agree re “way overkill”, so I want to show how simple it can be. They’re not the first “way overkill” people in identity / authn / authz.</li>
+  <li>16:25 <a href="https://twitter.com/sandhawke">@sandhawke</a> -I mean – maybe I should just go watch netflix – this might be a silly waste of time, but I’m here, and it’s a lot of smart and motivate people, so I can’t help but wonder about trying to steer them a bit.</li>
+  <li>16:26 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -I would be very interested in what you come up with. I haven’t had much luck in any of these conversations so far</li>
+  <li>16:27 <a href="https://twitter.com/sandhawke">@sandhawke</a> -fair enough :-) Is indieauth.spec.indieweb.org pretty much up-to-date with your thinking?</li>
+  <li>16:28 <a href="https://twitter.com/sandhawke">@sandhawke</a> -( sad not to see a change log from https://w3.org/TR/2018/NOTE-indieauth-20180123 )</li>
+  <li>16:28 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> -Yep and https://aaronparecki.com/2018/07/07/7/oauth-for-the-open-web is a good explanation too</li>
+  <li>16:28 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - oh did I forget a change log section? I’ll try to add that</li>
+  <li>16:29 <a href="https://twitter.com/sandhawke">@sandhawke</a> - +1</li>
+  <li>16:30 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - If video is more your thing, I gave this talk at the W3C workshop <a href="https://youtube.com/watch?v=EeCNlB7v08I">youtube.com/watch?v=EeCNlB7v08I</a>
+</li>
+  <li>16:30 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - its nice and short</li>
+  <li>16:34 <a href="https://twitter.com/sandhawke">@sandhawke</a> - cool, pulling out headphones and wathching…</li>
+  <li>16:45 <a href="https://twitter.com/sandhawke">@sandhawke</a> - ha - amused to hear Wendy’s voice moderating the session</li>
+  <li>16:52 <a href="https://twitter.com/sandhawke">@sandhawke</a> - I don’t understand the value of public apps being identified</li>
+  <li>16:52 <a href="https://twitter.com/sandhawke">@sandhawke</a> - (good video)</li>
+  <li>16:59 <a href="https://twitter.com/sandhawke">@sandhawke</a> - I guess there’s some attack it’s intended prevent.</li>
+  <li>17:01 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - Yeah that’s from OAuth. Prevents redirect interception by registering the redirect URL, and also helps the user not get phished</li>
+  <li>20:28 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - tbh as much as I’m for the whole DiD and what not</li>
+  <li>20:28 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - DNS is <em>not</em> going anywhere</li>
+  <li>20:29 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - as least for the people I aim to build for (like myself and then family to an extent)</li>
+  <li>20:29 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - DNS is straight-forward and more-or-less “reliable”</li>
+  <li>20:30 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - the only other idea I’ve seen thus far that was ‘usable’ has been <a href="https://docs.ipfs.io/guides/concepts/dnslink">docs.ipfs.io/guides/concepts/dnslink</a>
+</li>
+  <li>20:30 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - (which still relies on DNS but one could augment a local DNS resolver to intercept these lookups)</li>
+  <li>20:51 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - listens intently. (also welcome (back) sandhawke!)</li>
+  <li>20:55 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - I don’t know / wonder if a solution that’s speech-friendly will arise</li>
+  <li>20:55 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - like if I can’t say it out loud, it’s incredibly hard to share</li>
+  <li>20:55 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - sure, I can just share a link</li>
+  <li>21:00 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - speechfriendly++</li>
+  <li>21:00 <a href="https://indieweb.org/Loqi">[Loqi]</a> - speechfriendly has 1 karma over the last year</li>
+  <li>21:05 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - [tantek], yeah, I figured that it might be a useful link for people looking for my ‘main’ feed</li>
+  <li>21:06 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - also because currently in aperture, rel=”feed” is ignored. So if people search feeds on realize.be, they will get microformats, but that’s on my homepage, which is kind of useless</li>
+  <li>21:06 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - which makes me wonder whether I should remove microformat markup on the homepage maybe</li>
+  <li>21:08 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - (to be more specific, xray underneath ignores rel=”feed”, but that’s technical detail)</li>
+  <li>21:09 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - other than that, fun experiments today with checkins and geocache, I’m getting excited by the location stuff in indigenous :)</li>
+  <li>21:10 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - hm so I saw a question about indieauth and “data”, like in comparison to how OAuth2 gives you a blob of info post login</li>
+  <li>21:11 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - IndieAuth doesn’t have to do that thanks to MF2; you can just pull what you need from their h-card but now I wonder</li>
+  <li>21:11 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - jacky: we actually started experimenting with this</li>
+  <li>21:11 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - would it make sense to show a specialized page in the value of the ‘me’ page? that changes b/c on the authenticated app?</li>
+  <li>21:11 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - aaronpk: oh?</li>
+  <li>21:12 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - trying to remember where we documented it? it was a quick thing during IWC Austin</li>
+  <li>21:12 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - oh man</li>
+  <li>21:12 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - GWG added it to wordpress and I added it to Quill</li>
+  <li>21:12 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - hmm, GWG opened an issue for me indigenous, there’s probably a link there, let me check</li>
+  <li>21:12 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - indieweb/indieauth #31</li>
+  <li>21:12 <a href="https://indieweb.org/Loqi">[Loqi]</a> - [dshanske] #31 Returning Profile Data</li>
+  <li>21:13 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - nice</li>
+  <li>21:13 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - that’s at least the indieauth thing</li>
+  <li>21:13 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - maybe there’s more?</li>
+  <li>21:13 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - yep thanks</li>
+  <li>21:13 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - <a href="https://github.com/indieweb/indieauth/issues/23#issuecomment-414152219">indieweb/indieauth #23#issuecomment-414152219</a>
+</li>
+  <li>21:13 <a href="https://indieweb.org/Loqi">[Loqi]</a> - [Zegnat] The table above has been updated with new statistics. This shows that <code class="language-plaintext highlighter-rouge">rel="manifest"</code> are equally as likely to be found on client pages as <code class="language-plaintext highlighter-rouge">h-x-app</code>. This Web App Manifests may be a more logical alternative than previously realised.</li>
+  <li>21:13 <a href="https://indieweb.org/Loqi">[Loqi]</a> - Further devel…</li>
+  <li>21:13 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - Although Zegnat pointed out it should be nickname not name</li>
+  <li>21:13 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - hrm I don’t think it should be “nickname”</li>
+  <li>21:13 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - Hardly “should be”</li>
+  <li>21:14 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - that makes sense</li>
+  <li>21:14 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - b/c name is so vague</li>
+  <li>21:14 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - vs ‘username’, ‘nickname’, ‘given name’</li>
+  <li>21:14 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - display name is more accurate</li>
+  <li>21:14 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - More like: I ** wondered if it should be more clear to expect a “display name” rather than a personal name (which I feel <code class="language-plaintext highlighter-rouge">name</code> is often used for)**</li>
+  <li>21:15 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - the other reason for doing this is it means it’s easier to return private/sensitive profile data to apps without having to have a way to serve protected data from your home page</li>
+  <li>21:15 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - aaronpk, I agree with the idea and am willing to change to display name. It is still new and easy to adjust.</li>
+  <li>21:15 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - aaronpk: right</li>
+  <li>21:15 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - aaronpk, yes, that was a bit part of my reasoning over on GitHub :)</li>
+  <li>21:15 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - please comment with more details if you think I didn’t make that clear</li>
+  <li>21:16 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - s/a bit/a big/</li>
+  <li>21:16 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - If someone gives it another +1 I’ll go make a PR</li>
+  <li>21:16 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - Hmm, I like name tbh :)</li>
+  <li>21:16 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - I also don’t necessarily think “name” is a bad property for this, just need to make it clear that there is no expectation of a “real name” or “full name”</li>
+  <li>21:16 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - as it’s consistent then</li>
+  <li>21:16 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - there isn’t any expectation of that in this stuff anyway so I don’t really see the problem</li>
+  <li>21:17 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - Except I felt there may have been an expectation of that in JF2, aaronpk. And the issue seemed to suggest using JF2 cards.</li>
+  <li>21:17 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - aaronpk, what if someone requests the theoretical profile scope?</li>
+  <li>21:17 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - Zegnat: what gave you the idea of that from jf2? jf2 shouldn’t be defining any new semantics on top of the mf2 properties</li>
+  <li>21:18 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - GWG, do you have a link to the commit in wordpress?</li>
+  <li>21:18 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - Just for inspiration</li>
+  <li>21:18 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - “full/formatted name of the person or organisation” is the mf2 definition</li>
+  <li>21:18 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - Also, it feels to me like people have been using <code class="language-plaintext highlighter-rouge">name</code> on their h-cards a lot for full name currently</li>
+  <li>21:19 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - <a href="https://github.com/indieweb/wordpress-indieauth/pull/127/files#diff-F81F3DFF36BF04B7A070D642C858E883">indieweb/wordpress-indieauth #127/files#diff-F81F3DFF36BF04B7A070D642C858E883</a>
+</li>
+  <li>21:19 » <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> now has 3–5 seconds IRC delay, so discussing is going to be hard</li>
+  <li>21:19 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - thanks</li>
+  <li>21:20 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - hmm - we’ve been through this renaming loop before. name is display name, no need to ever change to “display name”.</li>
+  <li>21:21 <a href="https://indieweb.org/User:Vanderven.se_martijn">[Zegnat]</a> - I do not want to change the name property in mf2 here [tantek]. I just want it to be clear that the minimal info returned from an IndieAuth endpoint is a display name specifically (and further names (?) may be available under something like a profile scope)</li>
+  <li>21:21 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - in the past other formats have tried to make distinctions between “display name” “full name” etc. and it just results in bad UX. in practice people enter into “name” what they want displayed. period. no need to futz or handwring about bikeshedding the property. it works</li>
+  <li>21:22 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - Zegnat, calling something display name then implies that other “name”s are not “display” and it just confuses people (implementers, users etc.)</li>
+  <li>21:22 <a href="https://indieweb.org/checkin#Posting_checkins_from_clients">[swentel](https://github.com/swentel) - GWG, I’ve documented my experimental geo:uri;h=card on [indieweb.org/checkin#Posting_checkins_from_clients]</a> (but I’m not sure if that’s the right place :/) <em>**</em>
+</li>
+  <li>21:22 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - there is never a need in practice to ever “be clear” about “is a display name specifically”</li>
+  <li>21:22 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - just wanted to make sure it exists at least</li>
+  <li>21:22 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - side note: openid connect has “name”, “family_name”, “given_name”, “middle_name” and “nickname” all under the “profile” scope, and tbh is an example of what tantek is talking about where the only one actually used is just “name”</li>
+  <li>21:22 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - that’s a hypothetical concern from which no one has ever documented any actual harm ever</li>
+  <li>21:22 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - swentel, link to that under Micropub experimental as well.</li>
+  <li>21:23 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - GWG, on micropub extensions?</li>
+  <li>21:23 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - Swentel, yes, excuse me.</li>
+  <li>21:23 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - Ok, maybe it’s better to move it there completely</li>
+  <li>21:24 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - aaronpk is correct, and opendid connect even there screwed up (inserted Western-centric assumptions by I’m sure the 100% Western white male openid connect “designers) by renaming vCard’s “additional name” into “middle_name”.</li>
+  <li>21:24 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - openidconnect–</li>
+  <li>21:24 <a href="https://indieweb.org/Loqi">[Loqi]</a> - openidconnect has -1 karma over the last year</li>
+  <li>21:24 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - Do we have a theoretical use case for more than minimal data yet?</li>
+  <li>21:24 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - westerncentricassumptions–</li>
+  <li>21:24 <a href="https://indieweb.org/Loqi">[Loqi]</a> - westerncentricassumptions has -1 karma over the last year</li>
+  <li>21:26 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - I return name, url, and photo because that was the minimum needed for a client to display. I am happy to return more behind a profile scope the day someone wants it</li>
+  <li>21:26 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - (note: “ middle” is a layout/order specific label, not a semantic. in the past these same kinds of 100% Western white male format designers would have “first_name” “middle_name” “last_name”, there’s plenty of examples of bad old dead formats with that, programming examples in various “5 minutes to make your own social network!” type stuff etc.)</li>
+  <li>21:26 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - GWG: I’d hold off on anything further with this until we get more publishers and consumers of it</li>
+  <li>21:27 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - r^</li>
+  <li>21:27 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - aaronpk, I planned on it</li>
+  <li>21:27 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - I just was curious about uses</li>
+  <li>21:27 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - I have bigger problems right now</li>
+  <li>21:27 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - swentel - I think if you put rel=”alternate” on the link to your h-feed page then it may be discoverable. I believe rel=feed was deprecated (even dropped by WHATWG HTML for lack of interest / implementations)</li>
+  <li>21:28 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - [tantek], oh, interesting, I’ll give that a try yes!</li>
+  <li>21:28 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - Really? I just added a bunch of rel feeds</li>
+  <li>21:28 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - I can’t keep up</li>
+  <li>21:29 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - I thought alternate was an alternative view of the same page and feed was a different page</li>
+  <li>21:29 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - What is rel-feed?</li>
+  <li>21:29 <a href="https://indieweb.org/Loqi">[Loqi]</a> - rel-feed is the standard for linking to multiple (potentially alternative) h-feeds from a site’s homepage using the code rel=”feed” on those links indieweb.org/rel-feed</li>
+  <li>21:30 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - yeah same</li>
+  <li>21:30 <a href="https://indieweb.org/User:Jacky.wtf">[jacky]</a> - re: G WG</li>
+  <li>21:31 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - no feed discovery is done via rel=alternate type=”insert your feed mime type here”</li>
+  <li>21:31 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - like since forever</li>
+  <li>21:31 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - That’s the way I am using and consuming it</li>
+  <li>21:31 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - whoa swentel indieweb.org/Micropub-extensions#Location_checkin_information</li>
+  <li>21:31 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - folks here have been trying to get rel=feed off the ground again but TBH I’m unsure about it’s feasibility</li>
+  <li>21:31 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - What is feed discovery?</li>
+  <li>21:31 <a href="https://indieweb.org/Loqi">[Loqi]</a> - feed discovery is a way to, given someone’s home page, discover their feed or feeds that they publish indieweb.org/feed_discovery</li>
+  <li>21:31 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - that’s like an embedded h-card in a geo URL?</li>
+  <li>21:31 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - URI</li>
+  <li>21:31 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - aaronpk, yeah, works great .. (at least for me)</li>
+  <li>21:32 <a href="https://indieweb.org/User:David.shanske.com">[GWG]</a> - aaronpk, yes it is</li>
+  <li>21:32 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - aaronpk you had it right 🙂</li>
+  <li>21:32 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - I can post checkins and geocaches now from indigenous, with pictures, all in one go :)</li>
+  <li>21:32 <a href="https://indieweb.org/User:Realize.be">[swentel]</a> - it’s GREAT ;)</li>
+  <li>21:32 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - [tantek]: re: geo URI? I thought URLs had to be resolvable</li>
+  <li>21:32 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - swentel++ wow</li>
+  <li>21:32 <a href="https://indieweb.org/Loqi">[Loqi]</a> - swentel has 27 karma in this channel over the last year (48 in all channels)</li>
+</ul>
+
+<h2 id="indieweb-dev-on-iiw-2018-08-19">#indieweb-dev on IIW 2018-08-19</h2>
+
+<p><a href="https://freenode.logbot.info/indieweb-dev/20180819"><img src="https://imgur.com/MvrlESD.png" alt=""></a></p>
+
+<p><a href="https://freenode.logbot.info/indieweb-dev/20180819">#indieweb-dev on IIW 2018-08-19-chat log</a></p>
+<ul>
+  <li>17:08 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - No, IIW</li>
+  <li>17:09 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - but all the OAuth IETF people will be there</li>
+  <li>17:09 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - IETF people take IETF i-d more seriously than rando domain with proposals</li>
+  <li>17:09 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - IIW is a good place to socialize specs certainly</li>
+  <li>17:09 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - I wonder how much of this I can write in the next 2 hours</li>
+  <li>17:09 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - need a name tho</li>
+  <li>17:10 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - OpenAppID</li>
+  <li>17:10 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - Oh no</li>
+  <li>17:11 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - I was being facetious</li>
+  <li>17:11 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - [kevinmarks]: based on what evidence of successful specs to come out of IIW socialization?</li>
+  <li>17:11 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - kevinmarks++</li>
+  <li>17:11 <a href="https://indieweb.org/Loqi">[Loqi]</a> - kevinmarks has 7 karma in this channel over the last year (30 in all channels)</li>
+  <li>17:11 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - OpenAppID++</li>
+  <li>17:11 <a href="https://indieweb.org/Loqi">[Loqi]</a> - OpenAppID has 1 karma over the last year</li>
+  <li>17:11 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - OAuth came out of IIW</li>
+  <li>17:11 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - OAuth 1.0 had a lot of groundwork done at IIW</li>
+  <li>17:11 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - yes</li>
+  <li>17:12 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - no that’s a myth. OAuth came out of a mailing list started by Blaine at Twitter</li>
+  <li>17:12 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - A lot of it was done at IIW regardless of where it started exactly</li>
+  <li>17:12 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - the actual work was done by a small set of folks on a limited-write, public-readable mailing list</li>
+  <li>17:12 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - yes, but getting the yahoo and Google people in the room with him at IIW really helped</li>
+  <li>17:12 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - it was an interesting model of standards development by email</li>
+  <li>17:13 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - OAuth did not “come out of” IIW</li>
+  <li>17:13 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - that’s the myth</li>
+  <li>17:13 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - that helped get the mutual trust necessary to contribute to the mailing list</li>
+  <li>17:13 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - it came out of a limited-write, publicly readable mailing list started by Blaine</li>
+  <li>17:13 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - I didn’t say that, I said “a good place to socialize specs”</li>
+  <li>17:13 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - aaronpk said that</li>
+  <li>17:14 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - What I meant was OAuth would not have succeeded if it had not been discussed at IIW</li>
+  <li>17:14 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - I dragged several google auth people across the street to IIW, then they joined the mailing list</li>
+  <li>17:15 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - the real bonding experience was them hotpatching the spec and mitigating the replay attack at that foo camp</li>
+  <li>17:16 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - yes the Open Web Foo hotpatching of OAuth 1 to fix the security problems was key</li>
+  <li>17:16 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - I need a name that gets across that client registration is replaced by DNS</li>
+  <li>17:16 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - I would use “implicit client registration” if “implicit” didn’t already have existing meaning in OAuth</li>
+  <li>17:17 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - “URL client registration” ?</li>
+  <li>17:17 <a href="http://www.kevinmarks.com/">[kevinmarks]</a> - Zero Registration per ZeroConf</li>
+  <li>17:18 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - or NoReg per NoSQL</li>
+  <li>17:19 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - shortened to “NR”</li>
+  <li>17:19 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - how do you handle client registration? we use NR for that</li>
+  <li>17:19 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - “ZR” works just as well</li>
+  <li>17:19 <strong>sknebel</strong> - client lookup?</li>
+  <li>17:21 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - PKCE is a great name because it’s easily googleable and also pronounceable (pixie)</li>
+  <li>17:23 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - aaronpk: Zero Registration shortened to: ZoRg</li>
+  <li>17:23 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - all the Fifth Element fans will love it</li>
+  <li>17:23 <a href="https://indieweb.org/User:Aaronparecki.com">[aaronpk]</a> - zorg omg</li>
+  <li>17:24 <a href="https://indieweb.org/User:Tantek.com">[tantek]</a> - YES</li>
+</ul>
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#did" class="page__taxonomy-item" rel="tag">DID</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#iiw" class="page__taxonomy-item" rel="tag">IIW</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#indieauth" class="page__taxonomy-item" rel="tag">IndieAuth</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#indieweb" class="page__taxonomy-item" rel="tag">IndieWeb</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#oauth" class="page__taxonomy-item" rel="tag">OAuth</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#p2p" class="page__taxonomy-item" rel="tag">P2P</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rebooting-wot" class="page__taxonomy-item" rel="tag">Rebooting WoT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#w3c" class="page__taxonomy-item" rel="tag">W3C</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#decentralized-web" class="page__taxonomy-item" rel="tag">Decentralized Web</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#web-standards" class="page__taxonomy-item" rel="tag">Web Standards</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-06-03">June 03, 2019</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/decentralized-web/2019-06-03-indieweb-dev-on-did.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&amp;text=FreeNode+IRC+%23indieweb-dev+on+IIW+RWoT+and+DID%27s%20https%3A%2F%2Fdecentralized-id.com%2Fdecentralized-web%2Findieweb-on-did%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fdecentralized-web%2Findieweb-on-did%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdecentralized-id.com%2Fdecentralized-web%2Findieweb-on-did%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fdecentralized-web%2Findieweb-on-did%2F&amp;title=FreeNode+IRC+%23indieweb-dev+on+IIW+RWoT+and+DID%27s" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a>
+</h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2">
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="indieweb-dev-on-did">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/did-square.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/object-capabilities/" rel="permalink">Object Capability Model
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Computer scientist E. Dean Tribble stated that in smart contracts, identity-based access control did not support well dynamically changing permissions, compared to the object-capability model. He analogized the ocap model with giving a valet the key to one’s car, without handing over the right to...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2021-04-19 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    <div class="tags">Cosmos</div> <div class="tags">JSON-LD</div> <div class="tags">oCap</div> <div class="tags">zCap</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/dataweb/dataweb-whitepaper-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/xdi-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xri-tc/" rel="permalink">XDI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of the OASIS XDI TC is to define a generalized, extensible, location-, application-, and transport-independent service for sharing, linking, and synchronizing data over the Internet and other data networks using XML documents and XRIs (Extensible Resource Identifiers), a URI-compatibl...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">RDF</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/xri-tc-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xdi-tc/" rel="permalink">XRI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of this TC is to define a syntax for abstract structured identifiers – identifiers that can be used within other URI schemes (such as http: and https: URIs) to share semantics across any number of domains and applications. The TC is also defining a simple XML descriptor format and HTT...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

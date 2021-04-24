@@ -1,0 +1,1665 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Blockchain Identity |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Why Blockchain for Identity? + Assorted Blockchain ID Initiatives">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Blockchain Identity">
+<meta property="og:url" content="https://decentralized-id.com/blockchain/">
+
+
+  <meta property="og:description" content="Why Blockchain for Identity? + Assorted Blockchain ID Initiatives">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/blockchain-id-header.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Blockchain Identity">
+  <meta name="twitter:description" content="Why Blockchain for Identity? + Assorted Blockchain ID Initiatives">
+  <meta name="twitter:url" content="https://decentralized-id.com/blockchain/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://decentralized-id.com/images/blockchain-id-header.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2019-04-11T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2020-11-10T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/blockchain/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/about/">Welcome</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/introduction/">Introduction</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/posts/">Recent</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/aim/">Aim</a>
+            </li>
+</ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero" style=" ">
+  
+    <img src="/images/blockchain-id-header.webp" alt="Blockchain Identity" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption"><a href="https://arxiv.org/pdf/1908.00929.pdf">NIST Cybersecurity (DRAFT) Blockchain Identity Management Approaches</a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/images/the-world-map-from-a-binary-code.webp" alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox">
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources &amp; Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Blockchain Identity">
+    <meta itemprop="description" content="Traditional identity systems typically suffer from single points of failure, lack of interoperability, and privacy issues such as encouraging mass data collection and user tracking. Blockchain technology has the potential to support novel data ownership and governance models with built-in control and consent mechanisms, which may benefit both users and businesses by alleviating these concerns; as a result, blockchain-based IDMSs are beginning to proliferate.">
+    <meta itemprop="datePublished" content="April 11, 2019">
+    <meta itemprop="dateModified" content="November 10, 2020">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Blockchain Identity
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  8 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <ul>
+  <li>
+<a href="https://www.tcs.com/content/dam/tcs-bancs/protected-pdf/Impact%20of%20Blockchain%20on%20Digital%20identity.pdf">Impact of Blockchain on Digital Identity</a>
+    <blockquote>
+      <p>Starting from plain vanilla guidelines of security such as using a complex password to deploying cutting-edge technologies such as Biometrics, Machine Learning and Robotic Process Automation, multiple methods are being evaluated for digital identity protection.</p>
+
+      <p>Effective though they are, when applied on a Centralized Digital Identity Management system, these solutions prove costly and sometimes not as effective. One of the main drawbacks of such a centralized system is that the control of data remains with one entity</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.ibm.com/blogs/blockchain/2018/06/self-sovereign-identity-why-blockchain/">Self-Sovereign Identity: Why Blockchain?</a>
+    <blockquote>
+      <p>This question tends to stem from the notion that data associated with a person’s identity is destined to be stored, shared and used for verification on some form of distributed ledger technology. My hope is that this article with help to debunk that notion and provide a basic foundational understanding of how distributed ledger technology is being used to solve our identity infrastructure dilemma and resolve the impacts of the internet lacking an identity layer.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/1806.01926.pdf">Deployment of a Blockchain-Based Self-Sovereign Identity - Delft</a>
+    <blockquote>
+      <p>Digital identity is unsolved: after many years of research there is still no trusted communication over the Internet. To provide identity within the context of mutual distrust, this paper presents a blockchain-based digital identity solution. Without depending upon a single trusted third party, the proposed solution achieves passport-level legally valid identity. This solution for making identities Self-Sovereign, builds on a generic provable claim model for which attestations of truth from third parties need to be collected. The claim model is then shown to be both blockchain structure and proof method agnostic. Four different implementations in support of these two claim model properties are shown to offer sub-second performance for claim creation and claim verification. Through the properties of Self-Sovereign Identity, legally valid status and acceptable performance, our solution is considered to be fit for adoption by the general public.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://arxiv.org/pdf/1908.00929.pdf"><strong><em>A Taxonomic Approach to Understanding Emerging Blockchain Identity Management Systems</em></strong></a> NIST CYBERSECURITY WHITE PAPER (DRAFT) BLOCKCHAIN IDENTITY MANAGEMENT APPROACHES
+JULY 9, 2019
+    <blockquote>
+      <p>Identity management systems (IDMSs) are widely used to provision user identities while managing authentication, authorization, and data sharing both within organizations as well as on the Internet more broadly. Traditional identity systems typically suffer from single points of failure, lack of interoperability, and privacy issues such as encouraging mass data collection and user tracking. Blockchain technology has the potential to support novel data ownership and governance models with built-in control and consent mechanisms, which may benefit both users and businesses by alleviating these concerns; as a result, blockchain-based IDMSs are beginning to proliferate. This work categorizes these systems into a taxonomy based on differences in architecture, governance models, and other salient features. We provide context for the taxonomy by describing related terms, emerging standards, and use cases, while highlighting relevant security and privacy considerations.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://tykn.tech/identity-management-blockchain/">Identity Management with Blockchain: The Definitive Guide (2019)</a>
+    <blockquote>
+      <p>In identity management, a distributed ledger (a “blockchain”) enables everyone in the network to have the same source of truth about which credentials are valid and who attested to the validity of the data inside the credential, without revealing the actual data.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://twitter.com/windley/status/1071469217650638848">Phil Windley (@windley)</a>
+    <blockquote>
+      <p>If ledger isn’t used, then every issuer of a credential has to maintain infrastructure or contract service provider to respond to DID resolution &amp; revocation requests. And, credential issuers would know when the credential  was used, impacting privacy.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/hUYpvI43bHA" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+<p><a href="https://www.youtube.com/watch?v=hUYpvI43bHA">Daniel Buchner - Blockchain-Anchored Identity – A Gateway to Decentralized Apps and Services</a></p>
+
+<p><img src="https://i.imgur.com/bMbh6N7.png" alt="">
+<a href="https://www.kuppingercole.com/blog/kuppinger/blockchain-identity-success-factors-and-challenges">Blockchain Identity – Success Factors and Challenges</a> by Martin Kuppinger</p>
+<blockquote>
+  <p>When new things arrive, which are still in the pioneering stage and far from reaching maturity, there is always a lot of discussion. This is even more true for Blockchain Identity, where the massive hype around Blockchains, a long history of clever ideas failing, and a few interesting technical and security challenges come together. During my keynote at this year’s EIC, I addressed the challenges and success factors for Blockchain ID as well. That led to a discussion on Twitter about whether some of these success factors are contradictory.</p>
+  <ul>
+    <li>
+<a href="https://www.linkedin.com/pulse/gdpr-reflection-self-sovereign-identity-blockchain-nicolas-ameye/">GDPR - A reflection on the ‘self-sovereign identity’ and the Blockchain</a>
+The GDPR is taking for granted a centralized identity model, meaning a centralized model of digital data storage and transmission. Those centralized models of digital data storage are relying on the principles that the data custodians are trustworthy and are mandated to steward personal data. The GDPR, while being technology-neutral by nature, is articulated around the idea that personal data are being stewarded by centralized authorities.</li>
+  </ul>
+</blockquote>
+
+<iframe src="https://channel9.msdn.com/Shows/Blocktalk/Decentralized-Identity-and-Blockchain/player" width="640" height="360" allowfullscreen="" frameborder="0" title="Decentralized Identity and Blockchain - Microsoft Channel 9 Video"></iframe>
+
+<ul>
+  <li>
+<a href="https://essay.utwente.nl/71274/1/Baars_MA_BMS.pdf">Towards Self-Sovereign Identity using Blockchain Technology</a>
+    <blockquote>
+      <p>Blockchain technology could function as the foundation of such system being a network for decentralized trust and exchange. Because everyone can participate as issuer or acquirer (and both), there are low adoption barriers and low costs. This allows new business opportunities for governments, banks and other authorities and more transparency and control for end-users.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.youtube.com/watch?v=l04AHP7kPPw">Identity and Distributed Ledger - Today and Tomorrow - June 26 - Identiverse 2019</a>
+    <blockquote>
+      <p>Join our expert panel, moderated by Paul Madsen, as they discuss and debate the future of distributed identity technology and its applications in solving identity problems.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="http://www.windley.com/archives/2016/09/self-sovereign_identity_and_the_legitimacy_of_permissioned_ledgers.shtml">Self-Sovereign Identity and the Legitimacy of Permissioned Ledgers</a>
+    <blockquote>
+      <p>This post justifies the claim that an identity system based on a permissioned distributed ledger is legitimately self-sovereign. The post also examines the claims to legitimacy that social login and distributed ledger identity systems make.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.youtube.com/watch?v=VV2rLgH9TUE">Distributed Ledger Technologies, IAM, and the Truth in Things - June 27 - Identiverse 2019</a> - Robert Brown
+    <blockquote>
+      <p>The Internet of Things has a problem with data silos – it’s difficult for data to move across domains and prove where it came from. Users of IoT data must understand how Things were made and kept up-to-date if they are to know the data received is truthful. Yet keeping Things healthy is not the sole responsibility of a single actor; components of a Thing may be shared amongst hardware and software vendors, system integrators, retailers, system operators, owners, regulators or third parties. Safety and security rests with all involved in authorizing updates, how and when they are applied as well as the right to repair when Things are no longer officially supported. Shared device lifecycle assurance is the basis for verifiable service histories of Things which give data provenance. When data can be proven to originate from reliable sources, its value increases while reducing the risk of using it. Enabling third parties to build value from data would unlock the true value of IoT which in turn could fund its upkeep. This talk will outline how identity and shared ledger technology have key roles to building Truth in Things for a sustainable IoT.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.youtube.com/watch?v=bjlnZyMTf1M">Decentralized Identity: Intersection of Identity and Distributed Ledger - June 25 - Identiverse 2019</a> - Preeti Rastogi
+    <blockquote>
+      <p>Decentralization in Identity is a shiny object, promising amazing benefits – but sometimes it is nice to just see how the protocols work. Join this session for an overview of the distributed ledger landscape and a discussion of the role it plays in the identity world, as well as the new challenges it introduces. We will talk about how public keys stored on a ledger might act as an anchor for digital trust and what architectures are evolving to leverage that trust.</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.kuppingercole.com/blog/kuppinger/blockchain-for-identity-myth-or-potential">Blockchain for Identity - Myth or Potential</a>
+    <blockquote>
+      <p>Authentication might definitely become simpler, by having various authenticators and IDs, from eIDs to social logins, associated with a wallet. Just one simple store to get access. Yes, there are challenges in creating secure, easy-to-use wallets, but there is potential as well.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><img src="https://i.imgur.com/YSyv11h.png" alt=""></p>
+
+<h2 id="assorted-blockchain-id-initiatives">Assorted Blockchain ID Initiatives</h2>
+
+<ul>
+  <li>
+<a href="https://github.com/peacekeeper/blockchain-identity">peacekeeper/blockchain-identity</a> - Blockchain and Identity</li>
+  <li>
+<a href="https://blog.coinbase.com/identity-at-coinbase-welcoming-the-distributed-systems-team-d929dd64de2e">Identity at Coinbase: Welcoming the Distributed Systems team</a> [<a href="https://www.wired.com/story/coinbase-distributed-systems-acquisition/"><strong>ϟ</strong></a>]</li>
+  <li>
+<a href="https://shocard.com/">Shocard</a> — “Blockchain-Based Mobile Identity Platform” [<a href="https://medium.com/shocard/why-shocard-is-the-premier-blockchain-based-mobile-identity-platform-6fad15410106"><strong>ϟ</strong></a>]</li>
+  <li>
+<a href="http://authenteq.com/">Authenteq</a> [<a href="https://twitter.com/authenteq"><strong>T</strong></a>] [<a href="https://github.com/authenteq"><strong>G</strong></a>]
+    <ul>
+      <li>enables users to create their own sovereign digital IDs which are stored encrypted on <a href="http://docs.bigchaindb.com">BigChainDB</a>
+</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://www.jlinc.com/">JLinc</a> — registers cryptographic public keys on the Stellar blockchain.
+    <blockquote>
+      <p>“The founders have been at the center of a community of developers working on “user-centric digital identity for almost two decades.”</p>
+    </blockquote>
+  </li>
+  <li>
+<a href="https://www.civic.com/">Civic</a> launches: <a href="https://identity.com">identity.com</a>[<a href="https://github.com/identity-com/"><strong>G</strong></a>][<a href="https://www.civic.com/blog/identity-com-first-open-source-update/"><strong>B</strong></a>][<a href="https://tokensale.civic.com/CivicTokenSaleWhitePaper.pdf"><strong>wp</strong></a>]
+    <ul>
+      <li><a href="https://www.cryptoninjas.net/2018/08/30/dapp-framework-menlo-one-to-use-civic-for-blockchain-identity-verification/">Dapp Framework Melo One to use Civic</a></li>
+      <li><a href="https://brave.com/brave-civic-partnership/">Brave Civic Partnership</a></li>
+    </ul>
+  </li>
+  <li>
+<a href="https://iodigital.io/">I/O Digital Foundation</a> [<strong><a href="https://simplebooklet.com/iocoinwhitepaper#page=0">**wp**</a></strong>]
+    <ul>
+      <li>“offers a Proof-of-Stake blockchain called Decentralised Input Output Name Server (DIONS). It will enable applications such as identity and alias registration, storage of legal documents, key exchange, and encrypted messaging.”</li>
+    </ul>
+  </li>
+  <li><a href="https://www.cryptoninjas.net/2018/09/18/gemalto-and-r3-pilot-blockchain-technology-for-self-sovereign-digital-id-network/#.W6drpckvGLU.twitter">Gemalto and R3 pilot blockchain for SSID</a></li>
+  <li>
+<a href="https://datum.org">Datum</a> [<a href="https://datum.org/assets/Datum-WhitePaper.pdf"><strong>wp</strong></a>]
+    <ul>
+      <li>“network allows anyone to store structured data on a smart contract blockchain. Data can optionally be bought and sold on a marketplace using the DAT token. Datum leverages BigchainDB and IPFS as data storage backends. All data is encrypted and protected using AES256-GCM.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://procivis.ch">Pro-civis</a> — “e-government as a service” platform called “eID+”. It enables citizens to get an official, electronic Citizen-ID on a mobile app.
+    <ul>
+      <li>The platform includes the <a href="https://vetri.global/">Vetri</a> wallet and marketplace. ‘Earn extra income and rewards by joining the data economy.’”</li>
+    </ul>
+  </li>
+  <li>
+<a href="http://blogs.harvard.edu/doc/2018/09/18/data/">We can do better than selling our data</a>-Doc Searls(<em>IIW</em>)</li>
+</ul>
+
+<h2 id="democracy-earth">Democracy Earth</h2>
+
+<p><img src="https://i.imgur.com/KxbXb1t.png" alt=""></p>
+
+<ul>
+  <li>
+<a href="http://democracy.earth/">Democracy Earth Foundation</a> [<a href="https://github.com/DemocracyEarth/"><strong>G</strong></a>][<a href="https://words.democracy.earth/"><strong>B</strong></a>][<a href="https://twitter.com/DemocracyEarth"><strong>T</strong></a>][<a href="http://chat.democracy.earth/"><strong>C</strong></a>] - Crypto Governance
+    <ul>
+      <li>
+<a href="http://sovereign.software/">Sovereign</a>[<a href="https://github.com/DemocracyEarth/sovereign"><strong>G</strong></a>], a blockchain direct democracy tool using “vote” tokens to grant democratic participation rights to every human. A proof-of-individuality (POI) process based on peer-to-peer validation establishes that a self-sovereign identity is uniquely tied to a single person. Cooperation is happening with other decentralized identity initiatives such as Blockstack and uPort.</li>
+    </ul>
+  </li>
+  <li>
+<a href="https://github.com/DemocracyEarth/paper#The_Social_Smart_Contract">The Social Smart Contract</a>[<a href="https://www.dropbox.com/s/sifogl4zimwkkei/Democracy%20Earth%20-%20Social%20Smart%20Contract%20-%20Paper%20v0.2.pdf?dl=0"><strong>ϟ</strong></a>] An Initial Rights Offering from Democracy Earth Foundation.</li>
+  <li><a href="https://words.democracy.earth/decembers-app-mining-results-are-live-7bd2b4f2390">December App-Mining Results</a></li>
+  <li><a href="https://words.democracy.earth/yellow-jackets-on-the-sovereign-platform-bdebe6d62ae1">Yellow Jackets on the Sovereign Platform</a></li>
+  <li>
+<a href="https://www.coindesk.com/meet-the-dad-who-registered-his-daughters-birth-on-the-blockchain">Meet the Dad Who Registered His Daughter’s Birth on the Blockchain</a> [<a href="https://www.coindesk.com/humans-on-the-blockchain-why-crypto-is-the-best-defense-against-ai-overlords"><strong>ϟ</strong></a>]</li>
+  <li>Token: <a href="https://token.democracy.earth/">Sale</a> • <a href="https://www.dropbox.com/s/8q35dvht2hkfvqa/Democracy%20Earth%20-%20Token%20Economics.pdf?dl=0">Economics</a> • <a href="https://votest.democracy.earth/">testnet</a>
+    <blockquote>
+      <p>we worked with councils, senates, non profits, student centers, political parties, corporations.. but implementing real digital governance at scale really took off with crypto networks. our partnership with <a href="https://twitter.com/blockstack" class="user-mention">@blockstack</a> is our biggest milestone of 2018. -<a href="https://twitter.com/santisiri/status/1076259390154592256">Santi</a></p>
+    </blockquote>
+  </li>
+</ul>
+
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#authenteq" class="page__taxonomy-item" rel="tag">Authenteq</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#blockstack" class="page__taxonomy-item" rel="tag">Blockstack</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#civic" class="page__taxonomy-item" rel="tag">Civic</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#datum" class="page__taxonomy-item" rel="tag">Datum</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#gdpr" class="page__taxonomy-item" rel="tag">GDPR</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#microsoft" class="page__taxonomy-item" rel="tag">Microsoft</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#procivis" class="page__taxonomy-item" rel="tag">ProCivis</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#uport" class="page__taxonomy-item" rel="tag">uPort</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#blockchain" class="page__taxonomy-item" rel="tag">Blockchain</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/categories/#literature" class="page__taxonomy-item" rel="tag">Literature</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-10">November 10, 2020</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/blockchain/2019-04-11-blockchain-identity.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&amp;text=Blockchain+Identity%20https%3A%2F%2Fdecentralized-id.com%2Fblockchain%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fblockchain%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fdecentralized-id.com%2Fblockchain%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fblockchain%2F&amp;title=Blockchain+Identity" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a>
+</h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2">
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4">
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="blockchain-identity">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off">
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/dataweb/dataweb-whitepaper-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/augmented-social-network-teaser.png" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/augmented-social-network/" rel="permalink">Augmented Social Network
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The Augmented Social Network is a proposal for a “next generation” online community that would strengthen the collaborative nature of the Internet, enhancing its ability to act as a public commons that engages citizens in civil society. The ASN creates an infrastructure for trusted relationships ...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-26 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  172 minute read
+</p>
+    <div class="tags">Augmented Social Network</div> <div class="tags">Microsoft</div> <div class="tags">OASIS</div> <div class="tags">Planetwork</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/veres_one-teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blockchain/veres-one/" rel="permalink">Veres One
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Our vision is to enable all people and organizations in the world to create and own their online identifiers, control their identity data and with whom they share that data.
+</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-10 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    <div class="tags">DID</div> <div class="tags">Digital Bazaar</div> <div class="tags">Veres One</div> <div class="tags">Veres One Community Group</div> <div class="tags">Verifiable Credentials</div> <div class="tags">W3C</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/handshake_teaser.webp" alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/blockchain/handshake/" rel="permalink">Handshake
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Handshake is a UTXO-based blockchain protocol which manages the registration, renewal and transfer of DNS top-level domains (TLDs). Our naming protocol differs from its predecessors in that it has no concept of namespacing or subdomains at the consensus layer. Its purpose is not to replace DNS, b...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-10 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    <div class="tags">DNS</div> <div class="tags">Handshake</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

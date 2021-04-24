@@ -1,0 +1,1576 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>ESSIF - European Self Sovereign Identity Framework |  Decentralized Identity Web Directory</title>
+<meta name="description" content="  European Self-Sovereign Identity Framework (ESSIF)          This section contains the documents generated as technical specification for the ESSIF Use Case. These documents act as the base for the architecture definition for ESSIF V1.      The content of this documents should be taken as high-level technical documents, and conceptual technical documents. The content of these documents will be updated as long as the use case implementation evolves.        ESSIF: The European self-sovereign identity framework          The European self-sovereign identity framework (ESSIF) is part of the European blockchain service infrastructure (EBSI). The EBSI is a joint initiative from the European Commission and the European Blockchain Partnership (EBP) to deliver EU-wide cross-border public services using blockchain technology.      The EBSI aims to become a “gold standard” digital infrastructure to support the launch and operation of EU-wide cross-border public services. It is a multi-blockchain network with multiple use-cases such as notarization of documents, ESSIF, certification of diplomas and trusted data sharing. While there is an EBSI wallet, it’s for test purposes only and not for the public. The consensus of the permissioned network will be achieved via proof of authority (POA) with one note per member state.      ">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="ESSIF - European Self Sovereign Identity Framework">
+<meta property="og:url" content="https://decentralized-id.com/government/europe/eSSIF/">
+
+
+  <meta property="og:description" content="  European Self-Sovereign Identity Framework (ESSIF)          This section contains the documents generated as technical specification for the ESSIF Use Case. These documents act as the base for the architecture definition for ESSIF V1.      The content of this documents should be taken as high-level technical documents, and conceptual technical documents. The content of these documents will be updated as long as the use case implementation evolves.        ESSIF: The European self-sovereign identity framework          The European self-sovereign identity framework (ESSIF) is part of the European blockchain service infrastructure (EBSI). The EBSI is a joint initiative from the European Commission and the European Blockchain Partnership (EBP) to deliver EU-wide cross-border public services using blockchain technology.      The EBSI aims to become a “gold standard” digital infrastructure to support the launch and operation of EU-wide cross-border public services. It is a multi-blockchain network with multiple use-cases such as notarization of documents, ESSIF, certification of diplomas and trusted data sharing. While there is an EBSI wallet, it’s for test purposes only and not for the public. The consensus of the permissioned network will be achieved via proof of authority (POA) with one note per member state.      ">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/eSSIF.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="ESSIF - European Self Sovereign Identity Framework">
+  <meta name="twitter:description" content="  European Self-Sovereign Identity Framework (ESSIF)          This section contains the documents generated as technical specification for the ESSIF Use Case. These documents act as the base for the architecture definition for ESSIF V1.      The content of this documents should be taken as high-level technical documents, and conceptual technical documents. The content of these documents will be updated as long as the use case implementation evolves.        ESSIF: The European self-sovereign identity framework          The European self-sovereign identity framework (ESSIF) is part of the European blockchain service infrastructure (EBSI). The EBSI is a joint initiative from the European Commission and the European Blockchain Partnership (EBP) to deliver EU-wide cross-border public services using blockchain technology.      The EBSI aims to become a “gold standard” digital infrastructure to support the launch and operation of EU-wide cross-border public services. It is a multi-blockchain network with multiple use-cases such as notarization of documents, ESSIF, certification of diplomas and trusted data sharing. While there is an EBSI wallet, it’s for test purposes only and not for the public. The consensus of the permissioned network will be achieved via proof of authority (POA) with one note per member state.      ">
+  <meta name="twitter:url" content="https://decentralized-id.com/government/europe/eSSIF/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://decentralized-id.com/images/eSSIF.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-11-20T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2020-11-20T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/government/europe/eSSIF/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="/images/eSSIF.webp" alt="ESSIF - European Self Sovereign Identity Framework" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption"><a href="https://ssimeetup.org/understanding-european-self-sovereign-identity-framework-essif-daniel-du-seuil-carlos-pastor-webinar-32/">image source</a>
+</span>
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/images/the-world-map-from-a-binary-code.webp"
+        
+        alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources & Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="ESSIF - European Self Sovereign Identity Framework">
+    <meta itemprop="description" content="  European Self-Sovereign Identity Framework (ESSIF)          This section contains the documents generated as technical specification for the ESSIF Use Case. These documents act as the base for the architecture definition for ESSIF V1.      The content of this documents should be taken as high-level technical documents, and conceptual technical documents. The content of these documents will be updated as long as the use case implementation evolves.        ESSIF: The European self-sovereign identity framework          The European self-sovereign identity framework (ESSIF) is part of the European blockchain service infrastructure (EBSI). The EBSI is a joint initiative from the European Commission and the European Blockchain Partnership (EBP) to deliver EU-wide cross-border public services using blockchain technology.      The EBSI aims to become a “gold standard” digital infrastructure to support the launch and operation of EU-wide cross-border public services. It is a multi-blockchain network with multiple use-cases such as notarization of documents, ESSIF, certification of diplomas and trusted data sharing. While there is an EBSI wallet, it’s for test purposes only and not for the public. The consensus of the permissioned network will be achieved via proof of authority (POA) with one note per member state.      ">
+    <meta itemprop="datePublished" content="November 20, 2020">
+    <meta itemprop="dateModified" content="November 20, 2020">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">ESSIF - European Self Sovereign Identity Framework
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <ul>
+  <li><a href="https://ec.europa.eu/cefdigital/wiki/pages/viewpage.action?pageId=262505734">European Self-Sovereign Identity Framework (ESSIF)</a>
+    <blockquote>
+      <p>This section contains the documents generated as technical specification for the ESSIF Use Case. These documents act as the base for the architecture definition for ESSIF V1.</p>
+
+      <p>The content of this documents should be taken as high-level technical documents, and conceptual technical documents. The content of these documents will be updated as long as the use case implementation evolves.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://medium.com/@SSI_Ambassador/essif-the-european-self-sovereign-identity-framework-4572f6875e12">ESSIF: The European self-sovereign identity framework</a>
+    <blockquote>
+      <p>The European self-sovereign identity framework (ESSIF) is part of the European blockchain service infrastructure (EBSI). The EBSI is a joint initiative from the European Commission and the European Blockchain Partnership (EBP) to deliver EU-wide cross-border public services using blockchain technology.</p>
+
+      <p>The EBSI aims to become a “gold standard” digital infrastructure to support the launch and operation of EU-wide cross-border public services. It is a multi-blockchain network with multiple use-cases such as notarization of documents, ESSIF, certification of diplomas and trusted data sharing. While there is an EBSI wallet, it’s for test purposes only and not for the public. The consensus of the permissioned network will be achieved via proof of authority (POA) with one note per member state.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><a href="https://www.eesc.europa.eu/sites/default/files/files/1._panel_-_daniel_du_seuil.pdf"><img src="https://i.imgur.com/KAMuWHB.png" alt="" /></a></p>
+
+<blockquote>
+  <p>In European Blockchain Partnership NL-GER-BE started a initiative on
+European Self Sovereign Identity framework (eSSIF).
+○ How to facilitate cross-border interaction with SSI.
+○ How to make/keep national SSI projects interoperable.
+○ How to integrate/align existing building blocks such as eIDAS, e-delivery, once-only with SSI.
+○ How to conceptualize and build an identity layer in the new European Blockchain Services Infrastructure.
+○ How to preserve European/democratic values in the implementation of Self Sovereign identity.</p>
+</blockquote>
+
+<ul>
+  <li><strong>SSI-Meetup</strong>: <a href="https://ssimeetup.org/understanding-european-self-sovereign-identity-framework-essif-daniel-du-seuil-carlos-pastor-webinar-32/">Understanding the European Self-Sovereign Identity Framework (ESSIF) – Daniël Du Seuil and Carlos Pastor – Webinar 32</a>
+    <blockquote>
+      <p>Daniël Du Seuil, Programm manager and blockchain architect with the Flemish public service, and Carlos Pastor, from BME in Spain, give an overview of the vision, objectives, and approach of the European Self-Sovereign Identity Framework (ESSIF).</p>
+    </blockquote>
+  </li>
+  <li><a href="https://ercim-news.ercim.eu/en110/special/self-sovereign-identity-framework-and-blockchain">Self-Sovereign Identity Framework and Blockchain</a>
+    <blockquote>
+      <p>The Techruption Blockchain Project is a public-private partnership project in the Netherlands, within which large corporates, small companies, startups and scientific institutions collectively create disruptive technological innovations around distributed ledger (blockchain) technologies (DLT). DLTs are particularly useful in business and governance situations that involve multiple parties that do not necessarily trust one another to negotiate and execute electronic business transactions. In many cases such transactions require the ability to establish and validate identities and identity attributes, or to check whether or not they have been revoked.</p>
+
+      <p>Seven participants of the project (Accenture, APG, Brightlands, Chamber of Commerce, De Volksbank, Rabobank, and TNO) are developing a self-sovereign identity framework (SSIF) for the creation, validation and revocation of such identities that can be used in conjunction with blockchain technologies and the (disruptive) applications that are enabled by such technologies. The goal is to specify, validate and ultimately build a trustworthy, open digital infrastructure for self-sovereign identities that is secure, decentralized, open source, supports privacy (e.g., GDPR compliance) in multiple roles, and lacks a single point of failure or large information honey-pot. We aim to follow well-established requirements for user-centric identity systems</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.tno.nl/en/about-tno/news/2019/12/eu-project-essif-lab-open-for-start-ups-and-smes/">EU PROJECT ESSIF-LAB, AIMED AT FASTER AND SAFER ELECTRONIC TRANSACTIONS VIA THE INTERNET AS WELL AS IN REAL LIFE, OPEN FOR START-UPS AND SMES</a>
+    <blockquote>
+      <p><strong><em>The project will award 62 subgrants</em></strong> in two types of open call: one infrastructure-oriented open call targeting technical enhancements and extensions of the SSI framework and two business-oriented open calls targeting SSI business and social innovations and applications. The infrastructure-oriented open call (open to any type of innovator) and the first business-oriented open call (limited to start-ups and SMEs) are expected to open in March 2020. The exact opening date as well as the terms of reference will be available around February 2020 at essif-lab.eu.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/ATXCzY-GM_U" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+<ul>
+  <li><a href="https://www.tno.nl/en/about-tno/news/2019/12/eu-project-essif-lab-open-for-start-ups-and-smes/">ESSIF-Lab Consortium</a></li>
+  <li><a href="https://essif-lab.pages.grnet.gr/framework/docs/project">The eSSIF-Lab Project</a>
+    <blockquote>
+      <p>The European Self-Sovereign Identity Lab (eSSIF-Lab) views itself as an ecosystem of parties that work together to make existing (and new) Self-Sovereign Identity (SSI) technology into a scalable and interoperable infrastructure that businesses can use very easily for conducting (business) transactions with other businesses and individuals alike.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><img src="https://i.imgur.com/96aQxGu.jpg" alt="" /></p>
+
+<ul>
+  <li><a href="https://www.ngi.eu/ngi-projects/essif-lab/">NGI ESSIF-LAB</a> EUROPEAN SELF-SOVEREIGN IDENTITY FRAMEWORK LAB
+    <blockquote>
+      <p>eSSIF-Lab is a project funded by the European Commission and aims to advance the broad uptake of SSI as a next generation, open and trusted digital identity solution for faster and safer electronic transactions via the Internet, as well as in real life.</p>
+
+      <p>In this project, 5,6M€ EU funds will be made available to European innovators including academic research groups, SME’s and start-ups that want to build or improve SSI (Self-Sovereign Identity) components. The aim of the eSSIF-Lab is to create a range of interoperable, open-source SSI components that will be used within Europe and possibly world-wide</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.tno.nl/en/focus-areas/information-communication-technology/roadmaps/data-sharing/ssi/">SIMPLER AND SAFER DIGITAL LIVING WITH SELF-SOVEREIGN IDENTITY</a> (TNO)
+    <blockquote>
+      <p>On 1 November 2019 the EU Cascaded Funding project ‘eSSIF-Lab’ (European Self-Sovereign Identity Framework Lab) has started. In this project, EU funds will be made available to SMEs and start-ups that want to build or improve SSI components. The aim is to create a range of interoperable, open-source SSI components that people will actually use, not just in the Netherlands, but specifically also within Europe and perhaps world-wide. The first possibilities for SME’s and startups to contribute are expected in March 2020. To get more information about possibilities contact Oskar van Deventer.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://gataca.io/insights/video-gataca-asks-the-expert-daniel-du-seuil">[VIDEO] Gataca asks the Expert: Daniël Du Seuil</a>
+    <blockquote>
+      <p>Gataca chats to Daniël Du Seuil about his efforts leading ESSIF, a European Framework for Self Sovereign Identity as a cornerstone of EBSI, the European Blockchain Services Infrastructure. EBSI is a joint initiative from the European Commission and the European Blockchain Partnership (EBP) to deliver EU-wide cross-border public services using blockchain technology.</p>
+
+      <p>In this interview we answer key questions such as: “When decentralized identities will be a reality in Europe?”, “How adoption will unfold?” and “How Covid changed EU identity priorities?”</p>
+    </blockquote>
+  </li>
+</ul>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://player.vimeo.com/video/438295156?dnt=true" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+
+</div>
+
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr/>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#accenture" class="page__taxonomy-item" rel="tag">Accenture</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#apg" class="page__taxonomy-item" rel="tag">APG</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#brightlands" class="page__taxonomy-item" rel="tag">Brightlands</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#chamber-of-commerce" class="page__taxonomy-item" rel="tag">Chamber of Commerce</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#de-volksbank" class="page__taxonomy-item" rel="tag">De Volksbank</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ebsi" class="page__taxonomy-item" rel="tag">EBSI</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#eidas" class="page__taxonomy-item" rel="tag">eIDAS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#essif" class="page__taxonomy-item" rel="tag">eSSIF</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#europe" class="page__taxonomy-item" rel="tag">Europe</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rabobank" class="page__taxonomy-item" rel="tag">Rabobank</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#tno" class="page__taxonomy-item" rel="tag">TNO</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#government" class="page__taxonomy-item" rel="tag">Government</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-11-20">November 20, 2020</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/government/europe/2020-11-20-eSSIF.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&text=ESSIF+-+European+Self+Sovereign+Identity+Framework%20https%3A%2F%2Fdecentralized-id.com%2Fgovernment%2Feurope%2FeSSIF%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fgovernment%2Feurope%2FeSSIF%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdecentralized-id.com%2Fgovernment%2Feurope%2FeSSIF%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fgovernment%2Feurope%2FeSSIF%2F&title=ESSIF+-+European+Self+Sovereign+Identity+Framework" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr/>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a></h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" />
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" />
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="eSSIF">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/ccpa-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/government/usa/regulations/california/ccpa/" rel="permalink">California Consumer Privacy Act (CCPA)
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The California Consumer Privacy Act of 2018 (CCPA) gives consumers more control over the personal information that businesses collect about them. This landmark law secures new privacy rights for California consumers, including: - The right to know about the personal information a business collect...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-04 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    <div class="tags">CCPA</div> <div class="tags">CPRA</div> <div class="tags">California</div> <div class="tags">IAB</div> <div class="tags">IAPP</div> <div class="tags">USA</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/zug-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/government/europe/switzerland/zug/" rel="permalink">Zug ID
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Zug leveraged uPort, a decentralized identity platform to create the world’s first live implementation of a self-sovereign government-issued identity project on the Ethereum blockchain, along with the city of Zug, the Institute for Financial Services Zug (IFZ) of the Lucerne University, along wit...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-18 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    <div class="tags">Aries</div> <div class="tags">Consensys</div> <div class="tags">Crypto Valley Association</div> <div class="tags">DID</div> <div class="tags">Ethereum</div> <div class="tags">Europe</div> <div class="tags">ProCivis</div> <div class="tags">Switzerland</div> <div class="tags">Zug</div> <div class="tags">uPort</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/bcgov-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/government/canada/bcgov/" rel="permalink">BCGov - Government of British Columbia Canada
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">“Digital technologies are transforming the way British Columbians live, work and play. To meet their changing expectations, government’s transformation is also underway. It’s about using modern tools and technologies to deliver the services people want and maximizing the power of data to improve ...</p>
+    <p class="page__meta"><strong>Updated:</strong>  <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  12 minute read
+</p>
+    <div class="tags">Aries</div> <div class="tags">Canada</div> <div class="tags">DID</div> <div class="tags">IIW</div> <div class="tags">Indy</div> <div class="tags">Trinsic</div> <div class="tags">Trust Framework</div> <div class="tags">Trust over IP</div> <div class="tags">Verifiable Credentials</div> <div class="tags">Verifiable Organizations Network</div> <div class="tags">W3C</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/dhs-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/government/usa/dhs/" rel="permalink">Department Homeland Security (DHS)
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The DHS Science and Technology Directorate (S&amp;T) Silicon Valley Innovation Program (SVIP) is keeping pace with the innovation community to tackle the hardest problems faced by DHS and the Homeland Security Enterprise. SVIP expands DHS S&amp;T’s reach to find new technologies that strengthen n...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-11-02 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  17 minute read
+</p>
+    <div class="tags">Blockcerts</div> <div class="tags">Celerity</div> <div class="tags">DHS</div> <div class="tags">DKMS</div> <div class="tags">Danube Tech</div> <div class="tags">Digital Bazaar</div> <div class="tags">Dignario</div> <div class="tags">Evernym</div> <div class="tags">Factom</div> <div class="tags">Indicio</div> <div class="tags">Learning Machine</div> <div class="tags">MATTR</div> <div class="tags">Mavnet</div> <div class="tags">Mesur</div> <div class="tags">Narf</div> <div class="tags">Respect Network</div> <div class="tags">SICPA</div> <div class="tags">SecureKey</div> <div class="tags">Solarity</div> <div class="tags">Spherity</div> <div class="tags">Stranger Labs</div> <div class="tags">Transmute</div> <div class="tags">Trinsic</div> <div class="tags">USA</div> <div class="tags">Verifiable Credentials</div> <div class="tags">Verified.ME</div> <div class="tags">W3C</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

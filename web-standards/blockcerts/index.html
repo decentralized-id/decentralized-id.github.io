@@ -1,0 +1,1486 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.4 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Blockcerts |  Decentralized Identity Web Directory</title>
+<meta name="description" content="Open Standard for Blockchain Certificates">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Decentralized Identity Web Directory">
+<meta property="og:title" content="Blockcerts">
+<meta property="og:url" content="https://decentralized-id.com/web-standards/blockcerts/">
+
+
+  <meta property="og:description" content="Open Standard for Blockchain Certificates">
+
+
+
+  <meta property="og:image" content="https://decentralized-id.com/images/blockcerts-header.webp">
+
+
+
+  <meta name="twitter:site" content="@infominer33">
+  <meta name="twitter:title" content="Blockcerts">
+  <meta name="twitter:description" content="Open Standard for Blockchain Certificates">
+  <meta name="twitter:url" content="https://decentralized-id.com/web-standards/blockcerts/">
+
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://decentralized-id.com/images/blockcerts-header.webp">
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2020-01-07T00:00:00+00:00">
+
+
+
+  <meta property="article:modified_time" content="2021-04-14T00:00:00+00:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://decentralized-id.com/web-standards/blockcerts/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://decentralized-id.com",
+      "logo": "https://decentralized-id.com/images/did-twitter.webp"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Infominer",
+      "url": "https://decentralized-id.com",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Decentralized Identity Web Directory Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+
+<meta name="yandex-verification" content="876ea269be433d62" />
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://decentralized-id.com/assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://decentralized-id.com/assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://decentralized-id.com/assets/icons/favicon-16x16.png">
+<link rel="manifest" href="https://decentralized-id.com/assets/icons/site.webmanifest">
+<link rel="mask-icon" href="https://decentralized-id.com/assets/icons/safari-pinned-tab.svg" color="#eeeeef">
+<link rel="shortcut icon" href="https://decentralized-id.com/assets/icons/favicon.ico">
+<meta name="msapplication-TileColor" content="#eeeeef">
+<meta name="msapplication-config" content="https://decentralized-id.com/assets/icons/browserconfig.xml">
+<meta name="theme-color" content="#eeeeef">
+
+      <!-- start custom head snippets -->
+
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/images/DID.webp" alt=""></a>
+        
+        <a class="site-title" href="/">Decentralized Identity</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/" >Welcome</a>
+            </li><li class="masthead__menu-item">
+              <a href="/introduction/" >Introduction</a>
+            </li><li class="masthead__menu-item">
+              <a href="/posts/" >Recent</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/aim/" >Aim</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="/images/blockcerts-header.webp" alt="Blockcerts" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src=
+        
+          "/images/the-world-map-from-a-binary-code.webp"
+        
+        alt="Binary Globe by GDj">
+      
+      <h3>Identity Decentralized</h3>
+      
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          
+          
+
+          <a href="/"><span class="nav__sub-title">Home</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/" class="">• Resources & Pre-History</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2000-2009/" class="">• 2000-2009</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2010-2014/" class="">• 2010-2014</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/history/2015-2019/" class="">• 2015-2019</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Feature</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/ssi-101/" class="">• Self Sovereign ID 101</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/self-sovereign-identity/" class="">• SSI Literature</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/workshops/internet-identity-workshop/" class="">• IIW Session Topics</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/literature/rebooting-web-of-trust/" class="">• RWoT Papers Index</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/blogcatcher/" class="">• Identity Blog Catcher</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/twitter/" class="">• Weekly Tweet Collections</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/web-standards/"><span class="nav__sub-title">Web Standards</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/" class="">• W3C</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/w3c/wg/vc/verifiable-credentials/" class="">• Verifiable Credentials</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/linked-data/JSON-LD/" class="">• JSON-LD</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/gs1/" class="">• GS1</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/web-standards/blockcerts/" class="active">• Blockcerts</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Regulation</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/eidas/" class="">• eIDAS</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/government/europe/regulation/gdpr/" class="">• GDPR</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          
+          
+
+          <a href="/organizations/"><span class="nav__sub-title">Organizations</span></a>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/identity-foundation/" class="">• Identity Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/mydata/" class="">• My Data</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/blockchain/hyperledger/" class="">• Hyperledger Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/sovrin-foundation/" class="">• Sovrin Foundation</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/ssi-meetup/" class="">• SSI Meetup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/organizations/women-in-identity/" class="">• Women in Identity</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">⧉InfoMine⧉</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://identosphere.net/" class="">• Identosphere</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz/history/" class="">• Bitcoin Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub/decentralized-web/" class="">• Decentralized Web Histories</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://sourcecrypto.pub" class="">• Source⧉Crypto</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://bitcoinfo.xyz" class="">• Bitcoin Info</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://infominer.xyz/" class="">• InfoHub</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Blockcerts">
+    <meta itemprop="description" content="Blockcerts is an open standard for building apps that issue and verify blockchain-based official records. These may include certificates for civic records, academic credentials, professional licenses, workforce development, and more.Blockcerts consists of open-source libraries, tools, and mobile apps enabling a decentralized, standards-based, recipient-centric ecosystem, enabling trustless verification through blockchain technologies.">
+    <meta itemprop="datePublished" content="January 07, 2020">
+    <meta itemprop="dateModified" content="April 14, 2021">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Blockcerts
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-link"></i> Contents</h4></header>
+              <ul class="toc__menu">
+  <li><a href="#learning-machine">Learning Machine</a></li>
+  <li><a href="#blockcerts">Blockcerts</a>
+    <ul>
+      <li><a href="#open-badges">Open Badges</a></li>
+    </ul>
+  </li>
+  <li><a href="#literature">Literature</a></li>
+  <li><a href="#adoption">Adoption</a>
+    <ul>
+      <li><a href="#cowcerts">Cowcerts</a></li>
+    </ul>
+  </li>
+  <li><a href="#github-repositories">GitHub Repositories</a>
+    <ul>
+      <li><a href="#issuing">Issuing</a></li>
+      <li><a href="#validation">Validation</a></li>
+      <li><a href="#verification">Verification</a></li>
+      <li><a href="#web">Web</a></li>
+      <li><a href="#mobile">Mobile</a></li>
+    </ul>
+  </li>
+</ul>
+            </nav>
+          </aside>
+        
+        <h2 id="learning-machine">Learning Machine</h2>
+
+<p><a href="https://www.learningmachine.com/digital-identity/">The Digital Identity Problem Space</a></p>
+<blockquote>
+  <p>A framework for organizing the categories of digital identity and an analysis of where disruptive innovation is most likely to succeed.</p>
+  <ul>
+    <li><a href="https://www.learningmachine.com/">Learning Machine</a></li>
+    <li><a href="https://www.nataliesmolenski.com/">Natalie Smolenski - Author, Speaker</a>
+Natalie Smolenski is an anthropologist leading business development for blockchain technology firm Learning Machine. She writes and speaks about identity, tech, and government.</li>
+  </ul>
+</blockquote>
+
+<h2 id="blockcerts">Blockcerts</h2>
+
+<ul>
+  <li><a href="https://www.blockcerts.org/">Blockcerts</a>  - <a href="http://community.blockcerts.org/">Forum</a> - <a href="https://github.com/blockchain-certificates">Github</a> - <a href="https://twitter.com/blockcerts">Twitter</a>
+    <blockquote>
+      <p>open standard for issuing and verifying blockchain-based official records; The project offers  open-source libraries, tools, and mobile apps. MIT has <a href="https://www.insidehighered.com/news/2017/10/19/mit-introduces-digital-diplomas">issued</a> digital certificates based on this standard.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.blockcerts.org/guide/">Introduction</a>
+    <blockquote>
+      <p>Blockcerts is an open standard for building apps that issue and verify blockchain-based official records. These may include certificates for civic records, academic credentials, professional licenses, workforce development, and more.</p>
+
+      <p>Blockcerts consists of open-source libraries, tools, and mobile apps enabling a decentralized, standards-based, recipient-centric ecosystem, enabling trustless verification through blockchain technologies.</p>
+
+      <p>Blockcerts uses and encourages consolidation on open standards. Blockcerts is committed to self-sovereign identity of all participants, and enabling recipient control of their claims through easy-to-use tools such as the certificate wallet (mobile app). Blockcerts is also committed to availability of credentials, without single points of failure.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><img src="/images/blockcerts.webp" alt="" /></p>
+
+<ul>
+  <li><a href="https://www.learningmachine.com/academic-credentialing-blockchain/">Academic Credentialing and the Blockchain</a></li>
+  <li><a href="https://medium.com/mit-media-lab/blockcerts-an-open-infrastructure-for-academic-credentials-on-the-blockchain-899a6b880b2f">Blockcerts — An Open Infrastructure for Academic Credentials on the Blockchain</a></li>
+  <li><a href="https://medium.com/learning-machine-blog/top-10-reasons-to-use-blockcerts-ec7d29f2712c">Top 10 Reasons to Use Blockcerts</a>
+    <blockquote>
+      <p>The open standard for issuing blockchain-based records is your easiest bet for creating records that remain verifiable for a lifetime.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust-fall2017/blob/master/final-documents/blockcerts-revocation.md">A Decentralized Approach to Blockcerts Credential Revocation</a>
+    <blockquote>
+      <p>The initial release of the Blockcerts standard and reference implementation described only one revocation mechanism, the issuer-hosted revocation list approach also used by Open Badges. This has known limitations, including: centralization, single point of failure, and inability for a recipient to revoke. Other approaches to revocation were considered, but none were technically or economically feasible at the time given the project goals, including Bitcoin blockchain anchoring, low overhead, and minimal cost.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://www.hylandcredentials.com/future-proof">Future Proof</a>
+    <blockquote>
+      <p>Learning Machine is proud to announce that we have won Phase-1 funding for our response to the open call “Preventing Forgery &amp; Counterfeiting of Certificates and Licenses through the use of Blockchain and Distributed Ledger Technology.” […] The open-source reference implementation, targeted for 2020, will include:</p>
+      <ul>
+        <li>Updating the Blockcerts schema to a Verifiable Credentials-based format</li>
+        <li>Updating the Blockcerts signature/verification scheme to conform to the latest JSON-LD signature suite format</li>
+        <li>Updating Blockcerts credential issuance and verification</li>
+        <li>Incorporating a cost-efficient DID method for issuers</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><a href="https://nbviewer.jupyter.org/github/WebOfTrustInfo/rwot9-prague/blob/master/final-documents/BlockcertsV3.pdf">Blockcerts V3 Proposal - Verifiable Credentials &amp; Decentralized Identifiers</a> - <a href="https://community.blockcerts.org/t/blockcerts-v3-proposal-verifiable-credentials-decentralized-identifiers/2221">Forum</a> - <a href="https://github.com/blockchain-certificates/cert-issuer/tree/v3">GitHub</a>
+    <blockquote>
+      <p>The purpose of this paper is to identify all of the changes needed for Blockcerts to comply with the Verifable Credentials (VCs) and Decentralized Identifers (DIDs) standards and to expand upon the additional benefits of using a blockchain in combination with Verifiable Credentials. This paper is meant to act as an explainer in which a formal specification can be created.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="open-badges">Open Badges</h3>
+<ul>
+  <li><a href="https://www.learningmachine.com/badges-and-blockcerts/">Badges and Blockcerts</a>
+    <blockquote>
+      <p>In education and workforce development, it’s important to understand the differences between digital credential formats and how to combine them for greatest impact.
+…
+2011 saw the birth of Open Badges, which digitally and visually convey the achievement of a specific skill. Similar to the Scouts movement, which uses a small fabric symbol to represent specific achievements, digital badges were designed to convey a singular achievement through a digital image and a hosted set of data. Initially spearheaded by the Mozilla Foundation, the Open Badges standard is now maintained by the IMS Global Learning Consortium, ensuring interoperability between platforms.
+…
+In response to the desire for high-stakes credentials in a digital format, the development of Blockcerts began in 2015 as part of a project by the MIT Media Lab.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://nbviewer.jupyter.org/github/WebOfTrustInfo/rebooting-the-web-of-trust-spring2018/blob/master/final-documents/open-badges-are-verifiable-credentials.pdf">Open Badges are Verifable Credentials</a>
+    <blockquote>
+      <p>The Blockcerts Open Badges Draft Extension introduced a verifcation method based on those used by Verifable Credentials for the specifc use case of blockchain-anchored credentials. This paper expands that work and proposes a new option that can reside alongside existing Open Badges verifcation methods.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://draftin.com/documents/1138961?token=hQ5q0mCHizZum8-pkDFYUZr4YFYOWMN01BPT-5uX00hAaGxYOAlgAlhyenat76hjNpTCs-CMWPI38KWn_omp0Oc">OPEN BADGES ON THE BLOCKCHAIN</a>
+    <blockquote>
+      <p>This document gives an overview of the status, interesting companies and people regarding Verifiable Open Badges on the Blockchain.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p><img src="/images/blockcerts.webp" alt="" /></p>
+
+<h2 id="literature">Literature</h2>
+
+<ul>
+  <li><a href="http://www.fsmb.org/siteassets/digital-credentials/digital-credentials-report-june-2019.pdf">Healthcare and Digital Credentials: Technical, Legal, and Regulatory Considerations</a></li>
+  <li><a href="https://arxiv.org/pdf/1910.04622.pdf">Security analysis of a blockchain-based protocol forthe certification of academic credentials</a> by Marco Baldi, Franco Chiaraluce, Migelan Kodra and Luca Spalazzi
+    <blockquote>
+      <p>Abstract—We consider a blockchain-based protocol forthe certification of academic credentials named Blockcerts,which is currently used worldwide for validating digitalcertificates of competence compliant with the Open Badgesstandard. We study the certification steps that are per-formed by the Blockcerts protocol to validate a certificate,and find that they are vulnerable to a certain typeof impersonation attacks. More in detail, authenticationof the issuing institution is performed by retrieving anunauthenticated issuer profile online, and comparing somedata reported there with those included in the issuedcertificate. We show that, by fabricating a fake issuerprofile and generating a suitably altered certificate, anattacker is able to impersonate a legitimate issuer andcan produce certificates that cannot be distinguished fromoriginals by the Blockcerts validation procedure. We alsopropose some possible countermeasures against an attackof this type, which require the use of a classic public keyinfrastructure or a decentralized identity system integratedwith the Blockcerts protocol.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<center><iframe src="//www.slideshare.net/slideshow/embed_code/key/rVC25i8FzeTPiw" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen=""> </iframe> </center>
+
+<p><a href="https://www.slideshare.net/SSIMeetup/blockcerts-the-open-standard-for-blockchain-credentials">Blockcerts: The Open Standard for Blockchain Credentials</a> - <a href="https://ssimeetup.org/blockcerts-open-standard-blockchain-credentials-daniel-paramo-anthony-ronning-webinar-39/">SSI-Meetup – Webinar 39</a></p>
+
+<h2 id="adoption">Adoption</h2>
+
+<ul>
+  <li><a href="https://news.bitcoin.com/mit-blockcerts-certification-bitcoin/">MIT Launches Blockcerts Certification Using Bitcoin</a> (10/2016)
+    <blockquote>
+      <p>The MIT Media Lab project has already deployed a few instances of blockchain-based digital certificate verification. In October of 2015, the group issued certificates to Media Lab alumni who attended the Lab’s 30th anniversary. The organization Learning Machine also issued HR certificates to employees. MIT’s Global Entrepreneurship Bootcamp workshop in Seoul, South Korea in March 2016 published digital verification using the system. Lastly, Laboratorio para la Ciudad issued digital certificates to workshop participants in Mexico City in September 2015.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://education.gov.mt/en/Blockcerts/Pages/Blockcerts-Public-Key-Registry.aspx">education.gov.mt - Blockcerts Public Key Registry</a></li>
+  <li><a href="https://www.insidehighered.com/news/2017/10/19/mit-introduces-digital-diplomas">MIT Introduces Digital Diplomas</a></li>
+  <li><a href="https://www.cxc.org/cxc-pilots-e-certificates-on-the-blockchain/">CXC (Carribean) Pilots E-Certificates on the Blockchain</a></li>
+</ul>
+
+<h3 id="cowcerts">Cowcerts</h3>
+
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
+
+  <iframe src="https://www.youtube-nocookie.com/embed/3UvDv7OXsFs" frameborder="0" allowfullscreen=""></iframe>
+
+</div>
+
+<ul>
+  <li><a href="https://www.cowstamp.com/">Verifiable credentials using blockchain</a> (<a href="https://twitter.com/cowcerts">twitter</a>) (<a href="https://gitlab.com/cowcerts/">gitlab</a>)
+    <blockquote>
+      <p>Create, issue and receive verifiable credentials registered using blockchain technologies in a user-friendly fashion</p>
+    </blockquote>
+  </li>
+  <li><a href="https://cowcerts.readthedocs.io/en/develop/edu/index.html">Cowcerts for Education</a> - Cowcerts for Education provides a data model for digital certificates to prove that someone has completed their education successfully.
+    <blockquote>
+      <ul>
+        <li>provides extensions to the following base standards:
+          <ul>
+            <li><a href="https://openbadgespec.org/">Open Badges</a> standard</li>
+            <li><a href="https://blockcerts.org/">Blockcerts</a> standard</li>
+          </ul>
+        </li>
+      </ul>
+    </blockquote>
+  </li>
+  <li><a href="https://gitlab.com/cowcerts/schemas">cowcerts/schemas/</a>
+    <blockquote>
+      <p>Specifications, JSON Schemas and JSON Linked Data definitions for Cowcerts certificates <a href="https://cowcerts.dev">https://cowcerts.dev</a></p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="github-repositories">GitHub Repositories</h2>
+
+<ul>
+  <li><a href="https://github.com/blockchain-certificates/blockchain-certificates.github.io">blockchain-certificates/blockchain-certificates.github.io</a> - Web site.</li>
+  <li><a href="https://github.com/learningmachine/stage.blockcerts.github.io">learningmachine/stage.blockcerts.github.io</a></li>
+  <li><a href="https://github.com/blockchain-certificates/blockcerts-playground.github.io">blockchain-certificates/blockcerts-playground.github.io</a> - In-browser tool to experiment with Blockcerts.</li>
+</ul>
+
+<hr />
+
+<ul>
+  <li><a href="https://github.com/learningmachine/Foundatio">learningmachine/Foundatio</a> Pluggable foundation blocks for building distributed apps.</li>
+  <li><a href="https://github.com/blockchain-certificates/pyld">blockchain-certificates/pyld</a> - JSON-LD processor written in Python.</li>
+  <li><a href="https://github.com/learningmachine/polymer-redux">learningmachine/polymer-redux</a>
+    <blockquote>
+      <p>An example use-case to showcase the state/view abstraction in Polymer 3, LitElement and Redux context</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/blockchain-certificates/assets">blockchain-certificates/assets</a></li>
+  <li><a href="https://github.com/blockchain-certificates/archived-cert-store">blockchain-certificates/archived-cert-store</a>
+    <blockquote>
+      <p>Storage library and service for Blockchain Certificates</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/blockchain-certificates/PodSpecs">blockchain-certificates/PodSpecs</a>
+    <blockquote>
+      <p>A listing of CocoaPod .podspec files for all pods created in the Blockchain Certificates project.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="issuing">Issuing</h3>
+
+<ul>
+  <li><a href="https://github.com/blockchain-certificates/cert-schema">blockchain-certificates/cert-schema</a>
+    <blockquote>
+      <p>The schema for Blockcerts.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/blockchain-certificates/cert-issuer">blockchain-certificates/cert-issuer</a> - Issues Blockcerts using either the Bitcoin or Ethereum blockchain</li>
+  <li><a href="https://github.com/blockchain-certificates/cert-tools">blockchain-certificates/cert-tools</a>
+    <blockquote>
+      <p>Command line tools for designing certificate templates and instantiating a certificate batch</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/blockchain-certificates/obi-baking">blockchain-certificates/obi-baking</a>
+    <blockquote>
+      <p>Example of baking a blockcert into an Open Badge.</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/blockchain-certificates/cert-core">blockchain-certificates/cert-core</a></li>
+  <li><a href="https://github.com/blockchain-certificates/wallet-test-resources">blockchain-certificates/wallet-test-resources</a>
+    <blockquote>
+      <p>These are resources used to test implementations of the evolving blockcerts certificate standard and issuer conventions.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="validation">Validation</h3>
+
+<ul>
+  <li><a href="https://github.com/learningmachine/ajv">learningmachine/ajv</a>
+    <blockquote>
+      <p>The fastest JSON-Schema Validator. Supports draft-06</p>
+    </blockquote>
+  </li>
+  <li><a href="https://github.com/blockchain-certificates/openbadges-validator-core">blockchain-certificates/openbadges-validator-core</a> - Open Badges validation in python.</li>
+</ul>
+
+<h3 id="verification">Verification</h3>
+
+<ul>
+  <li><a href="https://github.com/blockchain-certificates/blockcerts-verifier">blockchain-certificates/blockcerts-verifier</a> - A Blockcerts verifier and viewer.</li>
+  <li><a href="https://github.com/blockchain-certificates/cert-verifier">blockchain-certificates/cert-verifier</a>
+Python library for verifying Blockcerts.</li>
+  <li><a href="https://github.com/blockchain-certificates/cert-verifier-js">blockchain-certificates/cert-verifier-js</a> - Javascript library for verifying Blockcerts Certificates</li>
+</ul>
+
+<h3 id="web">Web</h3>
+
+<ul>
+  <li><a href="https://github.com/blockchain-certificates/cert-web-component">blockchain-certificates/cert-web-component</a> - A web component for displaying blockchain certificates.</li>
+  <li><a href="https://github.com/blockchain-certificates/cert-viewer">blockchain-certificates/cert-viewer</a> - A web app for viewing and validating Blockchain Certificates</li>
+</ul>
+
+<h3 id="mobile">Mobile</h3>
+
+<ul>
+  <li><a href="https://github.com/blockchain-certificates/wallet-android">blockchain-certificates/wallet-android</a> - An Android app for Blockcerts.</li>
+  <li><a href="https://github.com/blockchain-certificates/BlockcertsFramework-iOS">blockchain-certificates/BlockcertsFramework-iOS</a> - An iOS wallet for viewing, validating, and sharing certs</li>
+  <li><a href="https://github.com/blockchain-certificates/wallet-iOS">blockchain-certificates/wallet-iOS</a> - An iOS wallet for Blockcerts.</li>
+</ul>
+
+        
+      </section>
+      <footer class="page__meta">
+        <hr/>
+        
+          <h3>Meta</h3>
+        
+        
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#bitcoin" class="page__taxonomy-item" rel="tag">Bitcoin</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#blockcerts" class="page__taxonomy-item" rel="tag">Blockcerts</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#btcr" class="page__taxonomy-item" rel="tag">BTCR</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#dhs" class="page__taxonomy-item" rel="tag">DHS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#did" class="page__taxonomy-item" rel="tag">DID</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ethereum" class="page__taxonomy-item" rel="tag">Ethereum</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#json-ld" class="page__taxonomy-item" rel="tag">JSON-LD</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#learning-machine" class="page__taxonomy-item" rel="tag">Learning Machine</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#rebooting-wot" class="page__taxonomy-item" rel="tag">Rebooting WoT</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#verifiable-credentials" class="page__taxonomy-item" rel="tag">Verifiable Credentials</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#web-standards" class="page__taxonomy-item" rel="tag">Web Standards</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-14">April 14, 2021</time></p>
+        
+        <h3><a href="https://github.com/Decentralized-ID/decentralized-id.github.io/blob/master/_posts/web-standards/2020-01-07-blockcerts.md" class="edit">Edit this page <i class="fa fa-pencil"></i></a></h3>
+        <h3>Social Share</h3>
+<a href="https://twitter.com/intent/tweet?via=infominer33&text=Blockcerts%20https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fblockcerts%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fblockcerts%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+<a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fblockcerts%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+<a href="https://www.reddit.com/submit?url=https%3A%2F%2Fdecentralized-id.com%2Fweb-standards%2Fblockcerts%2F&title=Blockcerts" class="btn btn--reddit" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+        <hr/>        
+      </footer>
+    </div>
+    
+        <center>
+    <h3>Comments by <a href="https://staticman.net/">Staticman</a> and <a href="https://identosphere.net">Identosphere</a></h3>
+    <iframe src="https://identosphere.substack.com/embed" width="400" height="267" style="border:1px solid #EEE; background:#f0f0f0;" frameborder="0" scrolling="yes"></iframe>
+  </center>
+  
+  <div class="page__comments">
+    
+      <section id="static-comments">
+        
+          <!-- Start static comments -->
+          <div class="js-comments">
+            
+          </div>
+          <!-- End static comments -->
+
+          <!-- Start new comment form -->
+          <div class="page__comments-form">
+            <h4 class="page__comments-title">Leave a Comment</h4>
+            <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+            <form id="new_comment" class="page__comments-form js-form form" method="post" action="https://tools.identosphere.net/staticman/v2/entry/Decentralized-ID/decentralized-id.github.io/master/comments">
+              <div class="form__spinner">
+                <i class="fas fa-spinner fa-spin fa-3x fa-fw"></i>
+                <span class="sr-only">Loading...</span>
+              </div>
+
+              <div class="form-group">
+                <label for="comment-form-message">Comment <small class="required">*</small></label>
+                <textarea type="text" rows="3" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+                <div class="small help-block"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+              </div>
+              <div class="form-group">
+                <label for="comment-form-name">Name <small class="required">*</small></label>
+                <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" />
+              </div>
+              <div class="form-group">
+                <label for="comment-form-email">Email address <small class="required">*</small></label>
+                <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" />
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <label for="comment-form-url">Website (optional)</label>
+                <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
+              </div>
+              <div class="form-group hidden" style="display: none;">
+                <input type="hidden" name="options[slug]" value="blockcerts">
+                <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+                <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
+                <input type="hidden" name="options[reCaptcha][siteKey]" value="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0">
+                <input type="hidden" name="options[reCaptcha][secret]" value="jG+tpXA7GdYSuIT/rcr5pyy9GG/ZP6808NE8SS+/ggGZ0Si0/uelJpZuElRrIITjfB7YjW6+MyWEBM/q/BFWQqRfkpCZ0RK5AETrx/awrvKSlCVCQfpN20MFpu54yFgkyj82umuoxOyiVczwUnkD8Sav0cXESbllHgC+2J2hw6nOYQ+ZnOFL4J4m3yoABhyGpKnhzw7enmaAm+pbxPXyLhjj9+LiRqGLWNUYOt+yOuo/i1aeE8p0lYwdESVoetkuNfKf1Q13Vs/KSPGceVXWLJAf7mDlwCf8wGrAZzCGAd9GQJM3KjliB+0hGOWs9X01+PdUr6ZeeGrAFjBERZXpTPdJmHDBmUNnX5Tdvhq9uU4I3NcZveIg5FyjLe4nMG30ha/hALW4KLvspzCL8nYWpFl27RTqN6v735xcBgcfVR4JPfInb91/EtAFe3gyM3BCe3enuiezGDZsqCn+glQZ7adeOrCaZ0pLG+FmL7WXR2QsSfq70biUp6uLZtGfJ4W9I9DIezbj3Z/ltJRFVTmWHGp3g4/2LAcsDLMfyR4QLVkcgqQjuAbYk3ItPNuLPAVV6mbHKvBmyoyimT1SpPWgu6uJCRkCyU90DMsBK/xNzhep9ljp73qV2B3qHvFqHIKKzYEoA2rtQexTsRWxf+20axauwWO/DdpcOqOQC8mUqBE=">
+              </div>
+              <!-- Start comment form alert messaging -->
+              <p class="hidden js-notice">
+                <strong class="js-notice-text"></strong>
+              </p>
+              <!-- End comment form alert messaging -->
+              
+                <div class="form-group">
+                  <div class="g-recaptcha" data-sitekey="6LfHeawUAAAAAATc0Sckhl9FJLGog3m7qLrYA8V0"></div>
+                </div>
+              
+              <div class="form-group">
+                <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn--primary btn--large">Submit comment</button>
+              </div>
+            </form>
+          </div>
+          <!-- End new comment form -->
+          <script async src="https://www.google.com/recaptcha/api.js"></script>
+        
+      </section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+              <div class="page__related">
+                
+                  <h4 class="page__related-title">See Also</h4>
+                
+                <div class="grid__wrapper">
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/did-square.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/object-capabilities/" rel="permalink">Object Capability Model
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">Computer scientist E. Dean Tribble stated that in smart contracts, identity-based access control did not support well dynamically changing permissions, compared to the object-capability model. He analogized the ocap model with giving a valet the key to one’s car, without handing over the right to...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2021-04-19 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+    <div class="tags">Cosmos</div> <div class="tags">JSON-LD</div> <div class="tags">oCap</div> <div class="tags">zCap</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/dataweb/dataweb-whitepaper-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/literature/dataweb-introduction-to-xdi/" rel="permalink">The Dataweb: An Introduction to XDI
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The goal of XDI is to enable data from any data source to be identified, exchanged, linked, and synchronized into a machine-readable dataweb using XML documents just as content from any content source can linked into the human-readable Web using HTML documents today. Because the controls needed t...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-09 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  42 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+      
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/xdi-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xri-tc/" rel="permalink">XDI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of the OASIS XDI TC is to define a generalized, extensible, location-, application-, and transport-independent service for sharing, linking, and synchronizing data over the Internet and other data networks using XML documents and XRIs (Extensible Resource Identifiers), a URI-compatibl...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  9 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">RDF</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+      
+      
+          
+            
+            
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/xri-tc-teaser.webp"
+          
+          alt="">
+      </div>
+    
+    <h3 class="archive__item-title" itemprop="headline">
+      
+        <a href="/web-standards/oasis-open/xdi/xdi-tc/" rel="permalink">XRI Technical Committee
+</a>
+      
+    </h3>
+    <p class="archive__item-excerpt" itemprop="description">The purpose of this TC is to define a syntax for abstract structured identifiers – identifiers that can be used within other URI schemes (such as http: and https: URIs) to share semantics across any number of domains and applications. The TC is also defining a simple XML descriptor format and HTT...</p>
+    <p class="page__meta"><strong>Updated:</strong> 2020-12-01 <i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    <div class="tags">Dataweb</div> <div class="tags">OASIS</div> <div class="tags">XDI</div> <div class="tags">XRI</div> <br><hr>
+  </article> 
+</div>
+
+            
+            
+      
+    
+        </div>
+      </div>
+    
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="mailto:info@identosphere.net" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+        
+      
+        
+          <li><a href="https://decentralized-id.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/DecentralizeID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/Decentralized-ID" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<script data-goatcounter="https://didecentral.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+
+<div class="page__footer-copyright">⧉ <a href="https://infominer.xyz">infominer</a> ⧉ <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons (CC0 1.0) Public Domain</a> ⧉ Powered by <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a> via <a href="https://web-work.tools/jamstack/github-pages-starter-pack/">Github Pages</a>. ⧉</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    (function ($) {
+    $('#new_comment').submit(function () {
+      var form = this;
+
+      $(form).addClass('disabled');
+      $('#comment-form-submit').html('<i class="fas fa-spinner fa-spin fa-fw"></i> Loading...');
+
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        contentType: 'application/x-www-form-urlencoded',
+        success: function (data) {
+          $('#comment-form-submit').html('Submitted');
+          $('.page__comments-form .js-notice').removeClass('notice--danger');
+          $('.page__comments-form .js-notice').addClass('notice--success');
+          showAlert('Thanks for your comment! It will show on the site once it has been approved.');
+        },
+        error: function (err) {
+          console.log(err);
+          $('#comment-form-submit').html('Submit comment');
+          $('.page__comments-form .js-notice').removeClass('notice--success');
+          $('.page__comments-form .js-notice').addClass('notice--danger');
+          showAlert('Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.');
+          $(form).removeClass('disabled');
+        }
+      });
+
+      return false;
+    });
+
+    function showAlert(message) {
+      $('.page__comments-form .js-notice').removeClass('hidden');
+      $('.page__comments-form .js-notice-text').html(message);
+    }
+  })(jQuery);
+  </script>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
